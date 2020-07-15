@@ -25,6 +25,18 @@ page 88000 "BCS Bot Template List"
                 {
                     ApplicationArea = All;
                 }
+                field("Base Price"; "Base Price")
+                {
+                    ApplicationArea = All;
+                }
+                field("Base Power Per Day"; "Base Power Per Day")
+                {
+                    ApplicationArea = All;
+                }
+                field("Base Operations Per Day"; "Base Operations Per Day")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }

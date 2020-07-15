@@ -21,7 +21,7 @@ codeunit 88000 "BCS Master Company"
                     if Customer.Get(Rec."No.") then
                         Error(CustomerAlreadyExistInsertErr, Rec."No.", Company.Name);
                     Customer := Rec;
-                    Customer.Insert(true);
+                    Customer.Insert(false);
                 end;
             until Company.Next() = 0;
     end;
@@ -40,7 +40,9 @@ codeunit 88000 "BCS Master Company"
     local procedure IsMasterCompany(): Boolean
     var
         CompanyInformation: Record "Company Information";
+        _currentCompany: Text[100];
     begin
+        _currentCompany := CompanyName();
         if CompanyInformation.get() then
             exit(CompanyInformation."Master Company")
         else

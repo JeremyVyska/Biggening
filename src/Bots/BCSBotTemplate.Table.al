@@ -21,6 +21,28 @@ table 88000 "BCS Bot Template"
             Caption = 'Description';
             DataClassification = SystemMetadata;
         }
+
+        field(50; "Base Price"; Decimal)
+        {
+            DataClassification = SystemMetadata;
+            Caption = 'Base Price';
+            DecimalPlaces = 0 : 0;
+            BlankZero = true;
+        }
+        field(60; "Base Power Per Day"; Decimal)
+        {
+            DataClassification = SystemMetadata;
+            Caption = 'Base Power Per Day';
+            DecimalPlaces = 0 : 0;
+            BlankZero = true;
+        }
+        field(70; "Base Operations Per Day"; Decimal)
+        {
+            DataClassification = SystemMetadata;
+            Caption = 'Base Ops. Per Day';
+            DecimalPlaces = 0 : 0;
+            BlankZero = true;
+        }
     }
 
     keys
