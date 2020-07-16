@@ -86,13 +86,16 @@ page 88001 "BCS Setup Overview"
     {
         area(Processing)
         {
-            action(ActionName)
+            action(CopyTO)
             {
                 ApplicationArea = All;
+                Caption = 'Copy To...';
 
                 trigger OnAction();
+                var
+                    BCSMaster: Codeunit "BCS Master Company";
                 begin
-
+                    BCSMaster.CopySetupToCompany(Rec.Name);
                 end;
             }
         }
@@ -101,6 +104,7 @@ page 88001 "BCS Setup Overview"
     trigger OnAfterGetRecord()
     begin
         GetSetupCounts(Rec.Name);
+        IsMasterCompany(Rec.Name);
     end;
 
     local procedure IsMasterCompany(WhichCompany: Text[30])
@@ -121,7 +125,7 @@ page 88001 "BCS Setup Overview"
         GenPostingSetup: Record "General Posting Setup";
         CustPostingGroups: Record "Customer Posting Group";
         CustDiscGroups: Record "Customer Discount Group";
-        PaymentTerms: Record "Payment Method";
+        PaymentTerms: Record "Payment Terms";
         VendPostingGroups: Record "Vendor Posting Group";
         InvPostingGroups: Record "Inventory Posting Group";
     begin
