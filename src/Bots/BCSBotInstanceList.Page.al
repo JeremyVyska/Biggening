@@ -63,4 +63,22 @@ page 88002 "BCS Bot Instance List"
         }
     }
 
+    actions
+    {
+        area(Creation)
+        {
+            action(AddBot)
+            {
+                Image = New;
+                Caption = 'Buy Bot';
+                ApplicationArea = All;
+
+                trigger OnAction()
+                begin
+                    Page.RunModal(Page::"BCS Bot Purchase");
+                end;
+            }
+        }
+    }
+
 }
