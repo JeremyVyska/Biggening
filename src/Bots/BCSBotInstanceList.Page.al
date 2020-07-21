@@ -79,6 +79,18 @@ page 88002 "BCS Bot Instance List"
                 end;
             }
         }
+        area(Navigation)
+        {
+            action(PowerEntries)
+            {
+                Image = LedgerEntries;
+                Caption = 'Power Usage';
+                ApplicationArea = All;
+
+                RunObject = Page "BCS Power Usage Ledger";
+                RunPageLink = "Bot Instance" = field("Instance ID");
+            }
+        }
     }
 
 }

@@ -8,7 +8,10 @@ pageextension 88000 "BCS Company Information" extends "Company Information"
             {
                 ApplicationArea = All;
             }
-
+            field("Current Game Date"; "Current Game Date")
+            {
+                ApplicationArea = All;
+            }
         }
 
     }
