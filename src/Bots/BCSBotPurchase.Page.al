@@ -82,10 +82,19 @@ page 88005 "BCS Bot Purchase"
                 Image = Approve;
 
                 trigger OnAction()
+                var
+                    BotTemplate: Record "BCS Bot Template";
+                    BotMgmt: Codeunit "BCS Bot Management";
                 begin
-                    Message('I would buy a bot now.');
+                    //TODO: Replace with correct bot template logic
+                    BotTemplate.SetRange("Bot Type", WhichBotType);
+                    if BotTemplate.FindFirst() then begin
 
-                    CurrPage.Close();
+                        Message(BotPurchasedMsg, BotMgmt.PurchaseBot(BotTemplate.Code));
+
+                        CurrPage.Close();
+                    end else
+                        Error(NoBotTemplateFoundErr, WhichBotType);
                 end;
             }
         }
@@ -132,5 +141,7 @@ page 88005 "BCS Bot Purchase"
         ActionBackAllowed: Boolean;
         ActionNextAllowed: Boolean;
         ActionFinishAllowed: Boolean;
+        BotPurchasedMsg: Label 'Bot %1 purchased.';
+        NoBotTemplateFoundErr: Label 'No Bot Template of type %1 was found';
 
 }

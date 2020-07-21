@@ -6,7 +6,7 @@ table 88001 "BCS Bot Instance"
     {
         field(1; "Instance ID"; Integer)
         {
-            Caption = 'MyField';
+            Caption = 'Instance ID';
             DataClassification = SystemMetadata;
             AutoIncrement = true;
         }
@@ -22,6 +22,12 @@ table 88001 "BCS Bot Instance"
         {
             DataClassification = SystemMetadata;
             Caption = 'Designation';
+
+            trigger OnValidate()
+            begin
+                if "Bot Name" = '' then
+                    "Bot Name" := Designation;
+            end;
         }
 
         field(4; "Bot Name"; Text[100])
