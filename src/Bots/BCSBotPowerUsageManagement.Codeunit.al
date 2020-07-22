@@ -1,6 +1,6 @@
 codeunit 88004 "BCS Bot Power Usage Management"
 {
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"BCS Player Heartbeat Listener", 'Heartbeat', '', true, true)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"BCS Player Heartbeat Listener", 'OnHeartbeat', '', true, true)]
     local procedure ChargeBotPowerUsage()
     var
         BotInstance: Record "BCS Bot Instance";
@@ -15,7 +15,8 @@ codeunit 88004 "BCS Bot Power Usage Management"
                 //Calculate the total power usage
 
 
-                //Create a power usage ledger entry
+                //Create a power usage ledger 
+                Clear(PowerLedger);
                 PowerLedger.Init();
                 PowerLedger."Bot Instance" := BotInstance."Instance ID";
                 PowerLedger."Bot Type" := BotInstance."Bot Type";

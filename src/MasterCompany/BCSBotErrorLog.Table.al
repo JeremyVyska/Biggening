@@ -1,7 +1,10 @@
-table 88005 "BCS Power Ledger"
+table 88007 "BCS Bot Error Log"
 {
-    Caption = 'BCS Power Ledger';
-    DataClassification = SystemMetadata;
+    Caption = 'BCS Bot Error Log';
+    DataClassification = ToBeClassified;
+    DataPerCompany = false;
+
+    //TODO: Clean up table
 
     fields
     {
@@ -9,8 +12,15 @@ table 88005 "BCS Power Ledger"
         {
             Caption = 'Entry No.';
             DataClassification = SystemMetadata;
-            AutoIncrement = false;
+            AutoIncrement = true;
         }
+
+        field(2; "Company Name"; Text[100])
+        {
+            Caption = 'Company Name';
+            DataClassification = SystemMetadata;
+        }
+
         field(10; "Bot Instance"; Integer)
         {
             Caption = 'Bot Instance';
@@ -26,14 +36,9 @@ table 88005 "BCS Power Ledger"
             Caption = 'Posting Date';
             DataClassification = SystemMetadata;
         }
-        field(30; "Power Usage"; Decimal)
+        field(50; "Error Message"; Text[200])
         {
-            Caption = 'Power Usage';
-            DataClassification = SystemMetadata;
-        }
-        field(40; "Posted to G/L"; Boolean)
-        {
-            Caption = 'Posted to G/L';
+            Caption = 'Error Message';
             DataClassification = SystemMetadata;
         }
     }
