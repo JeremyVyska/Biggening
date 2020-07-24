@@ -4,6 +4,7 @@ codeunit 88006 "BCS Bot Purchase"
 
     trigger OnRun()
     begin
+        //Error('Hello Stream!');
         ResultText := StrSubstNo('In the future, I would make %1 purchases.', Rec."Operations Per Day");
     end;
 

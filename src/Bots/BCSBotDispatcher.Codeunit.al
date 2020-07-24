@@ -26,6 +26,7 @@ codeunit 88005 "BCS Bot Dispatcher"
                 case BotInstance."Bot Type" of
                     BotInstance."Bot Type"::Purchasing:
                         begin
+                            Commit();
                             Clear(BotPurchase);
                             if BotPurchase.Run(BotInstance) then begin
                                 // YAY! It worked
@@ -43,6 +44,7 @@ codeunit 88005 "BCS Bot Dispatcher"
                                 // log to the system error log
                                 Clear(BotErrLog);
                                 BotErrLog.Init();
+                                BotErrLog."Company Name" := CompanyName();
                                 BotErrLog."Bot Type" := BotInstance."Bot Type";
                                 BotErrLog."Bot Instance" := BotInstance."Instance ID";
                                 BotErrLog."Posting Date" := WorkDate();
@@ -51,7 +53,7 @@ codeunit 88005 "BCS Bot Dispatcher"
                                 //TODO: Handle the whole error result with BLOB?
                                 BotErrLog.Insert(true);
                             end;
-                            ;
+                            Commit();
                         end;
 
                 end;
