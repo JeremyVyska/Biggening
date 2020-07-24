@@ -53,4 +53,12 @@ table 88000 "BCS Bot Template"
         }
     }
 
+    fieldgroups
+    {
+        fieldgroup(DropDown; Code, "Bot Type", Description)
+        {
+
+        }
+    }
+
 }
