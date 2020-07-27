@@ -36,6 +36,12 @@ page 88050 "BCS System Manager RC"
                     ApplicationArea = Basic, Suite;
 
                 }
+                action("Master Items")
+                {
+                    ToolTip = 'Manage Master Items for the game';
+                    RunObject = Page "BCS Master Item List";
+                    ApplicationArea = All;
+                }
 
                 action("Assisted Setup")
                 {
