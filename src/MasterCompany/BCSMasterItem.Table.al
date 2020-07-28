@@ -4,6 +4,7 @@ table 88010 "BCS Master Item"
     DataClassification = SystemMetadata;
     DrillDownPageId = "BCS Master Item List";
     LookupPageId = "BCS Master Item List";
+    DataPerCompany = false;
 
     fields
     {

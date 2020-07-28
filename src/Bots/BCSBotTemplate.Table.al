@@ -43,6 +43,14 @@ table 88000 "BCS Bot Template"
             DecimalPlaces = 0 : 0;
             BlankZero = true;
         }
+
+        field(80; "Research Points Per Op"; Decimal)
+        {
+            DataClassification = SystemMetadata;
+            Caption = 'Research Points Per Op.';
+            DecimalPlaces = 0 : 0;
+            BlankZero = true;
+        }
     }
 
     keys

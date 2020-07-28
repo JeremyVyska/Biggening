@@ -14,6 +14,13 @@ codeunit 88001 "BCS Bot Management"
         Instance."Operations Per Day" := Template."Base Operations Per Day";
         Instance.Price := Template."Base Price";
         Instance.Validate(Designation, GenerateDesignator());
+
+        case Template."Bot Type" of
+            Template."Bot Type"::Research:
+                begin
+                    Instance."Research Points Per Op" := Template."Research Points Per Op";
+                end;
+        end;
         Instance.Insert(true);
 
         exit(Instance.Designation);

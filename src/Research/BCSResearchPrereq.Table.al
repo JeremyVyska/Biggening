@@ -2,6 +2,7 @@ table 88009 "BCS Research Prereq."
 {
     Caption = 'BCS Research Prereq.';
     DataClassification = ToBeClassified;
+    DataPerCompany = false;
 
     fields
     {

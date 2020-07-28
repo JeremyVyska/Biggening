@@ -2,6 +2,7 @@ table 88011 "BCS Master Item BOM"
 {
     Caption = 'BCS Master Item BOM';
     DataClassification = SystemMetadata;
+    DataPerCompany = false;
 
     fields
     {

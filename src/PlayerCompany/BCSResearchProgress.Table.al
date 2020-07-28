@@ -1,8 +1,7 @@
-table 88008 "BCS Research"
+table 88014 "BCS Research Progress"
 {
     Caption = 'BCS Research';
     DataClassification = SystemMetadata;
-    DataPerCompany = false;
 
     fields
     {
@@ -10,22 +9,40 @@ table 88008 "BCS Research"
         {
             Caption = 'No.';
             DataClassification = SystemMetadata;
-            AutoIncrement = true;
             Editable = false;
+            TableRelation = "BCS Research";
         }
         field(10; Description; Text[100])
         {
             Caption = 'Description';
-            DataClassification = SystemMetadata;
+            FieldClass = FlowField;
+            CalcFormula = lookup ("BCS Research".Description where("No." = field("No.")));
         }
         field(20; Points; Integer)
         {
             Caption = 'Points';
             DataClassification = SystemMetadata;
         }
-        field(30; "Unmet Hide"; Boolean)
+
+        field(25; Progress; Integer)
         {
-            Caption = 'Unmet Hide';
+            Caption = 'Progress';
+            DataClassification = SystemMetadata;
+
+            trigger OnValidate()
+            begin
+                if (Progress > Points) then
+                    Progress := Points;
+                if (Progress = Points) then begin
+                    Completed := true;
+                    Selected := false;
+                end;
+            end;
+        }
+
+        field(28; Completed; Boolean)
+        {
+            Caption = 'Completed';
             DataClassification = SystemMetadata;
         }
 
@@ -100,6 +117,21 @@ table 88008 "BCS Research"
         }
 
         //TODO: Location Unlocking?
+
+
+        field(500; "Selected"; Boolean)
+        {
+            DataClassification = SystemMetadata;
+            Caption = 'Selected';
+
+            trigger OnValidate()
+            var
+                BCSResearch2: Record "BCS Research Progress";
+            begin
+                BCSResearch2.SetFilter("No.", '<>%1', Rec."No.");
+                BCSResearch2.ModifyAll(Selected, false);
+            end;
+        }
 
         field(1000; "Prerequisites"; Integer)
         {

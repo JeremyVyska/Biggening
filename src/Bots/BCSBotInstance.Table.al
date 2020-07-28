@@ -58,6 +58,14 @@ table 88001 "BCS Bot Instance"
             BlankZero = true;
         }
 
+        field(80; "Research Points Per Op"; Decimal)
+        {
+            DataClassification = SystemMetadata;
+            Caption = 'Research Points Per Op.';
+            DecimalPlaces = 0 : 0;
+            BlankZero = true;
+        }
+
         field(100; "Power Upgrade Code"; Code[20])
         {
             DataClassification = SystemMetadata;
