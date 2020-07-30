@@ -19,6 +19,8 @@ table 88011 "BCS Master Item BOM"
         }
         field(10; "Master Item No."; Code[20])
         {
+            //TODO: Rename this, it's a component
+            //TODO: Validate uniqueness
             Caption = 'Master Item No.';
             DataClassification = SystemMetadata;
             TableRelation = "BCS Master Item";
@@ -38,4 +40,16 @@ table 88011 "BCS Master Item BOM"
         }
     }
 
+    trigger OnInsert()
+    var
+        ItemBom2: Record "BCS Master Item BOM";
+    begin
+        if ("Line No." = 0) then begin
+            ItemBom2.SetRange("Item No.", "Item No.");
+            if ItemBom2.FindLast() then
+                "Line No." := ItemBom2."Line No." + 10000
+            else
+                "Line No." := 10000;
+        end;
+    end;
 }
