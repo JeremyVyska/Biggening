@@ -3,6 +3,7 @@ page 88014 "BCS Master Item Card"
     Caption = 'BCS Master Item Card';
     PageType = Card;
     SourceTable = "BCS Master Item";
+    UsageCategory = None;
 
     layout
     {

@@ -44,6 +44,7 @@ report 88000 "BCS Import Master Items"
         ExcelBuf.ReadSheet();
 
         ExcelBuf.SetFilter("Row No.", '>1');
+        ExcelBuf.SetFilter("Column No.", '1');
         if ExcelBuf.FindSet() then
             repeat
                 RowNo := ExcelBuf."Row No.";
@@ -90,13 +91,14 @@ report 88000 "BCS Import Master Items"
                         MasterBOM.SetRange("Master Item No.", BomItem);
                         if MasterBOM.FindFirst() then begin
                             // if the QtyToUpdate = 0, delete, else modify
-                            if (QuantityToUpdate <> 0) then
+                            if (QuantityToUpdate <> 0) then begin
                                 if (MasterBOM.Quantity <> QuantityToUpdate) then begin
                                     MasterBOM.Quantity := QuantityToUpdate;
                                     MasterBOM.Modify(true);
                                 end
-                                else
-                                    MasterBOM.Delete(true);
+                            end
+                            else
+                                MasterBOM.Delete(true);
                         end else begin
                             // if not make it.
                             MasterBOM."Item No." := WhichMasterItem;
@@ -108,7 +110,8 @@ report 88000 "BCS Import Master Items"
                     end;
                 end;
 
-            // Create/Update BOM Col 11 - Complex Items
+                // Create/Update BOM Col 11 - Complex Items
+                ParseBOMCell(WhichMasterItem, GetCellValue(RowNo, 11));
 
             // Create/Update Routing Col 12 - steps
 
@@ -120,10 +123,48 @@ report 88000 "BCS Import Master Items"
         StartingPosition: Text;
     begin
         StartingPosition := ExcelBuf.GetPosition();
+        ExcelBuf.SetRange("Column No.");
         if ExcelBuf.Get(RowNo, ColNo) then
             Result := ExcelBuf."Cell Value as Text";
+        ExcelBuf.SetFilter("Column No.", '1');
         ExcelBuf.SetPosition(StartingPosition);
         ExcelBuf.Find();
+    end;
+
+    local procedure ParseBOMCell(WhichMasterItem: Code[20]; BOMText: Text)
+    var
+        MasterItem: Record "BCS Master Item";
+        MasterBOM: Record "BCS Master Item BOM";
+        SemiSep: List of [Text];
+        CommaSep: List of [Text];
+        ComponentEntry: Text;
+        ComponentPart: List of [Text];
+        PossibleItem: Text;
+        PossibleQuantityText: Text;
+        PossibleQuantity: Decimal;
+    begin
+        if (BOMText = '') then
+            exit;
+        // EX: 2001,1;2002,1;2003,10
+        SemiSep.Add(';');
+        CommaSep.Add(',');
+        foreach ComponentEntry in BOMText.Split(SemiSep) do begin
+            ComponentPart := ComponentEntry.Split(CommaSep);
+            if ComponentPart.Get(1, PossibleItem) then
+                if PossibleItem <> '' then begin
+                    if ComponentPart.get(2, PossibleQuantityText) then
+                        if PossibleQuantityText <> '' then
+                            if Evaluate(PossibleQuantity, PossibleQuantityText) then begin
+                                // Checks:  Possible Item, PossibleQty (dec)
+                                MasterBOM."Item No." := WhichMasterItem;
+                                MasterBOM."Line No." := 0;
+                                MasterBOM.Validate("Master Item No.", PossibleItem);
+                                MasterBOM.Quantity := PossibleQuantity;
+                                MasterBOM.Insert(true);
+                            end;
+
+                end;
+        end;
     end;
 
     var

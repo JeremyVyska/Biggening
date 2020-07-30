@@ -32,6 +32,7 @@
       "to": 88999
     }
   ],
+  "features": ["TranslationFile"],
   "contextSensitiveHelpUrl": "https://github.com/JeremyVyska/Biggening/issues",
   "showMyCode": true,
   "runtime": "5.0",
