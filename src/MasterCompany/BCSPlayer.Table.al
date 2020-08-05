@@ -41,6 +41,14 @@ table 88015 "BCS Player"
             ValidateTableRelation = false;
             TestTableRelation = false;
         }
+        field(70; "System Permissions"; Option)
+        {
+            Caption = 'System Permissions';
+            DataClassification = SystemMetadata;
+            OptionMembers = "Player","Admin";
+            OptionCaption = 'Player,Admin';
+        }
+
         field(1000; "Company Display Name"; Text[80])
         {
             Caption = 'Company Display Name';

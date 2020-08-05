@@ -71,7 +71,7 @@ table 88001 "BCS Bot Instance"
             DataClassification = SystemMetadata;
             Caption = 'Power Upgrade Code';
         }
-        field(110; "Operations Update Code"; Code[20])
+        field(110; "Operations Upgrade Code"; Code[20])
         {
             DataClassification = SystemMetadata;
             Caption = 'Operations Upgrade Code';

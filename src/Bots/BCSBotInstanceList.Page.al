@@ -31,6 +31,10 @@ page 88002 "BCS Bot Instance List"
                 {
                     ApplicationArea = All;
                 }
+                field("Assignment Code"; "Assignment Code")
+                {
+                    ApplicationArea = All;
+                }
                 field("Power Per Day"; "Power Per Day")
                 {
                     ApplicationArea = All;
@@ -39,12 +43,7 @@ page 88002 "BCS Bot Instance List"
                 {
                     ApplicationArea = All;
                 }
-                field("Assignment Code"; "Assignment Code")
-                {
-                    ApplicationArea = All;
-                    Visible = false;
-                }
-                field("Operations Update Code"; "Operations Update Code")
+                field("Operations Upgrade Code"; "Operations Upgrade Code")
                 {
                     ApplicationArea = All;
                     Visible = false;

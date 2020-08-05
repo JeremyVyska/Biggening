@@ -21,6 +21,11 @@ page 88019 "BCS Player List"
                 {
                     ApplicationArea = All;
                 }
+                field("System Permissions"; "System Permissions")
+                {
+                    ApplicationArea = All;
+                }
+
                 field("Email"; "Email")
                 {
                     ApplicationArea = All;
