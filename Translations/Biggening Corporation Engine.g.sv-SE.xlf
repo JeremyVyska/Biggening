@@ -23,7 +23,7 @@
         </trans-unit>
         <trans-unit id="Table 677759022 - Field 209788930 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Name</source>
-          <target state="needs-l10n"> Namn</target>
+          <target state="needs-l10n">Bot typ</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Instance - Field Bot Name - Property Caption</note>
         </trans-unit>
@@ -82,7 +82,7 @@
         </trans-unit>
         <trans-unit id="Table 1340414549 - Field 3194883691 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Type</source>
-          <target state="needs-l10n">För typ</target>
+          <target state="translated">Bot typ</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template - Field Bot Type - Property Caption</note>
         </trans-unit>
@@ -135,13 +135,13 @@
         </trans-unit>
         <trans-unit id="Table 1270744385 - Field 3981829876 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Instance</source>
-          <target state="needs-l10n">Arbetsflödesinstans</target>
+          <target state="needs-l10n">Bot typ</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Error Log - Field Bot Instance - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1270744385 - Field 3194883691 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Type</source>
-          <target state="needs-l10n">För typ</target>
+          <target state="translated">Bot typ</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Error Log - Field Bot Type - Property Caption</note>
         </trans-unit>
@@ -336,13 +336,13 @@
         </trans-unit>
         <trans-unit id="Table 3997325726 - Field 3981829876 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Instance</source>
-          <target state="needs-l10n">Arbetsflödesinstans</target>
+          <target state="needs-l10n">Bot typ</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Activity Log - Field Bot Instance - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3997325726 - Field 3194883691 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Type</source>
-          <target state="needs-l10n">För typ</target>
+          <target state="translated">Bot typ</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Activity Log - Field Bot Type - Property Caption</note>
         </trans-unit>
@@ -378,13 +378,13 @@
         </trans-unit>
         <trans-unit id="Table 57229516 - Field 3981829876 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Instance</source>
-          <target state="needs-l10n">Arbetsflödesinstans</target>
+          <target state="needs-l10n">Bot typ</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Power Ledger - Field Bot Instance - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 57229516 - Field 3194883691 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Type</source>
-          <target state="needs-l10n">För typ</target>
+          <target state="translated">Bot typ</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Power Ledger - Field Bot Type - Property Caption</note>
         </trans-unit>
@@ -815,7 +815,7 @@
         </trans-unit>
         <trans-unit id="Page 3791836244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Buy a Bot</source>
-          <target state="needs-l10n">Köp från</target>
+          <target state="needs-l10n">Bot typ</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Property Caption</note>
         </trans-unit>
@@ -827,7 +827,7 @@
         </trans-unit>
         <trans-unit id="Page 3791836244 - Control 759990093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Type</source>
-          <target state="needs-l10n">För typ</target>
+          <target state="translated">Bot typ</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control BotTypeStep - Property Caption</note>
         </trans-unit>
@@ -838,7 +838,7 @@
         </trans-unit>
         <trans-unit id="Page 3791836244 - Control 17839560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Types</source>
-          <target state="needs-l10n">Lagerplatstyper</target>
+          <target state="needs-l10n">Bot typ</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control chooseBotType - Property Caption</note>
         </trans-unit>
@@ -886,7 +886,7 @@
         </trans-unit>
         <trans-unit id="Page 3791836244 - NamedType 1108768241" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot %1 purchased.</source>
-          <target state="needs-l10n"> ,Bot mallkod,Uppgraderingskod</target>
+          <target state="needs-l10n">Bot typ</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - NamedType BotPurchasedMsg</note>
         </trans-unit>
@@ -897,7 +897,7 @@
         </trans-unit>
         <trans-unit id="Page 458088940 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot List</source>
-          <target state="needs-l10n">&amp;Lista</target>
+          <target state="needs-l10n">Bot typ</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Instance List - Property Caption</note>
         </trans-unit>
@@ -908,7 +908,7 @@
         </trans-unit>
         <trans-unit id="Page 458088940 - Action 516137276 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Buy Bot</source>
-          <target state="needs-l10n">Köp från</target>
+          <target state="needs-l10n">Bot typ</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Instance List - Action AddBot - Property Caption</note>
         </trans-unit>
@@ -1235,7 +1235,7 @@
         </trans-unit>
         <trans-unit id="Enum 3436205 - EnumValue 1683733037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unlock Prod. Posting Group</source>
-          <target state="needs-l10n">Moms produktbokföringsmall,,,Ingen</target>
+          <target state="needs-l10n">Moms produktbokföringsmall</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Research Type - EnumValue Unlock-ProdPG - Property Caption</note>
         </trans-unit>

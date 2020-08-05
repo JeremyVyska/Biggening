@@ -10,10 +10,11 @@ codeunit 88003 "BCS Player Heartbeat Listener"
         CompanyInformation.Get();
         GameSetup.Get();
         if CompanyInformation."Current Game Date" <> GameSetup."Game Date" then begin
-            OnHeartbeat();
             //TODO: Date math for fault tolerance
             CompanyInformation."Current Game Date" := GameSetup."Game Date";
             CompanyInformation.Modify(true);
+
+            OnHeartbeat();
         end;
     end;
 

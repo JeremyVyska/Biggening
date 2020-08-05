@@ -111,6 +111,8 @@ report 88000 "BCS Import Master Items"
                 end;
 
                 // Create/Update BOM Col 11 - Complex Items
+                //TODO: Any Item BOM on the Master that isn't CLASS1, remove it.
+                // (Consider for future projects, a delta change?)
                 ParseBOMCell(WhichMasterItem, GetCellValue(RowNo, 11));
 
             // Create/Update Routing Col 12 - steps

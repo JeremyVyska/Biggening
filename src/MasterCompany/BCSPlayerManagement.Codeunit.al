@@ -1,7 +1,13 @@
 codeunit 88015 "BCS Player Management"
 {
     procedure SetupNewPlayer(var Player: Record "BCS Player")
+    var
+        IsMasterCompany: Codeunit "BCS Is Master Company";
     begin
+        if not IsMasterCompany.IsMC() then
+            //TODO: Error with feedback
+            exit;
+
         // New Company
         GeneratePlayerCompany(Player);
         Commit();

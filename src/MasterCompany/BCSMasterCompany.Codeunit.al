@@ -22,6 +22,7 @@ codeunit 88000 "BCS Master Company"
         DestPaymentTerms: Record "Payment Terms";
         DestVendPostingGroups: Record "Vendor Posting Group";
         DestInvPostingGroups: Record "Inventory Posting Group";
+        IsMasterCompany: Codeunit "BCS Is Master Company";
         DestGLAccountExists: Boolean;
         DestGenBusPostingExists: Boolean;
         DestGenProdPostingExists: Boolean;
@@ -32,7 +33,7 @@ codeunit 88000 "BCS Master Company"
         DestVendPostingGroupsExists: Boolean;
         DestInvPostingGroupsExists: Boolean;
     begin
-        if not IsMasterCompany() then
+        if not IsMasterCompany.IsMC() then
             Error(CopySourceMustBeMasterErr, CompanyName());
 
         DestGLAccount.ChangeCompany(WhichCompany);
@@ -134,16 +135,6 @@ codeunit 88000 "BCS Master Company"
                 else
                     DestInvPostingGroups.Insert();
             until InvPostingGroups.Next() = 0;
-    end;
-
-    local procedure IsMasterCompany(): Boolean
-    var
-        CompanyInformation: Record "Company Information";
-    begin
-        if CompanyInformation.get() then
-            exit(CompanyInformation."Master Company")
-        else
-            exit(false);
     end;
 
     var
