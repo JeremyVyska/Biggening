@@ -36,6 +36,12 @@ table 88001 "BCS Bot Instance"
             Caption = 'Bot Name';
         }
 
+        field(5; "Bot Tier"; Integer)
+        {
+            Caption = 'Bot Tier';
+            DataClassification = SystemMetadata;
+        }
+
         field(50; "Price"; Decimal)
         {
             DataClassification = SystemMetadata;
@@ -99,6 +105,24 @@ table 88001 "BCS Bot Instance"
         {
             Clustered = true;
         }
+        key(Tier; "Bot Type", "Bot Tier")
+        {
+
+        }
     }
 
+    procedure GetPowerPerDay(): Decimal
+    begin
+        exit(Rec."Power Per Day");
+    end;
+
+    procedure GetOpsPerDay(): Decimal
+    begin
+        exit(Rec."Operations Per Day");
+    end;
+
+    procedure GetResearchPerOp(): Decimal
+    begin
+        exit(Rec."Research Points Per Op");
+    end;
 }

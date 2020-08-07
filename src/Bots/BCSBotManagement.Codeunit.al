@@ -10,6 +10,7 @@ codeunit 88001 "BCS Bot Management"
 
         Instance.Init();
         Instance."Bot Type" := Template."Bot Type";
+        Instance."Bot Tier" := Template."Bot Tier";
         Instance."Power Per Day" := Template."Base Power Per Day";
         Instance."Operations Per Day" := Template."Base Operations Per Day";
         Instance.Price := Template."Base Price";

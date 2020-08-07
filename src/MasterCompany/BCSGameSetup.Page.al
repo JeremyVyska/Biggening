@@ -16,6 +16,28 @@ page 88007 "BCS Game Setup"
                     ApplicationArea = All;
                 }
             }
+            group(Purchasing)
+            {
+                field("Purchase Prospect Effort"; "Purchase Prospect Effort")
+                {
+                    ApplicationArea = All;
+                }
+                field("Purch. Pros. Tier Multiplier"; "Purch. Pros. Tier Multiplier")
+                {
+                    ApplicationArea = All;
+                }
+
+                field("Purch. Pros. Base Max Orders"; "Purch. Pros. Base Max Orders")
+                {
+                    ApplicationArea = All;
+                }
+                field("Purch. Pros. Base Max Quantity"; "Purch. Pros. Base Max Quantity")
+                {
+                    ApplicationArea = All;
+                }
+
+
+            }
         }
     }
 

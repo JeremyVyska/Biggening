@@ -15,7 +15,7 @@ codeunit 88012 "BCS Bot Research"
         BCSPlayerResearch: Record "BCS Research Progress";
         PointsToAdd: Decimal;
     begin
-        PointsToAdd := Rec."Operations Per Day" * Rec."Research Points Per Op";
+        PointsToAdd := Rec.GetOpsPerDay() * Rec.GetResearchPerOp();
         ResultText := StrSubstNo('I''ve generated %1 points.', PointsToAdd);
         BCSPlayerResearch.SetRange(Selected, true);
         if BCSPlayerResearch.FindFirst() then begin

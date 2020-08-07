@@ -21,7 +21,7 @@ codeunit 88004 "BCS Bot Power Usage Management"
                 PowerLedger."Bot Instance" := BotInstance."Instance ID";
                 PowerLedger."Bot Type" := BotInstance."Bot Type";
                 PowerLedger."Posting Date" := WorkDate();
-                PowerLedger."Power Usage" := BotInstance."Power Per Day";
+                PowerLedger."Power Usage" := BotInstance.GetPowerPerDay();
                 PowerLedger."Posted to G/L" := false;
                 PowerLedger.Insert(true);
             until BotInstance.Next() = 0;

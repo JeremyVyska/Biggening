@@ -23,6 +23,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Instance - Field Bot Name - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 677759022 - Field 1413907429 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Tier</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Instance - Field Bot Tier - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 677759022 - Field 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -72,6 +77,11 @@
           <source>Bot Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template - Field Bot Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1340414549 - Field 1413907429 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Tier</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template - Field Bot Tier - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1340414549 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
@@ -147,6 +157,26 @@
           <source>Game Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Game Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 489847365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Prospect Effort</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Purchase Prospect Effort - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 805256149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purch. Pros. Tier Multiplier</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Purch. Pros. Tier Multiplier - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2006648962 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purch. Pros. Base Max Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Purch. Pros. Base Max Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 545581756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purch. Pros. Base Max Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Purch. Pros. Base Max Quantity - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4246738589 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Game Setup</source>
@@ -387,6 +417,11 @@
           <source>Maximum Quantity Per Order</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Prospect - Field Maximum Quantity Per Order - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 864830994 - Field 4132174999 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Random Entry Source No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Prospect - Field Random Entry Source No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2223815861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Propect Trades</source>
@@ -978,11 +1013,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report BCS Import Master Items - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1933021926 - Control 3211120311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
-          <source>Player Information &amp; Settings</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Vendor Card - Control PlayerInfo - Property Caption</note>
-        </trans-unit>
         <trans-unit id="TableExtension 1779811491 - Field 3260569077 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3469146285">
           <source>Master Company</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -992,6 +1022,16 @@
           <source>Current Game Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Company Information - Field Current Game Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1779811491 - Field 489847365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3469146285">
+          <source>Purchase Prospect Effort</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Company Information - Field Purchase Prospect Effort - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1933021926 - Control 3211120311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
+          <source>Player Information &amp; Settings</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Vendor Card - Control PlayerInfo - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 4097106210 - Field 538187334 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
           <source>Max. Orders Per Day</source>

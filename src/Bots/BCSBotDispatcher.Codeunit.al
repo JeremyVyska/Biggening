@@ -7,6 +7,8 @@ codeunit 88005 "BCS Bot Dispatcher"
     begin
         // Iterate through all the bot instances
         BotInstance.Reset();
+        BotInstance.SetCurrentKey("Bot Type", "Bot Tier");
+        BotInstance.SetAscending("Bot Tier", false);
 
         BotInstance.SetRange("Bot Type", BotInstance."Bot Type"::Purchasing);
         HandleBotsOfType(BotInstance);

@@ -16,6 +16,11 @@ table 88000 "BCS Bot Template"
             Caption = 'Bot Type';
             DataClassification = SystemMetadata;
         }
+        field(5; "Bot Tier"; Integer)
+        {
+            Caption = 'Bot Tier';
+            DataClassification = SystemMetadata;
+        }
         field(10; Description; Text[200])
         {
             Caption = 'Description';

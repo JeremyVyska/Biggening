@@ -23,6 +23,7 @@ table 88013 "BCS Prospect Trades"
         {
             Caption = 'Line No.';
             DataClassification = SystemMetadata;
+            AutoIncrement = true;
         }
         field(20; "Trade Type"; Option)
         {

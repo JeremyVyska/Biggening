@@ -13,6 +13,12 @@ tableextension 88000 "BCS Company Information" extends "Company Information"
             DataClassification = SystemMetadata;
             Editable = false;
         }
+        field(88002; "Purchase Prospect Effort"; Integer)
+        {
+            Caption = 'Purchase Prospect Effort';
+            DataClassification = SystemMetadata;
+            Editable = false;
+        }
     }
 
 }
