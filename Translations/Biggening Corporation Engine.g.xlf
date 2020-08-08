@@ -933,6 +933,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Prospect List - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2080395824 - Action 3417371833 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Make Vendor</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Prospect List - Action Convert - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2338513767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Prospect Trade Factbox</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1028,10 +1033,25 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Company Information - Field Purchase Prospect Effort - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2706270701 - Control 3211120311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Player Information &amp; Settings</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Item Card - Control PlayerInfo - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1933021926 - Control 3211120311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
           <source>Player Information &amp; Settings</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Vendor Card - Control PlayerInfo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 441721345 - Field 4133416095 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Reorder Level</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Item - Field BCS Reorder Level - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 441721345 - Field 1757624030 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Maximum Stock</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Item - Field BCS Maximum Stock - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 4097106210 - Field 538187334 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
           <source>Max. Orders Per Day</source>

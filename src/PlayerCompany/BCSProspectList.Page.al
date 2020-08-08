@@ -41,4 +41,31 @@ page 88016 "BCS Prospect List"
         }
     }
 
+    actions
+    {
+        area(Processing)
+        {
+            action(Convert)
+            {
+                Caption = 'Make Vendor';
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
+                Image = Vendor;
+
+                trigger OnAction()
+                var
+                    Vendor: Record Vendor;
+                    VendorNo: Code[20];
+                begin
+                    VendorNo := Rec.ConvertToVendor();
+                    Rec.Delete(true);
+                    Vendor.Get(VendorNo);
+                    Vendor.SetRecFilter();
+                    Page.Run(0, Vendor);
+                end;
+            }
+        }
+    }
+
 }

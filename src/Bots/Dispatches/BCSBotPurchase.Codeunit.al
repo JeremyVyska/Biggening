@@ -12,6 +12,11 @@ codeunit 88006 "BCS Bot Purchase"
         //Error('Hello Stream!');
         //ResultText := StrSubstNo('In the future, I would make %1 purchases.', Rec."Operations Per Day");
 
+        if (Rec."Bot Tier" = 0) then begin
+            Rec."Bot Tier" := 1;
+            Rec.Modify(true);
+        end;
+
         for i := 1 to Rec.GetOpsPerDay() do begin
             // If the Purchasing Bot is assigned:
             if Rec."Assignment Code" <> '' then
