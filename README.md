@@ -9,9 +9,19 @@ To become a player on the main/development server, please sign up here:
 https://forms.gle/3L82AVRLZfyMnk3J6
 
 # Streaming Info
-Live stream schedule is currently weekdays at 3 PM CEST (9am EDT/6am PDT).
+Live stream schedule is currently weekdays at 5 PM CEST (11am EDT/8am PDT).
 https://www.twitch.tv/jeremyvyska
+
+# Twitter for Updates
+Follow me on Twitter for updates if you'd like
+https://twitter.com/JeremyVyska
+
+
 
 # Stream Archive
 Archived Live Streams of development are available at:
 https://www.youtube.com/playlist?list=PLwPS5n8APk5mpLIXM8qM90XtU21zGquB-
+
+#Summary Videos 
+Summary/Recap Videos Available:
+https://www.youtube.com/playlist?list=PLwPS5n8APk5kiIUGneEqnIAXUOIN_eNW2

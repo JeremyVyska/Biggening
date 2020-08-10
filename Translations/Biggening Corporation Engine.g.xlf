@@ -718,6 +718,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Total Bot Count - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1882246606 - NamedType 1528307622" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location %1 has a Capacity of %2 and cannot accept %3 units.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Location Checks - NamedType LocationOvercapacityErr</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1637666299 - NamedType 445785139" size-unit="char" translate="yes" xml:space="preserve">
           <source>Company %1 is not marked as a Master company, so cannot be used as a source.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1038,6 +1043,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Item Card - Control PlayerInfo - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1956061493 - Control 3211120311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3870787835">
+          <source>Player Information</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Location Card - Control PlayerInfo - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1933021926 - Control 3211120311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
           <source>Player Information &amp; Settings</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1052,6 +1062,31 @@
           <source>Maximum Stock</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Item - Field BCS Maximum Stock - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2827781225 - Field 967894943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
+          <source>Maximum Units</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Location - Field Maximum Units - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2827781225 - Field 2947049438 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
+          <source>Maximum Bots</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Location - Field Maximum Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2827781225 - Field 4160995943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
+          <source>Upgrade Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Location - Field Upgrade Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2827781225 - Field 3917791686 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
+          <source>Maximum Units</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Location - Field Total Stock - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2827781225 - Field 2735134486 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
+          <source>Assigned Bots</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Location - Field Assigned Bots - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 4097106210 - Field 538187334 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
           <source>Max. Orders Per Day</source>
