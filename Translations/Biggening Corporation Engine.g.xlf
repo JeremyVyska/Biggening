@@ -719,7 +719,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Total Bot Count - Property Caption</note>
         </trans-unit>
         <trans-unit id="Codeunit 1882246606 - NamedType 1528307622" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Location %1 has a Capacity of %2 and cannot accept %3 units.</source>
+          <source>Location %1 has a Capacity of %2 and cannot accept %3 units because of the %4 already in stock.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Location Checks - NamedType LocationOvercapacityErr</note>
         </trans-unit>

@@ -27,6 +27,8 @@ codeunit 88006 "BCS Bot Purchase"
         end;
 
         if Rec."Assignment Code" <> '' then begin
+
+            //TODO: Count of Released PO's, if any, POST BATCH on Status = Released.
             foreach DocNo in Documents do
                 DocListBuilder.Append(DocNo + ', ');
             DocListBuilder.Remove(DocListBuilder.Length - 2, 2);

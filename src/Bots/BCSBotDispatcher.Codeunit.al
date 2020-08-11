@@ -10,9 +10,6 @@ codeunit 88005 "BCS Bot Dispatcher"
         BotInstance.SetCurrentKey("Bot Type", "Bot Tier");
         BotInstance.SetAscending("Bot Tier", false);
 
-        BotInstance.SetRange("Bot Type", BotInstance."Bot Type"::Purchasing);
-        HandleBotsOfType(BotInstance);
-
         BotInstance.SetRange("Bot Type", BotInstance."Bot Type"::"Inventory-Basic");
         HandleBotsOfType(BotInstance);
 
@@ -26,6 +23,9 @@ codeunit 88005 "BCS Bot Dispatcher"
         HandleBotsOfType(BotInstance);
 
         BotInstance.SetRange("Bot Type", BotInstance."Bot Type"::Sales);
+        HandleBotsOfType(BotInstance);
+
+        BotInstance.SetRange("Bot Type", BotInstance."Bot Type"::Purchasing);
         HandleBotsOfType(BotInstance);
 
         BotInstance.SetRange("Bot Type", BotInstance."Bot Type"::Research);
