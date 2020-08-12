@@ -24,7 +24,7 @@ tableextension 88003 "BCS Location" extends Location
         }
         field(88100; "Total Stock"; Decimal)
         {
-            Caption = 'Maximum Units';
+            Caption = 'Total Stock';
             DecimalPlaces = 0 : 0;
             BlankZero = true;
             Editable = false;

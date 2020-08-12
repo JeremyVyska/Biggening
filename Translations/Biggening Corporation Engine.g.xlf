@@ -48,6 +48,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Instance - Field Research Points Per Op - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 677759022 - Field 772327277 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Maximum Doc. Lines Per Op</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Instance - Field Maximum Doc. Lines Per Op - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 677759022 - Field 1207827862 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Power Upgrade Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -107,6 +112,11 @@
           <source>Research Points Per Op.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template - Field Research Points Per Op - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1340414549 - Field 772327277 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Maximum Doc. Lines Per Op</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template - Field Maximum Doc. Lines Per Op - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1270744385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Bot Error Log</source>
@@ -743,6 +753,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Player Management - NamedType SetupCompletedMsg</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1769831807 - NamedType 1800867797" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Not assigned to a Location, sleeping.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Inv-Basic - NamedType UnassignedBotMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1769831807 - NamedType 1398461833" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Received %1 fully and %2 partially.  Shipped %3 fully and %4 partially.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Inv-Basic - NamedType OperationSuccessMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1769831807 - NamedType 4221683324" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No documents waiting to be processed, sleeping.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Inv-Basic - NamedType NoWorkAvailableMsg</note>
+        </trans-unit>
         <trans-unit id="Page 3791836244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Buy a Bot</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1079,7 +1104,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Location - Field Upgrade Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2827781225 - Field 3917791686 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
-          <source>Maximum Units</source>
+          <source>Total Stock</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Location - Field Total Stock - Property Caption</note>
         </trans-unit>

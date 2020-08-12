@@ -9,9 +9,7 @@ codeunit 88006 "BCS Bot Purchase"
         DocNo: Text;
         i: Integer;
     begin
-        //Error('Hello Stream!');
-        //ResultText := StrSubstNo('In the future, I would make %1 purchases.', Rec."Operations Per Day");
-
+        // Safety Measure
         if (Rec."Bot Tier" = 0) then begin
             Rec."Bot Tier" := 1;
             Rec.Modify(true);
@@ -29,14 +27,14 @@ codeunit 88006 "BCS Bot Purchase"
         if Rec."Assignment Code" <> '' then begin
 
             //TODO: Count of Released PO's, if any, POST BATCH on Status = Released.
-            foreach DocNo in Documents do
+            /* foreach DocNo in Documents do
                 DocListBuilder.Append(DocNo + ', ');
             DocListBuilder.Remove(DocListBuilder.Length - 2, 2);
             Commit();
             foreach DocNo in Documents do begin
                 PostPO(DocNo);
                 Commit();
-            end;
+            end; */
             ResultText := StrSubstNo('%1: %2', Documents.Count, DocListBuilder.ToText());
         end;
     end;

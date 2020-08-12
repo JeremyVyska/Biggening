@@ -56,6 +56,14 @@ table 88000 "BCS Bot Template"
             DecimalPlaces = 0 : 0;
             BlankZero = true;
         }
+
+        field(90; "Maximum Doc. Lines Per Op"; Decimal)
+        {
+            DataClassification = SystemMetadata;
+            Caption = 'Maximum Doc. Lines Per Op';
+            DecimalPlaces = 0 : 0;
+            BlankZero = true;
+        }
     }
 
     keys

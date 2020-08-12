@@ -58,6 +58,14 @@ page 88002 "BCS Bot Instance List"
                     ApplicationArea = All;
                     Visible = false;
                 }
+                field("Research Points Per Op"; "Research Points Per Op")
+                {
+                    ApplicationArea = All;
+                }
+                field("Maximum Doc. Lines Per Op"; "Maximum Doc. Lines Per Op")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }
