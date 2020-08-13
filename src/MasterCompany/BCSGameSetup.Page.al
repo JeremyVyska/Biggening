@@ -38,6 +38,30 @@ page 88007 "BCS Game Setup"
 
 
             }
+            group(Location)
+            {
+                Caption = 'Location';
+                field("Location No. Series"; "Location No. Series")
+                {
+                    ApplicationArea = All;
+                }
+                field("Basic Loc. Max. Bots"; "Basic Loc. Max. Bots")
+                {
+                    ApplicationArea = All;
+                }
+                field("Basic Loc. Max. Units"; "Basic Loc. Max. Units")
+                {
+                    ApplicationArea = All;
+                }
+                field("Adv. Loc. Max. Bots"; "Adv. Loc. Max. Bots")
+                {
+                    ApplicationArea = All;
+                }
+                field("Adv. Loc. Max. Units"; "Adv. Loc. Max. Units")
+                {
+                    ApplicationArea = All;
+                }
+            }
         }
     }
 

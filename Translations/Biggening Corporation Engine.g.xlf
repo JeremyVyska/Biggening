@@ -188,10 +188,50 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Purch. Pros. Base Max Quantity - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 3053492259 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location No. Series</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Location No. Series - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2716325568 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Basic - Maximum Bots</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Basic Loc. Max. Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 466978061 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Basic - Maximum Units</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Basic Loc. Max. Units - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 1054122965 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adv - Maximum Bots</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Adv. Loc. Max. Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2915397744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adv - Maximum Units</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Adv. Loc. Max. Units - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - NamedType 632351327" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update %1 in all Basic Locations across Companies?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - NamedType UpdateBasicLocationSettingsQst</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - NamedType 1868693256" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update %1 in all Advanced Locations across Companies?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - NamedType UpdateAdvLocationSettingsQst</note>
+        </trans-unit>
         <trans-unit id="Page 4246738589 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Game Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Game Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4246738589 - Control 3891454143 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Game Setup - Control Location - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1671890893 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Master Item</source>
@@ -728,10 +768,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Total Bot Count - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1882246606 - NamedType 1528307622" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Codeunit 2183177400 - NamedType 1528307622" size-unit="char" translate="yes" xml:space="preserve">
           <source>Location %1 has a Capacity of %2 and cannot accept %3 units because of the %4 already in stock.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Location Checks - NamedType LocationOvercapacityErr</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Location Management - NamedType LocationOvercapacityErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 1637666299 - NamedType 445785139" size-unit="char" translate="yes" xml:space="preserve">
           <source>Company %1 is not marked as a Master company, so cannot be used as a source.</source>
@@ -1072,6 +1112,31 @@
           <source>Player Information</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Location Card - Control PlayerInfo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3445643615 - Action 3064932810 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 105083977">
+          <source>Buy Location</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Location List - Action PurchaseLocation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3445643615 - Action 3064932810 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 105083977">
+          <source>Acquire a new Location for Inventory for a price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Location List - Action PurchaseLocation - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3445643615 - Action 3064932810 - Method 1377591017 - NamedType 2383351714" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 105083977">
+          <source>Which type of Location do you wish to buy?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Location List - Action PurchaseLocation - Method OnAction - NamedType WhichLocationQst</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3445643615 - Action 3064932810 - Method 1377591017 - NamedType 3496296870" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 105083977">
+          <source>Basic</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Location List - Action PurchaseLocation - Method OnAction - NamedType BasicTok</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3445643615 - Action 3064932810 - Method 1377591017 - NamedType 531357133" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 105083977">
+          <source>Advanced</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Location List - Action PurchaseLocation - Method OnAction - NamedType AdvTok</note>
         </trans-unit>
         <trans-unit id="PageExtension 1933021926 - Control 3211120311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
           <source>Player Information &amp; Settings</source>
