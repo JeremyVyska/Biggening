@@ -162,17 +162,8 @@ codeunit 88005 "BCS Bot Dispatcher"
 
     local procedure LogError(var BotInstance: Record "BCS Bot Instance")
     var
-        BotErrLog: Record "BCS Bot Error Log";
+        BCSErrorMgmt: Codeunit "BCS Error Management";
     begin
-        Clear(BotErrLog);
-        BotErrLog.Init();
-        BotErrLog."Company Name" := CompanyName();
-        BotErrLog."Bot Type" := BotInstance."Bot Type";
-        BotErrLog."Bot Instance" := BotInstance."Instance ID";
-        BotErrLog."Posting Date" := WorkDate();
-        //BotErrLog.Description := BotPurchase.GetResultText();
-        BotErrLog."Error Message" := COPYSTR(GetLastErrorText(), 1, MAXSTRLEN(BotErrLog."Error Message"));
-        //TODO: Handle the whole error result with BLOB?
-        BotErrLog.Insert(true);
+        BCSErrorMgmt.ThrowPlayerBotError(BotInstance, GetLastErrorText());
     end;
 }

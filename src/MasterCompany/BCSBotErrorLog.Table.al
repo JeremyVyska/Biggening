@@ -21,6 +21,12 @@ table 88007 "BCS Bot Error Log"
             DataClassification = SystemMetadata;
         }
 
+        field(5; "Error Type"; Enum "BCS Error Type")
+        {
+            Caption = 'Error Type';
+            DataClassification = SystemMetadata;
+        }
+
         field(10; "Bot Instance"; Integer)
         {
             Caption = 'Bot Instance';
@@ -39,6 +45,12 @@ table 88007 "BCS Bot Error Log"
         field(50; "Error Message"; Text[200])
         {
             Caption = 'Error Message';
+            DataClassification = SystemMetadata;
+        }
+
+        field(60; "Acknowledged"; Boolean)
+        {
+            Caption = 'Acknowledged';
             DataClassification = SystemMetadata;
         }
     }

@@ -19,7 +19,13 @@ page 88003 "BCS Player Activities"
                     DrillDownPageId = "BCS Bot Instance List";
                     ToolTip = 'Current count of bots the company operates';
                 }
-
+                field("Bot Errors"; "Bot Errors")
+                {
+                    Caption = 'Bot Errors';
+                    ApplicationArea = Basic, Suite;
+                    DrillDownPageId = "BCS Bot Error Log";
+                    ToolTip = 'Current count of new bot related errors';
+                }
             }
         }
     }

@@ -15,6 +15,13 @@ table 88002 "BCS Player Cue"
             CalcFormula = count ("BCS Bot Instance");
             Editable = false;
         }
+
+        field(101; "Bot Errors"; Integer)
+        {
+            FieldClass = FlowField;
+            CalcFormula = count ("BCS Bot Error Log" where("Error Type" = const(PlayerError), Acknowledged = const(false)));
+            Editable = false;
+        }
     }
 
     keys

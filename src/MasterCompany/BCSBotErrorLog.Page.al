@@ -7,6 +7,7 @@ page 88010 "BCS Bot Error Log"
     SourceTable = "BCS Bot Error Log";
     UsageCategory = History;
     Editable = false;
+    Permissions = tabledata "BCS Bot Error Log" = m;
 
     layout
     {
@@ -15,6 +16,14 @@ page 88010 "BCS Bot Error Log"
             repeater(General)
             {
                 field("Entry No."; "Entry No.")
+                {
+                    ApplicationArea = All;
+                }
+                field("Error Type"; "Error Type")
+                {
+                    ApplicationArea = All;
+                }
+                field(Acknowledged; Acknowledged)
                 {
                     ApplicationArea = All;
                 }
@@ -43,4 +52,39 @@ page 88010 "BCS Bot Error Log"
         }
     }
 
+    actions
+    {
+        area(Processing)
+        {
+            action(Ack)
+            {
+                Caption = 'Acknowledge';
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedOnly = true;
+                Image = Approve;
+                Enabled = not Acknowledged;
+
+                trigger OnAction()
+                begin
+                    Rec.Acknowledged := true;
+                    Rec.Modify(true);
+                end;
+            }
+        }
+    }
+
+    trigger OnOpenPage()
+    var
+        PlayerMgmt: Codeunit "BCS Player Management";
+        IsAdmin: Boolean;
+    begin
+        IsAdmin := PlayerMgmt.SetIsAdmin();
+        if not IsAdmin then begin
+            FilterGroup(10);
+            SetRange("Error Type", "Error Type"::PlayerError);
+            FilterGroup(0);
+        end;
+
+    end;
 }

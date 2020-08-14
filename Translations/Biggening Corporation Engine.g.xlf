@@ -133,6 +133,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Error Log - Field Company Name - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1270744385 - Field 1905805420 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Error Log - Field Error Type - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1270744385 - Field 3981829876 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Instance</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -153,10 +158,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Error Log - Field Error Message - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1270744385 - Field 4259673360 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Acknowledged</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Error Log - Field Acknowledged - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1270744385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Bot Error Log</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Error Log - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1270744385 - Action 2189612435 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Acknowledge</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Error Log - Action Ack - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4246738589 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Primary Key</source>
@@ -768,6 +783,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Total Bot Count - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2002652694 - Field 2439377710 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Errors</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Bot Errors - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Codeunit 2183177400 - NamedType 1528307622" size-unit="char" translate="yes" xml:space="preserve">
           <source>Location %1 has a Capacity of %2 and cannot accept %3 units because of the %4 already in stock.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1048,6 +1068,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Total Bot Count - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 3412068102 - Control 2439377710 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Errors</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Bot Errors - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3412068102 - Control 2439377710 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Current count of new bot related errors</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Bot Errors - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 2116380514 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Player Role Center</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1197,6 +1227,16 @@
           <source>Biggening System Manager</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Profile System Manager - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2109408326 - EnumValue 2480707887 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Error Type - EnumValue SystemError - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2109408326 - EnumValue 1027943565 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Player</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Error Type - EnumValue PlayerError - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 980859205 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>
