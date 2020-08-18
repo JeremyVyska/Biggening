@@ -203,6 +203,26 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Purch. Pros. Base Max Quantity - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 3752983244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Prospect Effort</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Sales Prospect Effort - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 4185148003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Pros. Tier Multiplier</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Sales Pros. Tier Multiplier - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 432929872 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Pros. Base Max Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Sales Pros. Base Max Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 3985902030 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Pros. Base Max Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Sales Pros. Base Max Quantity - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 4246738589 - Field 3053492259 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Location No. Series</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -412,6 +432,31 @@
           <source>BCS Bot Activity Log</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Activity Log - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3807868869 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Item Customer</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Item Customer - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3807868869 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Item Customer - Field Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3807868869 - Field 4190130733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Item Customer - Field Customer No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3807868869 - Field 441237434 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Item Customer - Field Customer Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3807868869 - Field 3450651614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variant Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Item Customer - Field Variant Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 57229516 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Power Ledger</source>
@@ -1123,6 +1168,31 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Setup Overview - Action CopyTO - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 846977156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Customer Catalog</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Item Customer Catalog - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 846977156 - Control 568743302 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the item the customer is willing to Salesase.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Item Customer Catalog - Control Item No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 846977156 - Control 3450651614 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the variant of the item on the line.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Item Customer Catalog - Control Variant Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 846977156 - Control 4190130733 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the Customer is willing to Salesase this Item.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Item Customer Catalog - Control Customer No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 846977156 - Control 441237434 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number that the Customer uses for this item.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Item Customer Catalog - Control Customer Item No. - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 956387415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Power Usage Ledger</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1262,6 +1332,16 @@
           <source>Purchase Prospect Effort</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Company Information - Field Purchase Prospect Effort - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1779811491 - Field 3752983244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3469146285">
+          <source>Sales Prospect Effort</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Company Information - Field Sales Prospect Effort - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2791412414 - Action 2793973994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>Item Catalog</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Customer Card - Action ItemCatalog - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2706270701 - Control 3211120311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Player Information &amp; Settings</source>

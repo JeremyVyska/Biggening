@@ -80,4 +80,36 @@ table 88012 "BCS Prospect"
 
         exit(Vendor."No.");
     end;
+
+    procedure ConvertToCustomer(): Code[20]
+    var
+        Customer: Record Customer;
+        ItemCustomer: Record "BCS Item Customer";
+        RandomPool: Record "BCS Random Entity Name Pool";
+        Trades: Record "BCS Prospect Trades";
+    begin
+        // No, Name, Gen. Bus. Posting, Customer Posting
+        Customer.Insert(true);
+        Customer.Name := Rec.Name;
+        if (Rec."Random Entry Source No." <> 0) and (RandomPool.Get(Rec."Random Entry Source No.")) then begin
+            Customer.Address := RandomPool.Address;
+            Customer.Contact := RandomPool."Contact Name";
+            Customer."E-Mail" := RandomPool.Email;
+        end;
+        //TODO: These should come from Game Setup
+        Customer."Gen. Bus. Posting Group" := 'TIER1';
+        Customer."Customer Posting Group" := 'CUST';
+        Customer.Modify(true);
+
+        //Migrate all trades to Item Customer
+        Trades.SetRange("Prospect No.", Rec."No.");
+        if Trades.FindSet(false) then
+            repeat
+                ItemCustomer."Customer No." := Customer."No.";
+                ItemCustomer."Item No." := Trades."Trade Code";
+                ItemCustomer.Insert(true);
+            until Trades.Next() = 0;
+
+        exit(Customer."No.");
+    end;
 }

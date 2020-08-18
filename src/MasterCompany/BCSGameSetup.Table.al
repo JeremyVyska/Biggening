@@ -41,6 +41,30 @@ table 88004 "BCS Game Setup"
             InitValue = 50;
         }
 
+        field(30; "Sales Prospect Effort"; Integer)
+        {
+            Caption = 'Sales Prospect Effort';
+            DataClassification = SystemMetadata;
+        }
+        field(31; "Sales Pros. Tier Multiplier"; Decimal)
+        {
+            Caption = 'Sales Pros. Tier Multiplier';
+            DataClassification = SystemMetadata;
+            InitValue = 1;
+        }
+        field(32; "Sales Pros. Base Max Orders"; Integer)
+        {
+            Caption = 'Sales Pros. Base Max Orders';
+            DataClassification = SystemMetadata;
+            InitValue = 10;
+        }
+        field(33; "Sales Pros. Base Max Quantity"; Integer)
+        {
+            Caption = 'Sales Pros. Base Max Quantity';
+            DataClassification = SystemMetadata;
+            InitValue = 50;
+        }
+
         field(40; "Location No. Series"; Code[20])
         {
             Caption = 'Location No. Series';
