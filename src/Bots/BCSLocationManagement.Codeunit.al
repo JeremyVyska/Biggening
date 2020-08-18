@@ -24,7 +24,7 @@ codeunit 88018 "BCS Location Management"
         //TODO: Inventory Setup : Setup driven
         InvtPostingSetup."Location Code" := Location.code;
         InvtPostingSetup."Invt. Posting Group Code" := 'ITEM';
-        InvtPostingSetup."Inventory Account" := '1420';
+        InvtPostingSetup."Inventory Account" := '1300';
         InvtPostingSetup.Insert(true);
 
         LocationCard.SetRecord(Location);
