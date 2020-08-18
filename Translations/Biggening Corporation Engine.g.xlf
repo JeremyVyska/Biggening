@@ -788,6 +788,116 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Bot Errors - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 988425705 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Season</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Season - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 988425705 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Season - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 988425705 - Field 1090351696 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Active</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Season - Field Active - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 988425705 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Season - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 988425705 - Field 1291660215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Built On Version</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Season - Field Built On Version - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 988425705 - Field 75197648 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Participants</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Season - Field Participants - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Snapshot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 722776286 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Season No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Season No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 1386389920 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Player No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Player No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 978466758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Game Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Game Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 586081679 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wealth Balance</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Wealth Balance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 1790589750 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wealth Net Change</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Wealth Net Change - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 4057230383 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location Counts</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Location Counts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 1537564488 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Counts</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Customer Counts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 54065872 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor Counts</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Vendor Counts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 4074595926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Power Usage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Power Usage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2062530576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Snapshot Bots</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2062530576 - Field 722776286 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Season No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot Bots - Field Season No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2062530576 - Field 1386389920 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Player No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot Bots - Field Player No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2062530576 - Field 978466758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Game Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot Bots - Field Game Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2062530576 - Field 3194883691 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot Bots - Field Bot Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2062530576 - Field 242570470 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Count</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot Bots - Field Bot Count - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Codeunit 2183177400 - NamedType 1528307622" size-unit="char" translate="yes" xml:space="preserve">
           <source>Location %1 has a Capacity of %2 and cannot accept %3 units because of the %4 already in stock.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1112,6 +1222,26 @@
           <source>Set up core functionality such as sales tax, sending documents as email, and approval workflow by running through a few pages that guide you through the information.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Assisted Setup - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 130879199 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Season List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Season List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1592444734 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Snapshot Bot Listpart</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Snapshot Bot Listpart - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3647718720 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Snapshot List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Snapshot List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3647718720 - Control 3154575163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bots By Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Snapshot List - Control BCSBotList - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 253072695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Import Master Items</source>
