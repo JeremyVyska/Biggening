@@ -11,8 +11,14 @@ codeunit 88000 "BCS Master Company"
         CustPostingGroups: Record "Customer Posting Group";
         CustDiscGroups: Record "Customer Discount Group";
         PaymentTerms: Record "Payment Terms";
+        PaymentMethods: Record "Payment Method";
         VendPostingGroups: Record "Vendor Posting Group";
         InvPostingGroups: Record "Inventory Posting Group";
+        NoSeries: Record "No. Series";
+        NoSeriesLine: Record "No. Series Line";
+        SalesAndRecSetup: Record "Sales & Receivables Setup";
+        PurchAndPaySetup: Record "Purchases & Payables Setup";
+        InvtSetup: Record "Inventory Setup";
         DestGLAccount: Record "G/L Account";
         DestGenBusPosting: Record "Gen. Business Posting Group";
         DestGenProdPosting: Record "Gen. Product Posting Group";
@@ -20,8 +26,14 @@ codeunit 88000 "BCS Master Company"
         DestCustPostingGroups: Record "Customer Posting Group";
         DestCustDiscGroups: Record "Customer Discount Group";
         DestPaymentTerms: Record "Payment Terms";
+        DestPaymentMethods: Record "Payment Method";
         DestVendPostingGroups: Record "Vendor Posting Group";
         DestInvPostingGroups: Record "Inventory Posting Group";
+        DestNoSeries: Record "No. Series";
+        DestNoSeriesLine: Record "No. Series Line";
+        DestSalesAndRecSetup: Record "Sales & Receivables Setup";
+        DestPurchAndPaySetup: Record "Purchases & Payables Setup";
+        DestInvtSetup: Record "Inventory Setup";
         IsMasterCompany: Codeunit "BCS Is Master Company";
         DestGLAccountExists: Boolean;
         DestGenBusPostingExists: Boolean;
@@ -30,8 +42,14 @@ codeunit 88000 "BCS Master Company"
         DestCustPostingGroupsExists: Boolean;
         DestCustDiscGroupsExists: Boolean;
         DestPaymentTermsExists: Boolean;
+        DestPaymentMethodsExists: Boolean;
         DestVendPostingGroupsExists: Boolean;
         DestInvPostingGroupsExists: Boolean;
+        DestNoSeriesExists: Boolean;
+        DestNoSeriesLineExists: Boolean;
+        DestSalesAndRecSetupExists: Boolean;
+        DestPurchAndPaySetupExists: Boolean;
+        DestInvtSetupExists: Boolean;
     begin
         if not IsMasterCompany.IsMC() then
             Error(CopySourceMustBeMasterErr, CompanyName());
@@ -43,8 +61,14 @@ codeunit 88000 "BCS Master Company"
         DestCustPostingGroups.ChangeCompany(WhichCompany);
         DestCustDiscGroups.ChangeCompany(WhichCompany);
         DestPaymentTerms.ChangeCompany(WhichCompany);
+        DestPaymentMethods.ChangeCompany(WhichCompany);
         DestVendPostingGroups.ChangeCompany(WhichCompany);
         DestInvPostingGroups.ChangeCompany(WhichCompany);
+        DestNoSeries.ChangeCompany(WhichCompany);
+        DestNoSeriesLine.ChangeCompany(WhichCompany);
+        DestSalesAndRecSetup.ChangeCompany(WhichCompany);
+        DestPurchAndPaySetup.ChangeCompany(WhichCompany);
+        DestInvtSetup.ChangeCompany(WhichCompany);
 
         if GLAccount.FindSet(false) then
             repeat
@@ -116,6 +140,16 @@ codeunit 88000 "BCS Master Company"
                     DestPaymentTerms.Insert();
             until PaymentTerms.Next() = 0;
 
+        if PaymentMethods.FindSet(false) then
+            repeat
+                DestPaymentMethodsExists := DestPaymentMethods.Get(PaymentMethods."Code");
+                DestPaymentMethods.TransferFields(PaymentMethods, not DestPaymentMethodsExists);
+                if DestPaymentMethodsExists then
+                    DestPaymentMethods.Modify()
+                else
+                    DestPaymentMethods.Insert();
+            until PaymentMethods.Next() = 0;
+
         if VendPostingGroups.FindSet(false) then
             repeat
                 DestVendPostingGroupsExists := DestVendPostingGroups.Get(VendPostingGroups."Code");
@@ -135,7 +169,59 @@ codeunit 88000 "BCS Master Company"
                 else
                     DestInvPostingGroups.Insert();
             until InvPostingGroups.Next() = 0;
+
+        if NoSeries.FindSet(false) then
+            repeat
+                DestNoSeriesExists := DestNoSeries.Get(NoSeries."Code");
+                DestNoSeries.TransferFields(NoSeries, not DestNoSeriesExists);
+                if DestNoSeriesExists then
+                    DestNoSeries.Modify()
+                else
+                    DestNoSeries.Insert();
+            until NoSeries.Next() = 0;
+
+        if NoSeriesLine.FindSet(false) then
+            repeat
+                DestNoSeriesLineExists := DestNoSeriesLine.Get(NoSeriesLine."Series Code", NoSeriesLine."Line No.");
+                DestNoSeriesLine.TransferFields(NoSeriesLine, not DestNoSeriesLineExists);
+                if DestNoSeriesLineExists then
+                    DestNoSeriesLine.Modify()
+                else
+                    DestNoSeriesLine.Insert();
+            until NoSeriesLine.Next() = 0;
+
+        if SalesAndRecSetup.FindSet(false) then
+            repeat
+                DestSalesAndRecSetupExists := DestSalesAndRecSetup.Get(SalesAndRecSetup."Primary Key");
+                DestSalesAndRecSetup.TransferFields(SalesAndRecSetup, not DestSalesAndRecSetupExists);
+                if DestSalesAndRecSetupExists then
+                    DestSalesAndRecSetup.Modify()
+                else
+                    DestSalesAndRecSetup.Insert();
+            until SalesAndRecSetup.Next() = 0;
+
+        if PurchAndPaySetup.FindSet(false) then
+            repeat
+                DestPurchAndPaySetupExists := DestPurchAndPaySetup.Get(PurchAndPaySetup."Primary Key");
+                DestPurchAndPaySetup.TransferFields(PurchAndPaySetup, not DestPurchAndPaySetupExists);
+                if DestPurchAndPaySetupExists then
+                    DestPurchAndPaySetup.Modify()
+                else
+                    DestPurchAndPaySetup.Insert();
+            until PurchAndPaySetup.Next() = 0;
+
+        if InvtSetup.FindSet(false) then
+            repeat
+                DestInvtSetupExists := DestInvtSetup.Get(InvtSetup."Primary Key");
+                DestInvtSetup.TransferFields(InvtSetup, not DestInvtSetupExists);
+                if DestInvtSetupExists then
+                    DestInvtSetup.Modify()
+                else
+                    DestInvtSetup.Insert();
+            until InvtSetup.Next() = 0;
     end;
+
+
 
     var
         CopySourceMustBeMasterErr: Label 'Company %1 is not marked as a Master company, so cannot be used as a source.';

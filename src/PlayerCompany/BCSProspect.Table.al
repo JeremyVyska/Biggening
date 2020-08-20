@@ -67,6 +67,7 @@ table 88012 "BCS Prospect"
         //TODO: These should come from Game Setup
         Vendor."Gen. Bus. Posting Group" := 'TIER1';
         Vendor."Vendor Posting Group" := 'VEND';
+        Vendor."Payment Method Code" := 'AUTOPAY';
         Vendor.Modify(true);
 
         //Migrate all trades to Item Vendor
@@ -99,6 +100,7 @@ table 88012 "BCS Prospect"
         //TODO: These should come from Game Setup
         Customer."Gen. Bus. Posting Group" := 'TIER1';
         Customer."Customer Posting Group" := 'CUST';
+        Customer."Payment Method Code" := 'AUTOPAY';
         Customer.Modify(true);
 
         //Migrate all trades to Item Customer
