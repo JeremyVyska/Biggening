@@ -18,42 +18,48 @@ page 88007 "BCS Game Setup"
             }
             group(Purchasing)
             {
-                field("Purchase Prospect Effort"; "Sales Prospect Effort")
+                field("Purchase Prospect Effort"; "Purchase Prospect Effort")
                 {
                     ApplicationArea = All;
                 }
-                field("Purch. Pros. Tier Multiplier"; "Sales Pros. Tier Multiplier")
+                field("Purch. Pros. Tier Multiplier"; "Purch. Pros. Tier Multiplier")
                 {
                     ApplicationArea = All;
+                    Caption = 'Pros. Tier Multiplier';
                 }
 
-                field("Purch. Pros. Base Max Orders"; "Sales Pros. Base Max Orders")
+                field("Purch. Pros. Base Max Orders"; "Purch. Pros. Base Max Orders")
                 {
                     ApplicationArea = All;
+                    Caption = 'Pros. Base Max Orders';
                 }
-                field("Purch. Pros. Base Max Quantity"; "Sales Pros. Base Max Quantity")
+                field("Purch. Pros. Base Max Quantity"; "Purch. Pros. Base Max Quantity")
                 {
                     ApplicationArea = All;
+                    Caption = 'Pros. Base Max Quantity';
                 }
             }
-            group(Salesasing)
+            group(Sales)
             {
-                field("Salesase Prospect Effort"; "Sales Prospect Effort")
+                field("Sales Prospect Effort"; "Sales Prospect Effort")
                 {
                     ApplicationArea = All;
                 }
                 field("Sales. Pros. Tier Multiplier"; "Sales Pros. Tier Multiplier")
                 {
                     ApplicationArea = All;
+                    Caption = 'Pros. Tier Multiplier';
                 }
 
                 field("Sales. Pros. Base Max Orders"; "Sales Pros. Base Max Orders")
                 {
                     ApplicationArea = All;
+                    Caption = 'Pros. Base Max Orders';
                 }
                 field("Sales. Pros. Base Max Quantity"; "Sales Pros. Base Max Quantity")
                 {
                     ApplicationArea = All;
+                    Caption = 'Pros. Base Max Quantity';
                 }
 
             }

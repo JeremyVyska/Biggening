@@ -45,13 +45,14 @@ page 88016 "BCS Prospect List"
     {
         area(Processing)
         {
-            action(Convert)
+            action(ConvertToVend)
             {
                 Caption = 'Make Vendor';
                 Promoted = true;
                 PromotedIsBig = true;
                 PromotedCategory = Process;
                 Image = Vendor;
+                Enabled = Type = Type::Vendor;
 
                 trigger OnAction()
                 var
@@ -63,6 +64,28 @@ page 88016 "BCS Prospect List"
                     Vendor.Get(VendorNo);
                     Vendor.SetRecFilter();
                     Page.Run(0, Vendor);
+                end;
+            }
+
+            action(ConvertToCust)
+            {
+                Caption = 'Make Customer';
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
+                Image = Customer;
+                Enabled = Type = Type::Customer;
+
+                trigger OnAction()
+                var
+                    Customer: Record Customer;
+                    CustomerNo: Code[20];
+                begin
+                    CustomerNo := Rec.ConvertToCustomer();
+                    Rec.Delete(true);
+                    Customer.Get(CustomerNo);
+                    Customer.SetRecFilter();
+                    Page.Run(0, Customer);
                 end;
             }
         }

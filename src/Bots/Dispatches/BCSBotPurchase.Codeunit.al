@@ -15,10 +15,16 @@ codeunit 88006 "BCS Bot Purchase"
             Rec.Modify(true);
         end;
 
+
+
         for i := 1 to Rec.GetOpsPerDay() do begin
             // If the Purchasing Bot is assigned:
             if Rec."Assignment Code" <> '' then
-                Documents.Add(CreatePO(Rec."Assignment Code"))
+                if not AreAnyOrdersNeeded(Rec) then begin
+                    ResultText := StrSubstNo(NoOrdersNeededMsg, Rec."Assignment Code");
+                    exit;
+                end else
+                    Documents.Add(CreatePO(Rec))
             else
                 // Else, they will 'farm' for new suppliers
                 FishForProspect(Rec);
@@ -45,6 +51,67 @@ codeunit 88006 "BCS Bot Purchase"
     end;
 
 
+    local procedure AreAnyOrdersNeeded(var BotInstance: Record "BCS Bot Instance"): Boolean
+    var
+        Vend: Record Vendor;
+        VendItem: Record "Item Vendor";
+        Item: Record Item;
+    begin
+        // The bot is assigned to a vendor, get it.
+        if BotInstance."Assignment Code" <> '' then
+            exit(false);
+        Vend.Get(BotInstance."Assignment Code");
+
+        //Look at each Item the vendor supplies
+        VendItem.SetRange("Vendor No.", Vend."No.");
+        if VendItem.IsEmpty then
+            exit(false);
+        if VendItem.FindSet() then
+            repeat
+                //Check the balance of stock in that Vendor Location
+                Item.Get(VendItem."Item No.");
+                Item.SetRange("Location Filter", Vend."Location Code");
+                Item.CalcFields(Inventory, "Qty. on Purch. Order");
+
+                //Factor in the Incoming Supply
+                if (Item.Inventory + Item."Qty. on Purch. Order" <= Item."BCS Reorder Level") then
+                    //Spit out true if we need to reorder
+                    exit(true);
+            until VendItem.Next() = 0;
+    end;
+
+    local procedure WhatItemIsNeeded(var BotInstance: Record "BCS Bot Instance"): Code[20]
+    var
+        Vend: Record Vendor;
+        VendItem: Record "Item Vendor";
+        Item: Record Item;
+    begin
+        // The bot is assigned to a vendor, get it.
+        if BotInstance."Assignment Code" <> '' then
+            exit('');
+        Vend.Get(BotInstance."Assignment Code");
+
+        //Look at each Item the vendor supplies
+        VendItem.SetRange("Vendor No.", Vend."No.");
+        if VendItem.IsEmpty then
+            exit('');
+        if VendItem.FindSet() then
+            repeat
+                //Check the balance of stock in that Vendor Location
+                Item.Get(VendItem."Item No.");
+                Item.SetRange("Location Filter", Vend."Location Code");
+                Item.CalcFields(Inventory, "Qty. on Purch. Order");
+
+                //Factor in the Incoming Supply
+                if (Item.Inventory + Item."Qty. on Purch. Order" <= Item."BCS Reorder Level") then
+                    //Spit out true if we need to reorder
+                    exit(Item."No.");
+            until VendItem.Next() = 0;
+    end;
+
+
+
+
     /*
  
   .d8888b.                           888                 8888888b.   .d88888b.  
@@ -58,18 +125,18 @@ codeunit 88006 "BCS Bot Purchase"
  
 */
 
-    local procedure CreatePO(VendorNo: Code[20]): Code[20]
+    local procedure CreatePO(var BotInstance: Record "BCS Bot Instance"): Code[20]
     var
         PurchaseHeader: Record "Purchase Header";
     begin
         // Count of BOTH The open PO docs, and the posted docs
 
         PurchaseHeader.Validate("Document Type", PurchaseHeader."Document Type"::Order);
-        PurchaseHeader.Validate("Buy-from Vendor No.", VendorNo);
+        PurchaseHeader.Validate("Buy-from Vendor No.", BotInstance."Assignment Code");
         PurchaseHeader.Insert(true);
 
         //Testing, just one
-        CreateLine(PurchaseHeader);
+        CreateLine(BotInstance, PurchaseHeader);
 
         exit(PurchaseHeader."No.");
     end;
@@ -87,7 +154,7 @@ codeunit 88006 "BCS Bot Purchase"
  
 */
 
-    local procedure CreateLine(var PurchaseHeader: Record "Purchase Header")
+    local procedure CreateLine(var BotInstance: Record "BCS Bot Instance"; var PurchaseHeader: Record "Purchase Header")
     var
         PurchaseLine: Record "Purchase Line";
         NextLineNo: Integer;
@@ -100,7 +167,7 @@ codeunit 88006 "BCS Bot Purchase"
         PurchaseLine.Validate("Line No.", NextLineNo);
         PurchaseLine.Insert(true);
         PurchaseLine.Validate(Type, PurchaseLine.Type::Item);
-        PurchaseLine.Validate("No.", '1000');
+        PurchaseLine.Validate("No.", WhatItemIsNeeded(BotInstance));
         PurchaseLine.Validate(Quantity, Random(10) + 10);
         PurchaseLine.validate("Direct Unit Cost", Random(10) + 10);
         PurchaseLine.Modify(true);
@@ -199,8 +266,7 @@ codeunit 88006 "BCS Bot Purchase"
 
                         Trades.Reset();
                         Trades."Prospect No." := Prospect."No.";
-                        Trades."Trade Type" := Trades."Trade Type"::Item;
-                        Trades."Trade Code" := MasterItem.Code;
+                        Trades."Item No." := MasterItem.Code;
                         Trades.Insert(true);
                     end else
                         Error('');
@@ -252,4 +318,5 @@ codeunit 88006 "BCS Bot Purchase"
 
     var
         ResultText: Text[200];
+        NoOrdersNeededMsg: Label 'No orders are required from Vendor No. %1.';
 }

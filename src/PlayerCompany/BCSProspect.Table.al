@@ -75,7 +75,7 @@ table 88012 "BCS Prospect"
         if Trades.FindSet(false) then
             repeat
                 ItemVendor."Vendor No." := Vendor."No.";
-                ItemVendor."Item No." := Trades."Trade Code";
+                ItemVendor."Item No." := Trades."Item No.";
                 ItemVendor.Insert(true);
             until Trades.Next() = 0;
 
@@ -85,7 +85,7 @@ table 88012 "BCS Prospect"
     procedure ConvertToCustomer(): Code[20]
     var
         Customer: Record Customer;
-        ItemCustomer: Record "BCS Item Customer";
+        CustInterests: Record "BCS Customer Interest";
         RandomPool: Record "BCS Random Entity Name Pool";
         Trades: Record "BCS Prospect Trades";
     begin
@@ -103,13 +103,14 @@ table 88012 "BCS Prospect"
         Customer."Payment Method Code" := 'AUTOPAY';
         Customer.Modify(true);
 
-        //Migrate all trades to Item Customer
+        //Migrate all trades to Customer Interests
         Trades.SetRange("Prospect No.", Rec."No.");
         if Trades.FindSet(false) then
             repeat
-                ItemCustomer."Customer No." := Customer."No.";
-                ItemCustomer."Item No." := Trades."Trade Code";
-                ItemCustomer.Insert(true);
+                CustInterests."Customer No." := Customer."No.";
+                CustInterests."Item Category Code" := Trades."Item Category Code";
+                CustInterests."Prod. Posting Group" := Trades."Prod. Posting Group";
+                CustInterests.Insert(true);
             until Trades.Next() = 0;
 
         exit(Customer."No.");

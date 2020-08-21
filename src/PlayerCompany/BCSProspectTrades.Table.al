@@ -25,19 +25,23 @@ table 88013 "BCS Prospect Trades"
             DataClassification = SystemMetadata;
             AutoIncrement = true;
         }
-        field(20; "Trade Type"; Option)
+        field(30; "Item No."; Code[20])
         {
-            Caption = 'Trade Type';
+            Caption = 'Item No.';
             DataClassification = SystemMetadata;
-            OptionMembers = "Item","Item Category";
-            OptionCaption = 'Item,Item Category';
+            TableRelation = Item;
         }
-        field(30; "Trade Code"; Code[20])
+        field(40; "Prod. Posting Group"; Code[20])
         {
-            Caption = 'Trade Code';
+            Caption = 'Prod. Posting Group';
             DataClassification = SystemMetadata;
-            TableRelation = if ("Trade Type" = const(Item)) Item else
-            if ("Trade Type" = const("Item Category")) "Item Category";
+            TableRelation = "Gen. Product Posting Group";
+        }
+        field(50; "Item Category Code"; Code[20])
+        {
+            Caption = 'Item Category Code';
+            DataClassification = SystemMetadata;
+            TableRelation = "Item Category";
         }
     }
     keys

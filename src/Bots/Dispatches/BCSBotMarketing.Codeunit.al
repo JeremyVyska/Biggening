@@ -73,6 +73,13 @@ codeunit 88013 "BCS Bot Marketing"
             Prospect.Insert(true);
 
             // Trade Creation
+            Trades.Reset();
+            Trades."Prospect No." := Prospect."No.";
+            //TODO: More Eventing!  ... More everything
+            Trades."Prod. Posting Group" := 'CLASS1';
+            Trades."Item Category Code" := '';
+            Trades.Insert(true);
+            /*
             MasterItem.SetRange("Prod. Posting Group", 'CLASS1');
             IfRunTrigger := true;
             OnBeforeProspectTrades(Prospect, MasterItem, IfRunTrigger);
@@ -89,16 +96,13 @@ codeunit 88013 "BCS Bot Marketing"
                         TempMasterItem := MasterItem;
                         TempMasterItem.Insert(false);
 
-                        Trades.Reset();
-                        Trades."Prospect No." := Prospect."No.";
-                        Trades."Trade Type" := Trades."Trade Type"::Item;
-                        Trades."Trade Code" := MasterItem.Code;
-                        Trades.Insert(true);
+                        
                     end else
                         Error('');
                 end;
             end;
             OnAfterProspectTrades(Prospect, Trades);
+            */
         end;
     end;
 
