@@ -1008,10 +1008,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Inv-Basic - NamedType NoWorkAvailableMsg</note>
         </trans-unit>
+        <trans-unit id="Codeunit 3791836244 - NamedType 3995586570" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purch. Order %1 created for Vendor No. %2.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Purchase - NamedType POCreatedMsg</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3791836244 - NamedType 4201234458" size-unit="char" translate="yes" xml:space="preserve">
           <source>No orders are required from Vendor No. %1.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Purchase - NamedType NoOrdersNeededMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3791836244 - NamedType 4069759577" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor No. %1 already has %2 orders for that date.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Purchase - NamedType MaxOrdersPerDayReachedMsg</note>
         </trans-unit>
         <trans-unit id="Page 3791836244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Buy a Bot</source>

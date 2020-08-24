@@ -4,6 +4,8 @@ codeunit 88006 "BCS Bot Purchase"
 
     trigger OnRun()
     var
+        Vendor: Record Vendor;
+        PurchHeader: Record "Purchase Header";
         Documents: List of [Code[20]];
         DocListBuilder: TextBuilder;
         DocNo: Text;
@@ -15,34 +17,26 @@ codeunit 88006 "BCS Bot Purchase"
             Rec.Modify(true);
         end;
 
-
-
-        for i := 1 to Rec.GetOpsPerDay() do begin
-            // If the Purchasing Bot is assigned:
-            if Rec."Assignment Code" <> '' then
-                if not AreAnyOrdersNeeded(Rec) then begin
-                    ResultText := StrSubstNo(NoOrdersNeededMsg, Rec."Assignment Code");
-                    exit;
-                end else
-                    Documents.Add(CreatePO(Rec))
-            else
-                // Else, they will 'farm' for new suppliers
-                FishForProspect(Rec);
-        end;
-
+        // If the Purchasing Bot is assigned:
         if Rec."Assignment Code" <> '' then begin
-
-            //TODO: Count of Released PO's, if any, POST BATCH on Status = Released.
-            /* foreach DocNo in Documents do
-                DocListBuilder.Append(DocNo + ', ');
-            DocListBuilder.Remove(DocListBuilder.Length - 2, 2);
-            Commit();
-            foreach DocNo in Documents do begin
-                PostPO(DocNo);
-                Commit();
-            end; */
-            ResultText := StrSubstNo('%1: %2', Documents.Count, DocListBuilder.ToText());
-        end;
+            PurchHeader.SetRange("Document Type", PurchHeader."Document Type"::Order);
+            PurchHeader.SetRange("Buy-from Vendor No.", Rec."Assignment Code");
+            PurchHeader.SetRange("Posting Date", WorkDate());
+            Vendor.Get("Assignment Code");
+            if Vendor."Max Orders Per Day" = 0 then
+                Vendor."Max Orders Per Day" := 1;
+            if PurchHeader.Count >= Vendor."Max Orders Per Day" then begin
+                ResultText := StrSubstNo(MaxOrdersPerDayReachedMsg, Rec."Assignment Code", Vendor."Max Orders Per Day");
+                exit;
+            end;
+            if not AreAnyOrdersNeeded(Rec) then begin
+                ResultText := StrSubstNo(NoOrdersNeededMsg, Rec."Assignment Code");
+                exit;
+            end else
+                ResultText := StrSubstNo(POCreatedMsg, CreatePO(Rec), Rec."Assignment Code");
+        end else
+            // Else, they will 'farm' for new suppliers
+            FishForProspect(Rec);
     end;
 
     procedure GetResultText(): Text[200]
@@ -58,7 +52,7 @@ codeunit 88006 "BCS Bot Purchase"
         Item: Record Item;
     begin
         // The bot is assigned to a vendor, get it.
-        if BotInstance."Assignment Code" <> '' then
+        if BotInstance."Assignment Code" = '' then
             exit(false);
         Vend.Get(BotInstance."Assignment Code");
 
@@ -87,7 +81,7 @@ codeunit 88006 "BCS Bot Purchase"
         Item: Record Item;
     begin
         // The bot is assigned to a vendor, get it.
-        if BotInstance."Assignment Code" <> '' then
+        if BotInstance."Assignment Code" = '' then
             exit('');
         Vend.Get(BotInstance."Assignment Code");
 
@@ -130,7 +124,8 @@ codeunit 88006 "BCS Bot Purchase"
         PurchaseHeader: Record "Purchase Header";
     begin
         // Count of BOTH The open PO docs, and the posted docs
-
+        //TODO: Check Vendor has a Location before allowing.
+        //TODO: Check for Logistics Bots
         PurchaseHeader.Validate("Document Type", PurchaseHeader."Document Type"::Order);
         PurchaseHeader.Validate("Buy-from Vendor No.", BotInstance."Assignment Code");
         PurchaseHeader.Insert(true);
@@ -158,19 +153,26 @@ codeunit 88006 "BCS Bot Purchase"
     var
         PurchaseLine: Record "Purchase Line";
         NextLineNo: Integer;
+        i: Integer;
     begin
         //Later, NextLineNo ?
         NextLineNo := 10000;
+        if BotInstance."Maximum Doc. Lines Per Op" = 0 then
+            BotInstance."Maximum Doc. Lines Per Op" := 1;
 
-        PurchaseLine.Validate("Document Type", PurchaseHeader."Document Type");
-        PurchaseLine.Validate("Document No.", PurchaseHeader."No.");
-        PurchaseLine.Validate("Line No.", NextLineNo);
-        PurchaseLine.Insert(true);
-        PurchaseLine.Validate(Type, PurchaseLine.Type::Item);
-        PurchaseLine.Validate("No.", WhatItemIsNeeded(BotInstance));
-        PurchaseLine.Validate(Quantity, Random(10) + 10);
-        PurchaseLine.validate("Direct Unit Cost", Random(10) + 10);
-        PurchaseLine.Modify(true);
+        for i := 1 to BotInstance."Maximum Doc. Lines Per Op" do begin
+            PurchaseLine.Validate("Document Type", PurchaseHeader."Document Type");
+            PurchaseLine.Validate("Document No.", PurchaseHeader."No.");
+            PurchaseLine.Validate("Line No.", NextLineNo);
+            PurchaseLine.Insert(true);
+            PurchaseLine.Validate(Type, PurchaseLine.Type::Item);
+            PurchaseLine.Validate("No.", WhatItemIsNeeded(BotInstance));
+            //TODO: Event Throw
+            PurchaseLine.Validate(Quantity, BotInstance.GetOpsPerDay());
+            //TODO: Event Throw
+            PurchaseLine.validate("Direct Unit Cost", Random(10) + 10);
+            PurchaseLine.Modify(true);
+        end;
     end;
 
     /*
@@ -318,5 +320,7 @@ codeunit 88006 "BCS Bot Purchase"
 
     var
         ResultText: Text[200];
+        POCreatedMsg: Label 'Purch. Order %1 created for Vendor No. %2.';
         NoOrdersNeededMsg: Label 'No orders are required from Vendor No. %1.';
+        MaxOrdersPerDayReachedMsg: Label 'Vendor No. %1 already has %2 orders for that date.';
 }

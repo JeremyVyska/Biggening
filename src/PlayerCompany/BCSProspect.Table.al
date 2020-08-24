@@ -68,6 +68,9 @@ table 88012 "BCS Prospect"
         Vendor."Gen. Bus. Posting Group" := 'TIER1';
         Vendor."Vendor Posting Group" := 'VEND';
         Vendor."Payment Method Code" := 'AUTOPAY';
+
+        Vendor."Max Orders Per Day" := Rec."Maximum Orders Per Day";
+        Vendor."Max Quantity Per Day" := Rec."Maximum Quantity Per Order";
         Vendor.Modify(true);
 
         //Migrate all trades to Item Vendor
