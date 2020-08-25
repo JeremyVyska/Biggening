@@ -90,6 +90,40 @@ page 88007 "BCS Game Setup"
         }
     }
 
+    actions
+    {
+        area(Processing)
+        {
+            action(TickGameDay)
+            {
+                Image = CalculateCalendar;
+                PromotedIsBig = true;
+                Promoted = true;
+                PromotedCategory = Process;
+
+                trigger OnAction()
+                begin
+                    Rec.Validate("Game Date", CalcDate('<1D>', Rec."Game Date"));
+                    Rec.Modify(true);
+                end;
+            }
+            action(CalcMarket)
+            {
+                Image = AdjustExchangeRates;
+                PromotedIsBig = true;
+                Promoted = true;
+                PromotedCategory = Process;
+
+                trigger OnAction()
+                var
+                    MarketCalc: Codeunit "BCS Market Calculation";
+                begin
+                    MarketCalc.CalculateDailyPrices();
+                end;
+            }
+        }
+    }
+
     trigger OnOpenPage()
     begin
         Reset();

@@ -2,6 +2,7 @@ table 88019 "BCS Market Trades"
 {
     Caption = 'BCS Market Trades';
     DataClassification = ToBeClassified;
+    DataPerCompany = false;
 
     fields
     {

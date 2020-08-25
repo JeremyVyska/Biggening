@@ -9,5 +9,11 @@ codeunit 88002 "BCS Master Heartbeat"
         GameSetup.Get();
         GameSetup."Game Date" := CalcDate('<+1D>', GameSetup."Game Date");
         GameSetup.Modify(true);
+        OnMasterHeartbeat();
+    end;
+
+    [BusinessEvent(false)]
+    local procedure OnMasterHeartbeat()
+    begin
     end;
 }

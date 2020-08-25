@@ -11,7 +11,7 @@ page 88014 "BCS Master Item Card"
         {
             group(General)
             {
-                field(Code; Code)
+                field("No."; "No.")
                 {
                     ApplicationArea = All;
                 }
@@ -27,11 +27,16 @@ page 88014 "BCS Master Item Card"
                 {
                     ApplicationArea = All;
                 }
+                field("Initial Price"; "Initial Price")
+                {
+                    ApplicationArea = All;
+                }
+
             }
 
             part(BOM; "BCS Master Item Subpage")
             {
-                SubPageLink = "Item No." = field(Code);
+                SubPageLink = "Item No." = field("No.");
                 UpdatePropagation = both;
             }
         }

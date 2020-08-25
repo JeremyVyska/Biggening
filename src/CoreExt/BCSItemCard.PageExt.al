@@ -36,14 +36,41 @@ pageextension 88004 "BCS Item Card" extends "Item Card"
             group(PlayerInfo)
             {
                 Caption = 'Player Information & Settings';
-                field("BCS Reorder Level"; "BCS Reorder Level")
+                group(PlayerPurchase)
                 {
-                    ApplicationArea = All;
+                    Caption = 'Purchasing';
+
+                    field("BCS Reorder Level"; "BCS Reorder Level")
+                    {
+                        ApplicationArea = All;
+                    }
+                    field("BCS Maximum Stock"; "BCS Maximum Stock")
+                    {
+                        ApplicationArea = All;
+                    }
+                    field("BCS Max. Purch Price."; "BCS Max. Purch Price.")
+                    {
+                        ApplicationArea = All;
+                    }
+
                 }
-                field("BCS Maximum Stock"; "BCS Maximum Stock")
+                group(PlayerSales)
                 {
-                    ApplicationArea = All;
+                    field("BCS Min. Sales Price."; "BCS Min. Sales Price.")
+                    {
+                        ApplicationArea = All;
+                    }
+
                 }
+            }
+        }
+
+        addlast(factboxes)
+        {
+            part(BCSMarketPrice; "BCS Market Price")
+            {
+                Caption = 'Market Price';
+                SubPageLink = "Item No." = field("No.");
             }
         }
     }

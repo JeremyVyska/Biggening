@@ -298,15 +298,75 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Game Setup - Control Location - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2065873973 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Market Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2065873973 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Price - Field Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2065873973 - Field 924038635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Market Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Price - Field Market Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2065873973 - Field 429282430 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Calculated</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Price - Field Last Calculated - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2065873973 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Market Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Market Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3615126029 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Market Trades</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3615126029 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades - Field Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3615126029 - Field 3133801257 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades - Field Company - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3615126029 - Field 3192175264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades - Field Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3615126029 - Field 1113358281 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Trades</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades - Field Total Trades - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3615126029 - Field 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades - Field Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3615126029 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Market Trades</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Market Trades - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1671890893 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Master Item</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Item - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1671890893 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Code</source>
+        <trans-unit id="Table 1671890893 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Item - Field Code - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Item - Field No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1671890893 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
@@ -322,6 +382,11 @@
           <source>Prod. Posting Group</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Item - Field Prod. Posting Group - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1671890893 - Field 436357301 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Initial Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Item - Field Initial Price - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1686972629 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Master Item BOM</source>
@@ -1383,6 +1448,26 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Item Card - Control PlayerInfo - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2706270701 - Control 4005698708 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Purchasing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Item Card - Control PlayerPurchase - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2706270701 - Control 35685 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Market Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Item Card - Control BCSMarketPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3391519799 - Control 35685 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4178721393">
+          <source>Market Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Item List - Control BCSMarketPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3391519799 - Control 1871059367 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4178721393">
+          <source>Minimum Sales Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Item List - Control BCS Min. Sales Price. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1956061493 - Control 3211120311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3870787835">
           <source>Player Information</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1437,6 +1522,16 @@
           <source>Maximum Stock</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Item - Field BCS Maximum Stock - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 441721345 - Field 1833822561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>BCS Max. Purch Price.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Item - Field BCS Max. Purch Price. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 441721345 - Field 1871059367 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>BCS Min. Sales Price.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Item - Field BCS Min. Sales Price. - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2827781225 - Field 967894943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
           <source>Maximum Units</source>

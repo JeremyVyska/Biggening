@@ -261,14 +261,14 @@ codeunit 88006 "BCS Bot Purchase"
                         if MasterItem.FindFirst() then
                             MasterItem.Next(Random(MasterItem.Count) - 1);
                         j := j + 1
-                    until ((not TempMasterItem.Get(MasterItem.Code)) or (j > 20));
-                    if TempMasterItem.Code = '' then begin
+                    until ((not TempMasterItem.Get(MasterItem."No.")) or (j > 20));
+                    if TempMasterItem."No." = '' then begin
                         TempMasterItem := MasterItem;
                         TempMasterItem.Insert(false);
 
                         Trades.Reset();
                         Trades."Prospect No." := Prospect."No.";
-                        Trades."Item No." := MasterItem.Code;
+                        Trades."Item No." := MasterItem."No.";
                         Trades.Insert(true);
                     end else
                         Error('');

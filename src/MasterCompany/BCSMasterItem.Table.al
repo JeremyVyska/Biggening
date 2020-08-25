@@ -8,9 +8,9 @@ table 88010 "BCS Master Item"
 
     fields
     {
-        field(1; Code; Code[20])
+        field(1; "No."; Code[20])
         {
-            Caption = 'Code';
+            Caption = 'No.';
             DataClassification = SystemMetadata;
         }
         field(10; Description; Text[50])
@@ -30,10 +30,16 @@ table 88010 "BCS Master Item"
             DataClassification = SystemMetadata;
             TableRelation = "Gen. Product Posting Group";
         }
+
+        field(50; "Initial Price"; Decimal)
+        {
+            Caption = 'Initial Price';
+            DataClassification = SystemMetadata;
+        }
     }
     keys
     {
-        key(PK; Code)
+        key(PK; "No.")
         {
             Clustered = true;
         }

@@ -2,6 +2,7 @@ table 88021 "BCS Market Price"
 {
     Caption = 'BCS Market Price';
     DataClassification = ToBeClassified;
+    DataPerCompany = false;
 
     fields
     {
@@ -14,7 +15,13 @@ table 88021 "BCS Market Price"
         field(10; "Market Price"; Decimal)
         {
             Caption = 'Market Price';
-            DataClassification = ToBeClassified;
+            DataClassification = SystemMetadata;
+            DecimalPlaces = 0 : 0;
+        }
+        field(20; "Last Calculated"; Date)
+        {
+            Caption = 'Last Calculated';
+            DataClassification = SystemMetadata;
         }
     }
     keys

@@ -16,6 +16,20 @@ tableextension 88002 "BCS Item" extends Item
             DecimalPlaces = 0 : 0;
             BlankZero = true;
         }
+        field(88002; "BCS Max. Purch Price."; Decimal)
+        {
+            Caption = 'BCS Max. Purch Price.';
+            DataClassification = SystemMetadata;
+            DecimalPlaces = 0 : 0;
+            BlankZero = true;
+        }
+        field(88010; "BCS Min. Sales Price."; Decimal)
+        {
+            Caption = 'BCS Min. Sales Price.';
+            DataClassification = SystemMetadata;
+            DecimalPlaces = 0 : 0;
+            BlankZero = true;
+        }
     }
 
     var

@@ -14,7 +14,7 @@ page 88015 "BCS Master Item List"
         {
             repeater(General)
             {
-                field(Code; Code)
+                field("No."; "No.")
                 {
                     ApplicationArea = All;
                 }
@@ -27,6 +27,10 @@ page 88015 "BCS Master Item List"
                     ApplicationArea = All;
                 }
                 field("Prod. Posting Group"; "Prod. Posting Group")
+                {
+                    ApplicationArea = All;
+                }
+                field("Initial Price"; "Initial Price")
                 {
                     ApplicationArea = All;
                 }

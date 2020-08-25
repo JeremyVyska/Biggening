@@ -59,7 +59,7 @@ report 88000 "BCS Import Master Items"
                     MasterItem.Modify(true);
                 end else begin
                     // Create the item
-                    MasterItem.Validate(Code, WhichMasterItem);
+                    MasterItem.Validate("No.", WhichMasterItem);
                     MasterItem.Validate(Description, GetCellValue(RowNo, 2));
                     MasterItem.Validate("Prod. Posting Group", GetCellValue(RowNo, 3));
                     MasterItem.Validate("Item Category Code", GetCellValue(RowNo, 4));
