@@ -1158,6 +1158,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - NamedType NoBotTemplateFoundErr</note>
         </trans-unit>
+        <trans-unit id="Codeunit 2863822581 - NamedType 4069759577" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No. %1 already has %2 orders for that date.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Sales - NamedType MaxOrdersPerDayReachedMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2863822581 - NamedType 2743498177" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are no Items in stock over market price.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Sales - NamedType NoStockOverMarketPriceMsg</note>
+        </trans-unit>
         <trans-unit id="Page 458088940 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot List</source>
           <note from="Developer" annotates="general" priority="2"></note>

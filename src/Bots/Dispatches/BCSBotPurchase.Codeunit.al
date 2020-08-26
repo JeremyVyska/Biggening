@@ -50,6 +50,7 @@ codeunit 88006 "BCS Bot Purchase"
         Vend: Record Vendor;
         VendItem: Record "Item Vendor";
         Item: Record Item;
+        MarketCalc: Codeunit "BCS Market Calculation";
     begin
         // The bot is assigned to a vendor, get it.
         if BotInstance."Assignment Code" = '' then
@@ -70,7 +71,8 @@ codeunit 88006 "BCS Bot Purchase"
                 //Factor in the Incoming Supply
                 if (Item.Inventory + Item."Qty. on Purch. Order" <= Item."BCS Reorder Level") then
                     //Spit out true if we need to reorder
-                    exit(true);
+                    if (MarketCalc.GetMarketPrice(Item."No.") <= Item."BCS Max. Purch Price.") then
+                        exit(true);
             until VendItem.Next() = 0;
     end;
 
@@ -79,6 +81,7 @@ codeunit 88006 "BCS Bot Purchase"
         Vend: Record Vendor;
         VendItem: Record "Item Vendor";
         Item: Record Item;
+        MarketCalc: Codeunit "BCS Market Calculation";
     begin
         // The bot is assigned to a vendor, get it.
         if BotInstance."Assignment Code" = '' then
@@ -99,7 +102,8 @@ codeunit 88006 "BCS Bot Purchase"
                 //Factor in the Incoming Supply
                 if (Item.Inventory + Item."Qty. on Purch. Order" <= Item."BCS Reorder Level") then
                     //Spit out true if we need to reorder
-                    exit(Item."No.");
+                    if (MarketCalc.GetMarketPrice(Item."No.") <= Item."BCS Max. Purch Price.") then
+                        exit(Item."No.");
             until VendItem.Next() = 0;
     end;
 
@@ -130,8 +134,7 @@ codeunit 88006 "BCS Bot Purchase"
         PurchaseHeader.Validate("Buy-from Vendor No.", BotInstance."Assignment Code");
         PurchaseHeader.Insert(true);
 
-        //Testing, just one
-        CreateLine(BotInstance, PurchaseHeader);
+        CreateLines(BotInstance, PurchaseHeader);
 
         exit(PurchaseHeader."No.");
     end;
@@ -149,13 +152,13 @@ codeunit 88006 "BCS Bot Purchase"
  
 */
 
-    local procedure CreateLine(var BotInstance: Record "BCS Bot Instance"; var PurchaseHeader: Record "Purchase Header")
+    local procedure CreateLines(var BotInstance: Record "BCS Bot Instance"; var PurchaseHeader: Record "Purchase Header")
     var
         PurchaseLine: Record "Purchase Line";
+        MarketCalc: Codeunit "BCS Market Calculation";
         NextLineNo: Integer;
         i: Integer;
     begin
-        //Later, NextLineNo ?
         NextLineNo := 10000;
         if BotInstance."Maximum Doc. Lines Per Op" = 0 then
             BotInstance."Maximum Doc. Lines Per Op" := 1;
@@ -164,13 +167,14 @@ codeunit 88006 "BCS Bot Purchase"
             PurchaseLine.Validate("Document Type", PurchaseHeader."Document Type");
             PurchaseLine.Validate("Document No.", PurchaseHeader."No.");
             PurchaseLine.Validate("Line No.", NextLineNo);
+            NextLineNo := NextLineNo + 10000;
             PurchaseLine.Insert(true);
             PurchaseLine.Validate(Type, PurchaseLine.Type::Item);
             PurchaseLine.Validate("No.", WhatItemIsNeeded(BotInstance));
-            //TODO: Event Throw
+            //TODO: Event Throw - Max Vendor Quantity per day
             PurchaseLine.Validate(Quantity, BotInstance.GetOpsPerDay());
             //TODO: Event Throw
-            PurchaseLine.validate("Direct Unit Cost", Random(10) + 10);
+            PurchaseLine.validate("Direct Unit Cost", MarketCalc.GetMarketPrice(PurchaseLine."No."));
             PurchaseLine.Modify(true);
         end;
     end;

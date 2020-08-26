@@ -53,9 +53,41 @@ codeunit 88021 "BCS Market Calculation"
                     MarketPrice."Last Calculated" := WorkDate();
                     MarketPrice.Modify(true);
                 end;
+                SafeStoreMarketPrice(MasterItem."No.", MarketPrice."Market Price");
             until MasterItem.Next() = 0;
     end;
 
+    procedure GetMarketPrice(ItemNo: Code[20]): Decimal
+    var
+        MarketPrice: Record "BCS Market Price";
+    begin
+        if MarketPrice.Get(ItemNo) then
+            exit(MarketPrice."Market Price");
+        exit(0);
+    end;
+
+    procedure SafeStoreMarketPrice(ItemNo: Code[20]; Price: Decimal)
+    var
+        Player: Record "BCS Player";
+        MarketTrades: Record "BCS Market Trades";
+    begin
+        MarketTrades.SetRange("Item No.", ItemNo);
+        MarketTrades.SetRange(Date, WorkDate());
+        if Player.FindSet() then
+            repeat
+                MarketTrades.SetRange(Company, Player."Company Name");
+                if not MarketTrades.FindFirst() then begin
+                    MarketTrades."Item No." := ItemNo;
+                    MarketTrades.Date := WorkDate();
+                    MarketTrades.Company := Player."Company Name";
+                    MarketTrades.Price := Price;
+                    MarketTrades.Insert(true);
+                end else begin
+                    MarketTrades.Price := Price;
+                    MarketTrades.Modify(true);
+                end;
+            until Player.Next() = 0;
+    end;
 
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"BCS Master Heartbeat", 'OnMasterHeartbeat', '', true, true)]
