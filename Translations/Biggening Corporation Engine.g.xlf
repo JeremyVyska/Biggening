@@ -1163,6 +1163,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control AssignmentStep - Property InstructionalText</note>
         </trans-unit>
+        <trans-unit id="Page 3791836244 - Control 629510381 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Assignment Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control Assignment - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3791836244 - Control 3307620804 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Step 4</source>
           <note from="Developer" annotates="general" priority="2"></note>

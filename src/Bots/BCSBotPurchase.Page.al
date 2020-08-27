@@ -3,7 +3,8 @@ page 88005 "BCS Bot Purchase"
     Caption = 'Buy a Bot';
     PageType = NavigatePage;
     AdditionalSearchTerms = 'bots,purchasing';
-    SourceTable = "Company Information";
+    SourceTable = "BCS Bot Instance";
+    SourceTableTemporary = true;
 
     layout
     {
@@ -14,7 +15,7 @@ page 88005 "BCS Bot Purchase"
                 Visible = WhichStep = 1;
                 Caption = 'Bot Type';
                 InstructionalText = 'Select the Type of Bot and possibly which Tier';
-                field(chooseBotType; WhichBotType)
+                field(chooseBotType; Rec."Bot Type")
                 {
                     ApplicationArea = all;
                     Caption = 'Bot Types';
@@ -22,6 +23,7 @@ page 88005 "BCS Bot Purchase"
                     trigger OnValidate()
                     begin
                         SetControls();
+                        Rec."Bot Type" := Rec."Bot Type";
                     end;
                 }
             }
@@ -35,6 +37,12 @@ page 88005 "BCS Bot Purchase"
             {
                 Visible = WhichStep = 3;
                 InstructionalText = 'Step 3';
+
+                field(Assignment; Rec."Assignment Code")
+                {
+                    Caption = 'Assignment Code';
+                    ApplicationArea = all;
+                }
             }
             group(ConfirmStep)
             {
@@ -87,14 +95,14 @@ page 88005 "BCS Bot Purchase"
                     BotMgmt: Codeunit "BCS Bot Management";
                 begin
                     //TODO: Replace with correct bot template logic
-                    BotTemplate.SetRange("Bot Type", WhichBotType);
+                    BotTemplate.SetRange("Bot Type", Rec."Bot Type");
                     if BotTemplate.FindFirst() then begin
 
                         Message(BotPurchasedMsg, BotMgmt.PurchaseBot(BotTemplate.Code));
 
                         CurrPage.Close();
                     end else
-                        Error(NoBotTemplateFoundErr, WhichBotType);
+                        Error(NoBotTemplateFoundErr, Rec."Bot Type");
                 end;
             }
         }
@@ -103,7 +111,7 @@ page 88005 "BCS Bot Purchase"
     local procedure SetControls()
     begin
         ActionBackAllowed := WhichStep > 1;
-        ActionNextAllowed := (WhichStep < 4) AND (WhichBotType <> WhichBotType::" ");
+        ActionNextAllowed := (WhichStep < 4) AND (Rec."Bot Type" <> Rec."Bot Type"::" ");
         //TODO Allow/disallow based on criteria
         ActionFinishAllowed := WhichStep = 4;
     end;
@@ -118,7 +126,7 @@ page 88005 "BCS Bot Purchase"
 
         if WhichStep = 3 then begin
             //TODO - do we need to be here?
-            if (WhichBotType in [WhichBotType::Sales, WhichBotType::Purchasing]) then begin
+            if (Rec."Bot Type" in [Rec."Bot Type"::Sales, Rec."Bot Type"::Purchasing, Rec."Bot Type"::"Inventory-Basic", Rec."Bot Type"::"Inventory-Advanced"]) then begin
 
             end else
                 if (WhichDirection > 0) then //Nexting
@@ -133,11 +141,12 @@ page 88005 "BCS Bot Purchase"
     begin
         WhichStep := 1;
         SetControls();
+        Rec.Init();
+        Rec.Insert();
     end;
 
     var
         WhichStep: Integer;
-        WhichBotType: Enum "BCS Bot Type";
         ActionBackAllowed: Boolean;
         ActionNextAllowed: Boolean;
         ActionFinishAllowed: Boolean;

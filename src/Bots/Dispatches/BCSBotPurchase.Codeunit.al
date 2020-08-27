@@ -179,31 +179,6 @@ codeunit 88006 "BCS Bot Purchase"
         end;
     end;
 
-    /*
-
-8888888b.                   888         8888888b.   .d88888b.  
-888   Y88b                  888         888   Y88b d88P" "Y88b 
-888    888                  888         888    888 888     888 
-888   d88P .d88b.  .d8888b  888888      888   d88P 888     888 
-8888888P" d88""88b 88K      888         8888888P"  888     888 
-888       888  888 "Y8888b. 888         888        888     888 
-888       Y88..88P      X88 Y88b.       888        Y88b. .d88P 
-888        "Y88P"   88888P'  "Y888      888         "Y88888P"  
-
-*/
-
-    local procedure PostPO(PurchaseOrderNo: Code[20])
-    var
-        PurchaseHeader: Record "Purchase Header";
-        PurchPost: Codeunit "Purch.-Post";
-    begin
-        if PurchaseHeader.Get(PurchaseHeader."Document Type"::Order, PurchaseOrderNo) then begin
-            PurchaseHeader.Receive := true;
-            PurchaseHeader.Invoice := true;
-            PurchPost.SetPostingFlags(PurchaseHeader);
-            PurchPost.Run(PurchaseHeader);
-        end;
-    end;
 
 
     /*

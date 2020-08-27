@@ -27,6 +27,26 @@ codeunit 88008 "BCS Bot Inv-Basic"
             for i := 1 to Rec.GetOpsPerDay() do begin
                 ActivityCompleted := false;
                 // Look for Prior To WorkDate Shipments
+                if not ActivityCompleted then begin
+                    SalesHeader.SetCurrentKey("Posting Date");
+                    SalesHeader.SetAscending("Posting Date", false);
+                    SalesHeader.SetRange("Location Code", Rec."Assignment Code");
+                    SalesHeader.SetFilter("Posting Date", '..%1', CalcDate('<-1D>', WorkDate()));
+                    if SalesHeader.FindSet(false) then begin
+                        repeat
+                            if SalesHasOutstanding(SalesHeader) then begin
+                                LinesHandled := HandleShipment(Rec, SalesHeader); //COMMITS
+                                if (LinesHandled < 0) then // Fully Received
+                                    DocsHandled[1] := DocsHandled[1] + 1
+                                else
+                                    if (LinesHandled > 0) then
+                                        DocsHandled[2] := DocsHandled[2] + 1;
+                                if (LinesHandled <> 0) then
+                                    ActivityCompleted := true;
+                            end;
+                        until (SalesHeader.Next() = 0) or ActivityCompleted;
+                    end;
+                end;
 
                 // Look for Prior to WorkDate Receipts
                 if not ActivityCompleted then begin
@@ -36,7 +56,7 @@ codeunit 88008 "BCS Bot Inv-Basic"
                     PurchHeader.SetFilter("Posting Date", '..%1', CalcDate('<-1D>', WorkDate()));
                     if PurchHeader.FindSet(false) then begin
                         repeat
-                            if HasOutstanding(PurchHeader) then begin
+                            if PurchHasOutstanding(PurchHeader) then begin
                                 LinesHandled := HandleReceipt(Rec, PurchHeader); //COMMITS
                                 if (LinesHandled < 0) then // Fully Received
                                     DocsHandled[1] := DocsHandled[1] + 1
@@ -51,13 +71,30 @@ codeunit 88008 "BCS Bot Inv-Basic"
                 end;
 
                 // Look for Current Workdate shipments
+                if not ActivityCompleted then begin
+                    SalesHeader.SetRange("Posting Date", WorkDate());
+                    if SalesHeader.FindSet(false) then begin
+                        repeat
+                            if SalesHasOutstanding(SalesHeader) then begin
+                                LinesHandled := HandleShipment(Rec, SalesHeader); //COMMITS
+                                if (LinesHandled < 0) then // Fully Received
+                                    DocsHandled[1] := DocsHandled[1] + 1
+                                else
+                                    if (LinesHandled > 0) then
+                                        DocsHandled[2] := DocsHandled[2] + 1;
+                                if (LinesHandled <> 0) then
+                                    ActivityCompleted := true;
+                            end;
+                        until (SalesHeader.Next() = 0) or ActivityCompleted;
+                    end;
+                end;
 
                 // Look for Current Workdate receipt
                 if not ActivityCompleted then begin
                     PurchHeader.SetRange("Posting Date", WorkDate());
                     if PurchHeader.FindSet(false) then begin
                         repeat
-                            if HasOutstanding(PurchHeader) then begin
+                            if PurchHasOutstanding(PurchHeader) then begin
                                 LinesHandled := HandleReceipt(Rec, PurchHeader); //COMMITS
                                 if (LinesHandled < 0) then // Fully Received
                                     DocsHandled[1] := DocsHandled[1] + 1
@@ -80,7 +117,7 @@ codeunit 88008 "BCS Bot Inv-Basic"
 
     end;
 
-    local procedure HasOutstanding(var PurchaseHeader: Record "Purchase Header"): Boolean
+    local procedure PurchHasOutstanding(var PurchaseHeader: Record "Purchase Header"): Boolean
     var
         PurchaseLine: Record "Purchase Line";
     begin
@@ -99,7 +136,7 @@ codeunit 88008 "BCS Bot Inv-Basic"
         PurchaseLine.SetRange("Document No.", PurchaseHeader."No.");
         PurchaseLine.SetFilter("Outstanding Quantity", '>0');
         if PurchaseLine.Count <= WhichBot."Maximum Doc. Lines Per Op" then begin
-            PostPurchase(PurchaseHeader); //COMMITS
+            PostReceipt(PurchaseHeader); //COMMITS
             exit(-1);
         end else begin
             // All the PO lines, 0 our the Qty to Receive.
@@ -112,13 +149,13 @@ codeunit 88008 "BCS Bot Inv-Basic"
                 PurchaseLine.Validate("Qty. to Receive", PurchaseLine."Outstanding Quantity");
                 PurchaseLine.Modify(true);
             end;
-            PostPurchase(PurchaseHeader); //COMMITS
+            PostReceipt(PurchaseHeader); //COMMITS
             exit(WhichBot."Maximum Doc. Lines Per Op");
         end;
 
     end;
 
-    local procedure PostPurchase(var PurchaseHeader: Record "Purchase Header")
+    local procedure PostReceipt(var PurchaseHeader: Record "Purchase Header")
     var
         PurchPost: Codeunit "Purch.-Post";
     begin
@@ -129,6 +166,54 @@ codeunit 88008 "BCS Bot Inv-Basic"
         Commit();
     end;
 
+    local procedure SalesHasOutstanding(var SalesHeader: Record "Sales Header"): Boolean
+    var
+        SalesLine: Record "Sales Line";
+    begin
+        SalesLine.SetRange("Document Type", SalesHeader."Document Type");
+        SalesLine.SetRange("Document No.", SalesHeader."No.");
+        SalesLine.SetFilter("Outstanding Quantity", '>0');
+        Exit(not SalesLine.IsEmpty);
+    end;
+
+    local procedure HandleShipment(var WhichBot: Record "BCS Bot Instance"; var SalesHeader: Record "Sales Header"): Integer
+    var
+        SalesLine: Record "Sales Line";
+        i: Integer;
+    begin
+        SalesLine.SetRange("Document Type", SalesHeader."Document Type");
+        SalesLine.SetRange("Document No.", SalesHeader."No.");
+        SalesLine.SetFilter("Outstanding Quantity", '>0');
+        if SalesLine.Count <= WhichBot."Maximum Doc. Lines Per Op" then begin
+            PostShipment(SalesHeader); //COMMITS
+            exit(-1);
+        end else begin
+            // All the PO lines, 0 our the Qty to Receive.
+            SalesLine.ModifyAll("Qty. to Ship", 0);
+            SalesLine.ModifyAll("Qty. to Ship (base)", 0);
+
+            // Iterate through the SO Lines up to the max lines of the bot,
+            // setting Qty to Receive
+            for i := 1 to WhichBot."Maximum Doc. Lines Per Op" do begin
+                SalesLine.Validate("Qty. to Ship", SalesLine."Outstanding Quantity");
+                SalesLine.Modify(true);
+            end;
+            PostShipment(SalesHeader); //COMMITS
+            exit(WhichBot."Maximum Doc. Lines Per Op");
+        end;
+
+    end;
+
+    local procedure PostShipment(var SalesHeader: Record "Sales Header")
+    var
+        SalesPost: Codeunit "Sales-Post";
+    begin
+        SalesHeader.Ship := true;
+        SalesHeader.Invoice := false;
+        SalesPost.SetPostingFlags(SalesHeader);
+        SalesPost.Run(SalesHeader);
+        Commit();
+    end;
 
     procedure GetResultText(): Text[200]
     begin

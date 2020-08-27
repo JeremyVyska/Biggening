@@ -78,6 +78,9 @@ page 88002 "BCS Bot Instance List"
             {
                 Image = New;
                 Caption = 'Buy Bot';
+                Promoted = true;
+                PromotedCategory = New;
+                PromotedIsBig = true;
                 ApplicationArea = All;
 
                 trigger OnAction()

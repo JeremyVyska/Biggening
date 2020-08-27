@@ -50,6 +50,9 @@ codeunit 88023 "BCS Power Posting"
         GenJnl: Record "Gen. Journal Line";
         GenJnlPost: Codeunit "Gen. Jnl.-Post Line";
     begin
+        GenJnl.SetRange("Journal Template Name", 'GENERAL');
+        GenJnl.SetRange("Journal Batch Name", 'DEFAULT');
+        GenJnl.DeleteAll();
         GenJnl."Journal Template Name" := 'GENERAL';
         GenJnl."Journal Batch Name" := 'DEFAULT';
         GenJnl."Line No." := 10000;

@@ -62,6 +62,8 @@ codeunit 88018 "BCS Location Management"
     begin
         if PurchLine."Location Code" = '' then
             exit;
+        if not PurchHeader.Receive then
+            exit;
         if Location.Get(PurchLine."Location Code") and (Location."Maximum Units" <> 0) then begin
             Location.CalcFields("Total Stock");
             if (Location."Total Stock" + PurchLine."Qty. to Receive" > Location."Maximum Units") then
