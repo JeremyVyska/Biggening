@@ -11,6 +11,13 @@ table 88005 "BCS Power Ledger"
             DataClassification = SystemMetadata;
             AutoIncrement = true;
         }
+        field(5; "Entry Type"; Option)
+        {
+            Caption = 'Entry Type';
+            OptionMembers = Bot,Location;
+            OptionCaption = 'Bot,Location';
+            DataClassification = SystemMetadata;
+        }
         field(10; "Bot Instance"; Integer)
         {
             Caption = 'Bot Instance';

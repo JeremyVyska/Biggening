@@ -18,6 +18,10 @@ page 88008 "BCS Power Usage Ledger"
                 {
                     ApplicationArea = All;
                 }
+                field("Entry Type"; "Entry Type")
+                {
+                    ApplicationArea = All;
+                }
                 field("Bot Instance"; "Bot Instance")
                 {
                     ApplicationArea = All;
@@ -42,4 +46,25 @@ page 88008 "BCS Power Usage Ledger"
         }
     }
 
+    actions
+    {
+        area(Processing)
+        {
+            action(Post)
+            {
+                Caption = 'Post';
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true;
+                Image = Post;
+
+                trigger OnAction()
+                var
+                    PowerPost: Codeunit "BCS Power Posting";
+                begin
+                    PowerPost.PostYesterdayPower();
+                end;
+            }
+        }
+    }
 }

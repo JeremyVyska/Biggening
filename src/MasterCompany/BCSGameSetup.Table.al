@@ -127,6 +127,27 @@ table 88004 "BCS Game Setup"
                 UpdateAllLocations(Location.FieldNo("Maximum Units"), Location.FieldCaption("Maximum Units"), "Adv. Loc. Max. Units", false);
             end;
         }
+
+        field(50; "Cash Account"; Code[20])
+        {
+            Caption = 'Cash Account';
+            DataClassification = SystemMetadata;
+            TableRelation = "G/L Account" where("Direct Posting" = const(true));
+        }
+
+
+        field(60; "Bot Power Account"; Code[20])
+        {
+            Caption = 'Bot Power Account';
+            DataClassification = SystemMetadata;
+            TableRelation = "G/L Account" where("Direct Posting" = const(true));
+        }
+        field(61; "Loc. Power Account"; Code[20])
+        {
+            Caption = 'Loc. Power Account';
+            DataClassification = SystemMetadata;
+            TableRelation = "G/L Account" where("Direct Posting" = const(true));
+        }
     }
 
     keys

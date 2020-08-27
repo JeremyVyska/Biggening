@@ -16,6 +16,25 @@ page 88007 "BCS Game Setup"
                     ApplicationArea = All;
                 }
             }
+
+            group(GeneralLedger)
+            {
+                Caption = 'General Ledger';
+                field("Cash Account"; "Cash Account")
+                {
+                    ApplicationArea = All;
+                }
+                field("Bot Power Account"; "Bot Power Account")
+                {
+                    ApplicationArea = All;
+                }
+                field("Loc. Power Account"; "Loc. Power Account")
+                {
+                    ApplicationArea = All;
+                }
+
+            }
+
             group(Purchasing)
             {
                 field("Purchase Prospect Effort"; "Purchase Prospect Effort")

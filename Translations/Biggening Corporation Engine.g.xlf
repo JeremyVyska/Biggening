@@ -248,6 +248,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Adv. Loc. Max. Units - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2427499964 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cash Account</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Cash Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 1743148073 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Power Account</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Bot Power Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 1806059340 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Loc. Power Account</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Loc. Power Account - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 4246738589 - NamedType 632351327" size-unit="char" translate="yes" xml:space="preserve">
           <source>Update %1 in all Basic Locations across Companies?</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -262,6 +277,11 @@
           <source>BCS Game Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Game Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4246738589 - Control 2641605773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General Ledger</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Game Setup - Control GeneralLedger - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4246738589 - Control 805256149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Pros. Tier Multiplier</source>
@@ -557,6 +577,16 @@
           <source>Entry No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Power Ledger - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 57229516 - Field 149522872 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Power Ledger - Field Entry Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 57229516 - Field 149522872 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot,Location</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Power Ledger - Field Entry Type - Property OptionCaption</note>
         </trans-unit>
         <trans-unit id="Table 57229516 - Field 3981829876 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Instance</source>
@@ -1058,6 +1088,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Player Management - NamedType SetupCompletedMsg</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1815687023 - NamedType 3656885394" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PWR-%1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Power Posting - NamedType PowerDocNoTok</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1769831807 - NamedType 1800867797" size-unit="char" translate="yes" xml:space="preserve">
           <source>Not assigned to a Location, sleeping.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1292,6 +1327,11 @@
           <source>BCS Power Usage Ledger</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Power Usage Ledger - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 956387415 - Action 2282416948 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Power Usage Ledger - Action Post - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2080395824 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Prospect List</source>
