@@ -118,6 +118,71 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template - Field Maximum Doc. Lines Per Op - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1340414549 - Field 3499638444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Materials</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template - Field Materials - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1141274101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Bot Template Req.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template Req. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1141274101 - Field 3842292144 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Template Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template Req. - Field Bot Template Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1141274101 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template Req. - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1141274101 - Field 3839938362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Master Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template Req. - Field Master Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1141274101 - Field 2704404533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template Req. - Field Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3171401266 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Resource Check Buffer</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3171401266 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3171401266 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3171401266 - Field 878332001 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Requirement</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Field Requirement - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3171401266 - Field 2105307182 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inventory</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Field Inventory - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3171401266 - Field 2148673219 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Field Shortage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3171401266 - Field 2989465547 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>LineStyle</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Field LineStyle - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1270744385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Bot Error Log</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1063,6 +1128,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot Bots - Field Bot Count - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1555525260 - NamedType 3410486187" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Money</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Management - NamedType CashTok</note>
+        </trans-unit>
         <trans-unit id="Codeunit 2183177400 - NamedType 1528307622" size-unit="char" translate="yes" xml:space="preserve">
           <source>Location %1 has a Capacity of %2 and cannot accept %3 units because of the %4 already in stock.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1123,81 +1193,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Purchase - NamedType MaxOrdersPerDayReachedMsg</note>
         </trans-unit>
-        <trans-unit id="Page 3791836244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Buy a Bot</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3791836244 - Property 3863440606" size-unit="char" translate="yes" xml:space="preserve">
-          <source>bots,purchasing</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Property AdditionalSearchTerms</note>
-        </trans-unit>
-        <trans-unit id="Page 3791836244 - Control 759990093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Bot Type</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control BotTypeStep - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3791836244 - Control 759990093 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Select the Type of Bot and possibly which Tier</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control BotTypeStep - Property InstructionalText</note>
-        </trans-unit>
-        <trans-unit id="Page 3791836244 - Control 17839560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Bot Types</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control chooseBotType - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3791836244 - Control 3285058841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Resources Check</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control MaterialCheckStep - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3791836244 - Control 3285058841 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Review the Required Resources</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control MaterialCheckStep - Property InstructionalText</note>
-        </trans-unit>
-        <trans-unit id="Page 3791836244 - Control 663913547 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Step 3</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control AssignmentStep - Property InstructionalText</note>
-        </trans-unit>
-        <trans-unit id="Page 3791836244 - Control 629510381 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Assignment Code</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control Assignment - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3791836244 - Control 3307620804 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Step 4</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control ConfirmStep - Property InstructionalText</note>
-        </trans-unit>
-        <trans-unit id="Page 3791836244 - Action 2438272767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Back</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Action ActionBack - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3791836244 - Action 914282563 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Next</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Action ActionNext - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3791836244 - Action 3259912055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Finish</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Action ActionFinish - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3791836244 - NamedType 1108768241" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Bot %1 purchased.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - NamedType BotPurchasedMsg</note>
-        </trans-unit>
-        <trans-unit id="Page 3791836244 - NamedType 1196336861" size-unit="char" translate="yes" xml:space="preserve">
-          <source>No Bot Template of type %1 was found</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - NamedType NoBotTemplateFoundErr</note>
-        </trans-unit>
         <trans-unit id="Codeunit 2863822581 - NamedType 4069759577" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer No. %1 already has %2 orders for that date.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1228,6 +1223,91 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Instance List - Action PowerEntries - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1732090029 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Buy a Bot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Property 3863440606" size-unit="char" translate="yes" xml:space="preserve">
+          <source>bots,purchasing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Property AdditionalSearchTerms</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 759990093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control BotTypeStep - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 759990093 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the Type of Bot and possibly which Tier</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control BotTypeStep - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 17839560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Types</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control chooseBotType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 2803388714 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TemplatePicker</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control TemplatePicker - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 3285058841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resources Check</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control MaterialCheckStep - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 3285058841 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Review the Required Resources</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control MaterialCheckStep - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 663913547 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Step 3</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control AssignmentStep - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 629510381 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Assignment Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control Assignment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 3307620804 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Step 4</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control ConfirmStep - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Action 2438272767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Back</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Action ActionBack - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Action 914282563 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Next</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Action ActionNext - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Action 3259912055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Finish</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Action ActionFinish - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - NamedType 1108768241" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot %1 purchased.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - NamedType BotPurchasedMsg</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - NamedType 1196336861" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No Bot Template of type %1 was found</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - NamedType NoBotTemplateFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Page 3600309392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Bot Template Chooser</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Template Chooser - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 739513131 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Template List</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1237,6 +1317,21 @@
           <source>bots</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Template List - Property AdditionalSearchTerms</note>
+        </trans-unit>
+        <trans-unit id="Page 739513131 - Action 2702432588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Materials</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Template List - Action MaterialsBtn - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2698378957 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Bot Temp. Req. List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Temp. Req. List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3942313896 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Checklist</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Resource Checklist - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 261101873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Master Item Card</source>

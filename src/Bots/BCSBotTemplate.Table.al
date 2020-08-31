@@ -64,7 +64,17 @@ table 88000 "BCS Bot Template"
             DecimalPlaces = 0 : 0;
             BlankZero = true;
         }
+
+        field(1000; "Materials"; Integer)
+        {
+            Caption = 'Materials';
+            FieldClass = FlowField;
+            CalcFormula = count ("BCS Bot Template Req." where("Bot Template Code" = field(Code)));
+            Editable = false;
+        }
     }
+
+    // TODO: Validate only one Type/tier
 
     keys
     {

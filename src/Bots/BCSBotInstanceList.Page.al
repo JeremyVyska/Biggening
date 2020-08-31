@@ -85,7 +85,7 @@ page 88002 "BCS Bot Instance List"
 
                 trigger OnAction()
                 begin
-                    Page.RunModal(Page::"BCS Bot Purchase");
+                    Page.RunModal(Page::"BCS Bot Purchase Wizard");
                 end;
             }
         }

@@ -21,11 +21,19 @@ page 88000 "BCS Bot Template List"
                 {
                     ApplicationArea = All;
                 }
+                field("Bot Tier"; "Bot Tier")
+                {
+                    ApplicationArea = All;
+                }
                 field(Description; Description)
                 {
                     ApplicationArea = All;
                 }
                 field("Base Price"; "Base Price")
+                {
+                    ApplicationArea = All;
+                }
+                field(Materials; Materials)
                 {
                     ApplicationArea = All;
                 }
@@ -49,4 +57,22 @@ page 88000 "BCS Bot Template List"
         }
     }
 
+    actions
+    {
+        area(Navigation)
+        {
+            action(MaterialsBtn)
+            {
+                ApplicationArea = All;
+                Caption = 'Materials';
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true;
+                Image = BOMVersions;
+                RunObject = Page "BCS Bot Temp. Req. List";
+                RunPageMode = Edit;
+                RunPageLink = "Bot Template Code" = field(Code);
+            }
+        }
+    }
 }

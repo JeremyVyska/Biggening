@@ -1,4 +1,4 @@
-page 88005 "BCS Bot Purchase"
+page 88005 "BCS Bot Purchase Wizard"
 {
     Caption = 'Buy a Bot';
     PageType = NavigatePage;
@@ -21,10 +21,24 @@ page 88005 "BCS Bot Purchase"
                     Caption = 'Bot Types';
 
                     trigger OnValidate()
+                    var
+                        BotTemplate: Record "BCS Bot Template";
                     begin
                         SetControls();
-                        Rec."Bot Type" := Rec."Bot Type";
+
+                        // is there only 1 or more Templates for the Type?
+                        BotTemplate.SetRange("Bot Type", Rec."Bot Type");
+                        ShowBotTemplates := (BotTemplate.Count > 1);
+
                     end;
+                }
+                part(TemplatePicker; "BCS Bot Template Chooser")
+                {
+                    Caption = 'TemplatePicker';
+                    SubPageLink = "Bot Type" = field("Bot Type");
+                    Visible = ShowBotTemplates;
+                    Editable = false;
+                    UpdatePropagation = both;
                 }
             }
             group(MaterialCheckStep)
@@ -32,6 +46,10 @@ page 88005 "BCS Bot Purchase"
                 Visible = WhichStep = 2;
                 Caption = 'Resources Check';
                 InstructionalText = 'Review the Required Resources';
+                part(ResourceChecklist; "BCS Resource Checklist")
+                {
+
+                }
             }
             group(AssignmentStep)
             {
@@ -108,6 +126,16 @@ page 88005 "BCS Bot Purchase"
         }
     }
 
+    trigger OnOpenPage()
+    begin
+        WhichStep := 1;
+        SetControls();
+        Rec.Init();
+        Rec.Insert();
+    end;
+
+
+
     local procedure SetControls()
     begin
         ActionBackAllowed := WhichStep > 1;
@@ -119,10 +147,17 @@ page 88005 "BCS Bot Purchase"
     local procedure TakeStep(WhichDirection: Integer)
     begin
         WhichStep += WhichDirection;
+        // Floor & Ceiling check
         if WhichStep < 1 then
             WhichStep := 1;
         if WhichStep > 4 then
             WhichStep := 4;
+
+        if WhichStep = 2 then begin
+            // We're moving to materials requirements.
+            //Message('You picked: %1', CurrPage.TemplatePicker.Page.GetSelected());
+            populateRequirements();
+        end;
 
         if WhichStep = 3 then begin
             //TODO - do we need to be here?
@@ -137,19 +172,29 @@ page 88005 "BCS Bot Purchase"
         SetControls();
     end;
 
-    trigger OnOpenPage()
+    local procedure populateRequirements()
+    var
+        ReqToShow: Record "BCS Resource Check Buffer" temporary;
+        BotTemplate: Record "BCS Bot Template";
+        BCSBotMgt: Codeunit "BCS Bot Management";
     begin
-        WhichStep := 1;
-        SetControls();
-        Rec.Init();
-        Rec.Insert();
+        if (ShowBotTemplates) then
+            BotTemplate.Get(CurrPage.TemplatePicker.Page.GetSelected())
+        else begin
+            BotTemplate.SetRange("Bot Type", Rec."Bot Type");
+            BotTemplate.FindFirst();
+        end;
+        BCSBotMgt.GenerateReqBuffer(ReqToShow, BotTemplate);
+        CurrPage.ResourceChecklist.Page.SetData(ReqToShow);
     end;
+
 
     var
         WhichStep: Integer;
         ActionBackAllowed: Boolean;
         ActionNextAllowed: Boolean;
         ActionFinishAllowed: Boolean;
+        ShowBotTemplates: Boolean;
         BotPurchasedMsg: Label 'Bot %1 purchased.';
         NoBotTemplateFoundErr: Label 'No Bot Template of type %1 was found';
 
