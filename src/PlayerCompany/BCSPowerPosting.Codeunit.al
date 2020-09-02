@@ -33,7 +33,7 @@ codeunit 88023 "BCS Power Posting"
         if BotTotal <> 0 then begin
             OnBeforeChargePower(PowerLedger."Entry Type", BotTotal, IsHandled);
             if not IsHandled then
-                if BCSPlayerCharge.ChargeCash(GameSetup."Bot Power Account", BotTotal, DocNo) then begin
+                if BCSPlayerCharge.ChargeCash(GameSetup."Bot Power Account", BotTotal, DocNo, PowerBotChargeTok) then begin
                     PowerLedger.SetRange("Entry Type", PowerLedger."Entry Type"::Bot);
                     PowerLedger.ModifyAll("Posted to G/L", true);
                 end;
@@ -41,7 +41,7 @@ codeunit 88023 "BCS Power Posting"
         if LocTotal <> 0 then begin
             OnBeforeChargePower(PowerLedger."Entry Type", LocTotal, IsHandled);
             if not IsHandled then
-                if BCSPlayerCharge.ChargeCash(GameSetup."Loc. Power Account", LocTotal, DocNo) then begin
+                if BCSPlayerCharge.ChargeCash(GameSetup."Loc. Power Account", LocTotal, DocNo, PowerLocationChargeTok) then begin
                     PowerLedger.SetRange("Entry Type", PowerLedger."Entry Type"::Location);
                     PowerLedger.ModifyAll("Posted to G/L", true);
                 end;
@@ -59,4 +59,6 @@ codeunit 88023 "BCS Power Posting"
     var
         GameSetup: Record "BCS Game Setup";
         PowerDocNoTok: Label 'PWR-%1';
+        PowerBotChargeTok: Label 'Power charges for bots.';
+        PowerLocationChargeTok: Label 'Power charges for locations';
 }

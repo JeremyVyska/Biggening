@@ -503,6 +503,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Item BOM - Field Quantity - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 744421501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Master Tables</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Tables - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 744421501 - Field 3017471043 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Table No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Tables - Field Table No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2297530211 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Player</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1138,6 +1148,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Management - NamedType CashTok</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1555525260 - NamedType 69799087" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Charge for purchase of %1.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Management - NamedType BotPurchTok</note>
+        </trans-unit>
         <trans-unit id="Codeunit 2183177400 - NamedType 1528307622" size-unit="char" translate="yes" xml:space="preserve">
           <source>Location %1 has a Capacity of %2 and cannot accept %3 units because of the %4 already in stock.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1177,6 +1192,16 @@
           <source>PWR-%1</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Power Posting - NamedType PowerDocNoTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1815687023 - NamedType 4238063584" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Power charges for bots.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Power Posting - NamedType PowerBotChargeTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1815687023 - NamedType 3453767692" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Power charges for locations</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Power Posting - NamedType PowerLocationChargeTok</note>
         </trans-unit>
         <trans-unit id="Codeunit 1769831807 - NamedType 1800867797" size-unit="char" translate="yes" xml:space="preserve">
           <source>Not assigned to a Location, sleeping.</source>
@@ -1362,6 +1387,11 @@
           <source>BCS Master Item Subpage</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Master Item Subpage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2602657000 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Master Table Checklist</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Master Table Checklist - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3522310541 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Player List</source>

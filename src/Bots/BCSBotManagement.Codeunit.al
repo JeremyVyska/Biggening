@@ -15,9 +15,9 @@ codeunit 88001 "BCS Bot Management"
         if ResCheckBuffer.FindSet() then
             repeat
                 if (ResCheckBuffer."Item No." = '') then
-                    BCSPlayerCharge.ChargeCash('1410', ResCheckBuffer.Requirement, BotDesignation)
+                    BCSPlayerCharge.ChargeCash('1410', ResCheckBuffer.Requirement, BotDesignation, StrSubstNo(BotPurchTok, BotDesignation))
                 else
-                    BCSPlayerCharge.ChargeMaterial(ResCheckBuffer."Item No.", ResCheckBuffer.Requirement, BotDesignation);
+                    BCSPlayerCharge.ChargeMaterial(ResCheckBuffer."Item No.", ResCheckBuffer.Requirement, BotDesignation, StrSubstNo(BotPurchTok, BotDesignation));
             until ResCheckBuffer.Next() = 0;
 
         // Create the Bot Instance
@@ -109,4 +109,5 @@ codeunit 88001 "BCS Bot Management"
 
     var
         CashTok: Label 'Money';
+        BotPurchTok: Label 'Charge for purchase of %1.';
 }

@@ -1,7 +1,7 @@
 codeunit 88025 "BCS Player Charge"
 {
 
-    procedure ChargeCash(ChargeAccount: Code[20]; ChargeAmount: Decimal; DocNo: Code[20]): Boolean
+    procedure ChargeCash(ChargeAccount: Code[20]; ChargeAmount: Decimal; DocNo: Code[20]; PostingDesc: Text[100]): Boolean
     var
         GameSetup: Record "BCS Game Setup";
         GenJnl: Record "Gen. Journal Line";
@@ -21,12 +21,13 @@ codeunit 88025 "BCS Player Charge"
         GenJnl.Validate("Bal. Account Type", GenJnl."Bal. Account Type"::"G/L Account");
         GenJnl.Validate("Bal. Account No.", GameSetup."Cash Account");
         GenJnl.Validate(Amount, ChargeAmount);
+        GenJnl.Description := PostingDesc;
         GenJnl.Insert(true);
         Commit();
         exit(GenJnlPost.Run(GenJnl));
     end;
 
-    procedure ChargeMaterial(MaterialCode: Code[20]; QtyToCharge: Decimal; DocNo: Code[20])
+    procedure ChargeMaterial(MaterialCode: Code[20]; QtyToCharge: Decimal; DocNo: Code[20]; PostingDesc: Text[100])
     var
         Item: Record Item;
         Location: Record Location;
@@ -55,8 +56,8 @@ codeunit 88025 "BCS Player Charge"
                         QtyToReduce := RemQtyToCharge
                     else
                         QtyToReduce := Location."Total Stock";
-                    AdjustOutSimple(MaterialCode, QtyToReduce, DocNo);
-                    RemQtyToCharge := RemQtyToCharge - QtyToReduce;
+                    if AdjustOutSimple(MaterialCode, QtyToReduce, DocNo, Location.Code, PostingDesc) then
+                        RemQtyToCharge := RemQtyToCharge - QtyToReduce;
                 until (RemQtyToCharge = 0) OR (Location.Next() = 0);
 
         // TODO: Handle Advanced Locations
@@ -65,11 +66,27 @@ codeunit 88025 "BCS Player Charge"
             Error(UnableToFindItems, MaterialCode, RemQtyToCharge);
     end;
 
-    local procedure AdjustOutSimple(ItemNo: Code[20]; QtyToReduce: Decimal; DocNo: Code[20])
+    local procedure AdjustOutSimple(ItemNo: Code[20]; QtyToReduce: Decimal; DocNo: Code[20]; LocNo: Code[20]; PostingDesc: Text[100]): Boolean
     var
         ItemJnl: Record "Item Journal Line";
+        ItemJnlPostLn: Codeunit "Item Jnl.-Post Line";
     begin
-
+        ItemJnl.SetRange("Journal Template Name", 'ITEM');
+        ItemJnl.SetRange("Journal Batch Name", 'DEFAULT');
+        ItemJnl.DeleteAll();
+        ItemJnl."Journal Template Name" := 'ITEM';
+        ItemJnl."Journal Batch Name" := 'DEFAULT';
+        ItemJnl."Line No." := 10000;
+        ItemJnl."Entry Type" := ItemJnl."Entry Type"::"Negative Adjmt.";
+        ItemJnl.Validate("Posting Date", WorkDate());
+        ItemJnl.Validate("Document No.", DocNo);
+        ItemJnl.Validate("Item No.", ItemNo);
+        ItemJnl.Validate("Location Code", LocNo);
+        ItemJnl.Validate(Quantity, QtyToReduce);
+        ItemJnl.Description := PostingDesc;
+        ItemJnl.Insert(true);
+        Commit();
+        exit(ItemJnlPostLn.Run(ItemJnl));
     end;
 
 
