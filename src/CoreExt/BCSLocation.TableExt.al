@@ -29,7 +29,7 @@ tableextension 88003 "BCS Location" extends Location
             BlankZero = true;
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = sum ("Item Ledger Entry".Quantity where("Location Code" = field(Code)));
+            CalcFormula = sum ("Item Ledger Entry".Quantity where("Location Code" = field(Code), "Item No." = field("BCS Item Filter")));
         }
         field(88101; "Assigned Bots"; Integer)
         {
@@ -37,6 +37,12 @@ tableextension 88003 "BCS Location" extends Location
             FieldClass = FlowField;
             Editable = false;
             CalcFormula = count ("BCS Bot Instance" where("Bot Type" = filter("Inventory-Basic" | "Inventory-Advanced"), "Assignment Code" = field(code)));
+        }
+        field(88102; "BCS Item Filter"; Code[20])
+        {
+            Caption = 'Item Filter';
+            FieldClass = FlowFilter;
+            TableRelation = Item;
         }
     }
 

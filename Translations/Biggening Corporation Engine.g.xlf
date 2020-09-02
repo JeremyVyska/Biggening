@@ -183,6 +183,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Field LineStyle - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3171401266 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Field Item No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1270744385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Bot Error Log</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1158,6 +1163,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Player Management - NamedType SetupCompletedMsg</note>
         </trans-unit>
+        <trans-unit id="Codeunit 2769507221 - NamedType 2624433890" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You do not have enough of %1 in Inventory (%2/%3).</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Player Charge - NamedType InsufficientItemsErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2769507221 - NamedType 2961456523" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to locate sufficient quantity of %1 in Locations (%2)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Player Charge - NamedType UnableToFindItems</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1815687023 - NamedType 3656885394" size-unit="char" translate="yes" xml:space="preserve">
           <source>PWR-%1</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1707,6 +1722,11 @@
           <source>Assigned Bots</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Location - Field Assigned Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2827781225 - Field 3698817609 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
+          <source>Item Filter</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Location - Field BCS Item Filter - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 4097106210 - Field 538187334 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
           <source>Max. Orders Per Day</source>

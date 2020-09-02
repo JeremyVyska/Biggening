@@ -1,20 +1,33 @@
 codeunit 88001 "BCS Bot Management"
 {
 
-    procedure PurchaseBot(WhichTemplate: Code[20]): Text[20]
+    procedure PurchaseBot(var ResCheckBuffer: Record "BCS Resource Check Buffer"; WhichTemplate: Code[20]): Text[20]
     var
         Template: Record "BCS Bot Template";
         Instance: Record "BCS Bot Instance";
+        BCSPlayerCharge: Codeunit "BCS Player Charge";
+        BotDesignation: Code[20];
     begin
         Template.Get(WhichTemplate);
+        BotDesignation := GenerateDesignator();
 
+        // Charge the Materials to the Player
+        if ResCheckBuffer.FindSet() then
+            repeat
+                if (ResCheckBuffer."Item No." = '') then
+                    BCSPlayerCharge.ChargeCash('1410', ResCheckBuffer.Requirement, BotDesignation)
+                else
+                    BCSPlayerCharge.ChargeMaterial(ResCheckBuffer."Item No.", ResCheckBuffer.Requirement, BotDesignation);
+            until ResCheckBuffer.Next() = 0;
+
+        // Create the Bot Instance
         Instance.Init();
         Instance."Bot Type" := Template."Bot Type";
         Instance."Bot Tier" := Template."Bot Tier";
         Instance."Power Per Day" := Template."Base Power Per Day";
         Instance."Operations Per Day" := Template."Base Operations Per Day";
         Instance.Price := Template."Base Price";
-        Instance.Validate(Designation, GenerateDesignator());
+        Instance.Validate(Designation, BotDesignation);
 
         case Template."Bot Type" of
             Template."Bot Type"::Research:
@@ -77,6 +90,7 @@ codeunit 88001 "BCS Bot Management"
                 ResCheckBuffer."Line No." := NextLineNo;
                 NextLineNo := NextLineNo + 1;
                 MasterItem.Get(TemplateReq."Master Item No.");
+                ResCheckBuffer."Item No." := MasterItem."No.";
                 ResCheckBuffer.Description := MasterItem.Description;
                 ResCheckBuffer.Requirement := TemplateReq.Quantity;
                 if (Item.Get(TemplateReq."Master Item No.")) then begin

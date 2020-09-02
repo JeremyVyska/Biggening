@@ -10,6 +10,8 @@ codeunit 88023 "BCS Power Posting"
     procedure PostYesterdayPower()
     var
         PowerLedger: Record "BCS Power Ledger";
+        BCSPlayerCharge: Codeunit "BCS Player Charge";
+        DocNo: Code[20];
         BotTotal: Decimal;
         LocTotal: Decimal;
         IsHandled: Boolean;
@@ -26,11 +28,12 @@ codeunit 88023 "BCS Power Posting"
         PowerLedger.SetRange("Entry Type", PowerLedger."Entry Type"::Location);
         PowerLedger.CalcSums("Power Usage");
         LocTotal := PowerLedger."Power Usage";
+        DocNo := StrSubstNo(PowerDocNoTok, Format(WorkDate(), 0, '<Standard Format,9>'));
 
         if BotTotal <> 0 then begin
             OnBeforeChargePower(PowerLedger."Entry Type", BotTotal, IsHandled);
             if not IsHandled then
-                if DoPostLine(GameSetup."Bot Power Account", BotTotal) then begin
+                if BCSPlayerCharge.ChargeCash(GameSetup."Bot Power Account", BotTotal, DocNo) then begin
                     PowerLedger.SetRange("Entry Type", PowerLedger."Entry Type"::Bot);
                     PowerLedger.ModifyAll("Posted to G/L", true);
                 end;
@@ -38,35 +41,14 @@ codeunit 88023 "BCS Power Posting"
         if LocTotal <> 0 then begin
             OnBeforeChargePower(PowerLedger."Entry Type", LocTotal, IsHandled);
             if not IsHandled then
-                if DoPostLine(GameSetup."Loc. Power Account", LocTotal) then begin
+                if BCSPlayerCharge.ChargeCash(GameSetup."Loc. Power Account", LocTotal, DocNo) then begin
                     PowerLedger.SetRange("Entry Type", PowerLedger."Entry Type"::Location);
                     PowerLedger.ModifyAll("Posted to G/L", true);
                 end;
         end;
     end;
 
-    procedure DoPostLine(ChargeAccount: Code[20]; ChargeAmount: Decimal): Boolean
-    var
-        GenJnl: Record "Gen. Journal Line";
-        GenJnlPost: Codeunit "Gen. Jnl.-Post Line";
-    begin
-        GenJnl.SetRange("Journal Template Name", 'GENERAL');
-        GenJnl.SetRange("Journal Batch Name", 'DEFAULT');
-        GenJnl.DeleteAll();
-        GenJnl."Journal Template Name" := 'GENERAL';
-        GenJnl."Journal Batch Name" := 'DEFAULT';
-        GenJnl."Line No." := 10000;
-        GenJnl."Account Type" := GenJnl."Account Type"::"G/L Account";
-        GenJnl.Validate("Account No.", ChargeAccount);
-        GenJnl.Validate("Document No.", StrSubstNo(PowerDocNoTok, Format(WorkDate(), 0, '<Standard Format,9>')));
-        GenJnl.Validate("Posting Date", WorkDate());
-        GenJnl.Validate("Bal. Account Type", GenJnl."Bal. Account Type"::"G/L Account");
-        GenJnl.Validate("Bal. Account No.", GameSetup."Cash Account");
-        GenJnl.Validate(Amount, ChargeAmount);
-        GenJnl.Insert(true);
-        Commit();
-        exit(GenJnlPost.Run(GenJnl));
-    end;
+
 
     [BusinessEvent(false)]
     local procedure OnBeforeChargePower(ChargeType: Option Bot,Location; var ChargeAmount: Decimal; var IsHandled: Boolean)

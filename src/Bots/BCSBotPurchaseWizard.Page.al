@@ -116,7 +116,7 @@ page 88005 "BCS Bot Purchase Wizard"
                     BotTemplate.SetRange("Bot Type", Rec."Bot Type");
                     if BotTemplate.FindFirst() then begin
 
-                        Message(BotPurchasedMsg, BotMgmt.PurchaseBot(BotTemplate.Code));
+                        Message(BotPurchasedMsg, BotMgmt.PurchaseBot(ReqToShow, BotTemplate.Code));
 
                         CurrPage.Close();
                     end else
@@ -139,8 +139,15 @@ page 88005 "BCS Bot Purchase Wizard"
     local procedure SetControls()
     begin
         ActionBackAllowed := WhichStep > 1;
-        ActionNextAllowed := (WhichStep < 4) AND (Rec."Bot Type" <> Rec."Bot Type"::" ");
-        //TODO Allow/disallow based on criteria
+        //ActionNextAllowed := (WhichStep < 4) AND (Rec."Bot Type" <> Rec."Bot Type"::" ");
+
+        // FALSE if WhichStep = 4
+        // FALSE if there's not Bot Type
+        // FALSE IF we've calculated the materials AND there's a shortage
+        ActionNextAllowed := NOT ((WhichStep = 4) OR
+                                   (Rec."Bot Type" = Rec."Bot Type"::" ") OR
+                                   (not ReqToShow.IsEmpty and MissingMaterials));
+
         ActionFinishAllowed := WhichStep = 4;
     end;
 
@@ -152,6 +159,12 @@ page 88005 "BCS Bot Purchase Wizard"
             WhichStep := 1;
         if WhichStep > 4 then
             WhichStep := 4;
+
+        // If we're back at step 1, reset the Materials stages
+        if WhichStep = 1 then begin
+            MissingMaterials := false;
+            ReqToShow.DeleteAll();
+        end;
 
         if WhichStep = 2 then begin
             // We're moving to materials requirements.
@@ -174,7 +187,6 @@ page 88005 "BCS Bot Purchase Wizard"
 
     local procedure populateRequirements()
     var
-        ReqToShow: Record "BCS Resource Check Buffer" temporary;
         BotTemplate: Record "BCS Bot Template";
         BCSBotMgt: Codeunit "BCS Bot Management";
     begin
@@ -186,10 +198,15 @@ page 88005 "BCS Bot Purchase Wizard"
         end;
         BCSBotMgt.GenerateReqBuffer(ReqToShow, BotTemplate);
         CurrPage.ResourceChecklist.Page.SetData(ReqToShow);
+
+        ReqToShow.SetRange(Shortage, true);
+        MissingMaterials := not ReqToShow.IsEmpty;
+        ReqToShow.SetRange(Shortage);
     end;
 
 
     var
+        ReqToShow: Record "BCS Resource Check Buffer" temporary;
         WhichStep: Integer;
         ActionBackAllowed: Boolean;
         ActionNextAllowed: Boolean;
@@ -198,4 +215,5 @@ page 88005 "BCS Bot Purchase Wizard"
         BotPurchasedMsg: Label 'Bot %1 purchased.';
         NoBotTemplateFoundErr: Label 'No Bot Template of type %1 was found';
 
+        MissingMaterials: Boolean;
 }

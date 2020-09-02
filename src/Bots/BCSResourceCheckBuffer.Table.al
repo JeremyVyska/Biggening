@@ -2,7 +2,7 @@ table 88023 "BCS Resource Check Buffer"
 {
     Caption = 'BCS Resource Check Buffer';
     DataClassification = ToBeClassified;
-    
+
     fields
     {
         field(1; "Line No."; Integer)
@@ -35,6 +35,13 @@ table 88023 "BCS Resource Check Buffer"
             Caption = 'LineStyle';
             DataClassification = SystemMetadata;
         }
+
+        field(100; "Item No."; Code[20])
+        {
+            Caption = 'Item No.';
+            TableRelation = "BCS Master Item";
+            DataClassification = SystemMetadata;
+        }
     }
     keys
     {
@@ -43,5 +50,5 @@ table 88023 "BCS Resource Check Buffer"
             Clustered = true;
         }
     }
-    
+
 }
