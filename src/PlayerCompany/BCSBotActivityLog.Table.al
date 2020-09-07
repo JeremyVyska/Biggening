@@ -29,6 +29,11 @@ table 88006 "BCS Bot Activity Log"
             Caption = 'Posting Date';
             DataClassification = SystemMetadata;
         }
+        field(30; "Activity Type"; Enum "BCS Bot Result Type")
+        {
+            Caption = 'Activity Type';
+            DataClassification = SystemMetadata;
+        }
         field(50; Description; Text[200])
         {
             Caption = 'Description';

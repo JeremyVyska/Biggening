@@ -26,24 +26,20 @@ codeunit 88006 "BCS Bot Purchase"
             if Vendor."Max Orders Per Day" = 0 then
                 Vendor."Max Orders Per Day" := 1;
             if PurchHeader.Count >= Vendor."Max Orders Per Day" then begin
-                ResultText := StrSubstNo(MaxOrdersPerDayReachedMsg, Rec."Assignment Code", Vendor."Max Orders Per Day");
+                SetResult(StrSubstNo(MaxOrdersPerDayReachedMsg, Rec."Assignment Code", Vendor."Max Orders Per Day"), MyResult."Action Type"::Idle);
                 exit;
             end;
             if not AreAnyOrdersNeeded(Rec) then begin
-                ResultText := StrSubstNo(NoOrdersNeededMsg, Rec."Assignment Code");
+                SetResult(StrSubstNo(NoOrdersNeededMsg, Rec."Assignment Code"), MyResult."Action Type"::Idle);
                 exit;
             end else
-                ResultText := StrSubstNo(POCreatedMsg, CreatePO(Rec), Rec."Assignment Code");
+                SetResult(StrSubstNo(POCreatedMsg, CreatePO(Rec), Rec."Assignment Code"), MyResult."Action Type"::Activity);
         end else
             // Else, they will 'farm' for new suppliers
             FishForProspect(Rec);
-    end;
 
-    procedure GetResultText(): Text[200]
-    begin
-        exit(ResultText);
+        //TODO: Activity message about fishing
     end;
-
 
     local procedure AreAnyOrdersNeeded(var BotInstance: Record "BCS Bot Instance"): Boolean
     var
@@ -297,8 +293,21 @@ codeunit 88006 "BCS Bot Purchase"
     begin
     end;
 
+    procedure GetResult(var DispatchResult: Record "BCS Dispatch Result" temporary)
+    begin
+        Clear(DispatchResult);
+        DispatchResult.TransferFields(MyResult);
+    end;
+
+    procedure SetResult(newText: Text[200]; whichType: Enum "BCS Bot Result Type")
+    begin
+        MyResult."Action Type" := whichType;
+        MyResult.ResultText := newText;
+    end;
+
+
     var
-        ResultText: Text[200];
+        MyResult: Record "BCS Dispatch Result" temporary;
         POCreatedMsg: Label 'Purch. Order %1 created for Vendor No. %2.';
         NoOrdersNeededMsg: Label 'No orders are required from Vendor No. %1.';
         MaxOrdersPerDayReachedMsg: Label 'Vendor No. %1 already has %2 orders for that date.';

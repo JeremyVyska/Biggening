@@ -22,6 +22,15 @@ table 88002 "BCS Player Cue"
             CalcFormula = count ("BCS Bot Error Log" where("Error Type" = const(PlayerError), Acknowledged = const(false)));
             Editable = false;
         }
+
+        // Wealth Balance
+
+        // Bots - Idle, Erroring
+
+        // Delayed Shipments
+
+        // Delayed Receipts
+
     }
 
     keys

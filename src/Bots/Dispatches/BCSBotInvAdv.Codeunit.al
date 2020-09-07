@@ -7,9 +7,10 @@ codeunit 88009 "BCS Bot Inv-Adv"
         ResultText := StrSubstNo('In the future, I would make %1 Inv-Adv.', Rec."Operations Per Day");
     end;
 
-    procedure GetResultText(): Text[200]
+    procedure GetResult(var DispatchResult: Record "BCS Dispatch Result" temporary)
     begin
-        exit(ResultText);
+        Clear(DispatchResult);
+        DispatchResult.ResultText := ResultText;
     end;
 
     var

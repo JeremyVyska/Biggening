@@ -22,24 +22,17 @@ codeunit 88007 "BCS Bot Sales"
             if Cust."Max Orders Per Day" = 0 then
                 Cust."Max Orders Per Day" := 1;
             if SalesHeader.Count >= Cust."Max Orders Per Day" then begin
-                ResultText := StrSubstNo(MaxOrdersPerDayReachedMsg, Rec."Assignment Code", Cust."Max Orders Per Day");
+                SetResult(StrSubstNo(MaxOrdersPerDayReachedMsg, Rec."Assignment Code", Cust."Max Orders Per Day"), MyResult."Action Type"::Idle);
                 exit;
             end;
 
             CreateOrders(Rec)
 
         end else begin
-            ResultText := ('I am missing an Assignment Code and did nothing today.')
+            SetResult(('I am missing an Assignment Code and did nothing today.'), MyResult."Action Type"::Idle);
         end;
 
     end;
-
-    procedure GetResultText(): Text[200]
-    begin
-        exit(ResultText);
-    end;
-
-
 
 
     local procedure CreateOrders(var BotInstance: Record "BCS Bot Instance")
@@ -73,7 +66,7 @@ codeunit 88007 "BCS Bot Sales"
                 end;
             until CustInterests.Next() = 0;
         if TempItems.IsEmpty then begin
-            ResultText := NoStockOverMarketPriceMsg;
+            SetResult(NoStockOverMarketPriceMsg, MyResult."Action Type"::Idle);
             exit;
         end;
 
@@ -129,8 +122,21 @@ codeunit 88007 "BCS Bot Sales"
     end;
 
 
+    procedure GetResult(var DispatchResult: Record "BCS Dispatch Result" temporary)
+    begin
+        Clear(DispatchResult);
+        DispatchResult.TransferFields(MyResult);
+    end;
+
+    procedure SetResult(newText: Text[200]; whichType: Enum "BCS Bot Result Type")
+    begin
+        MyResult."Action Type" := whichType;
+        MyResult.ResultText := newText;
+    end;
+
+
     var
-        ResultText: Text[200];
+        MyResult: Record "BCS Dispatch Result" temporary;
         MaxOrdersPerDayReachedMsg: Label 'Customer No. %1 already has %2 orders for that date.';
         NoStockOverMarketPriceMsg: Label 'There are no Items in stock over market price.';
 }

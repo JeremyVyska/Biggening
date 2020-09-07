@@ -16,7 +16,7 @@ codeunit 88012 "BCS Bot Research"
         PointsToAdd: Decimal;
     begin
         PointsToAdd := Rec.GetOpsPerDay() * Rec.GetResearchPerOp();
-        ResultText := StrSubstNo('I''ve generated %1 points.', PointsToAdd);
+        SetResult(StrSubstNo('I''ve generated %1 points.', PointsToAdd), MyResult."Action Type"::Activity);
         BCSPlayerResearch.SetRange(Selected, true);
         if BCSPlayerResearch.FindFirst() then begin
             BCSPlayerResearch.Validate(Progress, BCSPlayerResearch.Progress + PointsToAdd);
@@ -24,11 +24,19 @@ codeunit 88012 "BCS Bot Research"
         end;
     end;
 
-    procedure GetResultText(): Text[200]
+    procedure GetResult(var DispatchResult: Record "BCS Dispatch Result" temporary)
     begin
-        exit(ResultText);
+        Clear(DispatchResult);
+        DispatchResult.TransferFields(MyResult);
     end;
 
+    procedure SetResult(newText: Text[200]; whichType: Enum "BCS Bot Result Type")
+    begin
+        MyResult."Action Type" := whichType;
+        MyResult.ResultText := newText;
+    end;
+
+
     var
-        ResultText: Text[200];
+        MyResult: Record "BCS Dispatch Result" temporary;
 }

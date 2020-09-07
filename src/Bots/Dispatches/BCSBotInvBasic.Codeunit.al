@@ -22,7 +22,7 @@ codeunit 88008 "BCS Bot Inv-Basic"
         end;
 
         if rec."Assignment Code" = '' then
-            ResultText := UnassignedBotMsg
+            SetResult(UnassignedBotMsg, MyResult."Action Type"::Idle)
         else begin
             for i := 1 to Rec.GetOpsPerDay() do begin
                 ActivityCompleted := false;
@@ -110,9 +110,9 @@ codeunit 88008 "BCS Bot Inv-Basic"
             end;
 
             if (DocsHandled[1] = 0) and (DocsHandled[2] = 0) and (DocsHandled[3] = 0) and (DocsHandled[4] = 0) then
-                ResultText := NoWorkAvailableMsg
+                SetResult(NoWorkAvailableMsg, MyResult."Action Type"::Idle)
             else
-                ResultText := StrSubstNo(OperationSuccessMsg, DocsHandled[1], DocsHandled[2], DocsHandled[3], DocsHandled[4])
+                SetResult(StrSubstNo(OperationSuccessMsg, DocsHandled[1], DocsHandled[2], DocsHandled[3], DocsHandled[4]), MyResult."Action Type"::Activity)
         end;
 
     end;
@@ -215,13 +215,21 @@ codeunit 88008 "BCS Bot Inv-Basic"
         Commit();
     end;
 
-    procedure GetResultText(): Text[200]
+    procedure GetResult(var DispatchResult: Record "BCS Dispatch Result" temporary)
     begin
-        exit(ResultText);
+        Clear(DispatchResult);
+        DispatchResult.TransferFields(MyResult);
     end;
 
+    procedure SetResult(newText: Text[200]; whichType: Enum "BCS Bot Result Type")
+    begin
+        MyResult."Action Type" := whichType;
+        MyResult.ResultText := newText;
+    end;
+
+
     var
-        ResultText: Text[200];
+        MyResult: Record "BCS Dispatch Result" temporary;
         UnassignedBotMsg: Label 'Not assigned to a Location, sleeping.';
         OperationSuccessMsg: Label 'Received %1 fully and %2 partially.  Shipped %3 fully and %4 partially.';
         NoWorkAvailableMsg: Label 'No documents waiting to be processed, sleeping.';

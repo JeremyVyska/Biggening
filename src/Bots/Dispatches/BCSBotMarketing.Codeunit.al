@@ -17,13 +17,9 @@ codeunit 88013 "BCS Bot Marketing"
         end;
 
         // TODO: Return useful info to the Activity log
-        ResultText := StrSubstNo('In the future, I would make %1 marketing ops.', Rec."Operations Per Day");
+        SetResult('I researched the market', MyResult."Action Type"::Activity);
     end;
 
-    procedure GetResultText(): Text[200]
-    begin
-        exit(ResultText);
-    end;
 
     /*
 
@@ -147,6 +143,19 @@ codeunit 88013 "BCS Bot Marketing"
     end;
 
 
+    procedure GetResult(var DispatchResult: Record "BCS Dispatch Result" temporary)
+    begin
+        Clear(DispatchResult);
+        DispatchResult.TransferFields(MyResult);
+    end;
+
+    procedure SetResult(newText: Text[200]; whichType: Enum "BCS Bot Result Type")
+    begin
+        MyResult."Action Type" := whichType;
+        MyResult.ResultText := newText;
+    end;
+
+
     var
-        ResultText: Text[200];
+        MyResult: Record "BCS Dispatch Result" temporary;
 }
