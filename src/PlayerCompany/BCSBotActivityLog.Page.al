@@ -18,6 +18,10 @@ page 88009 "BCS Bot Activity Log"
                 {
                     ApplicationArea = All;
                 }
+                field("Activity Type"; "Activity Type")
+                {
+                    ApplicationArea = All;
+                }
                 field("Bot Instance"; "Bot Instance")
                 {
                     ApplicationArea = All;

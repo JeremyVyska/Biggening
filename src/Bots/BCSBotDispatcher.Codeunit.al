@@ -70,7 +70,7 @@ codeunit 88005 "BCS Bot Dispatcher"
                             Clear(BotPurchase);
                             if BotPurchase.Run(BotInstance) then begin
                                 // YAY! It worked - log to the player activity log
-                                BotSales.GetResult(DispatchResult);
+                                BotPurchase.GetResult(DispatchResult);
                                 LogActivity(BotInstance, DispatchResult);
                             end else begin
                                 // It hit an error -  log to the system error log
@@ -82,7 +82,7 @@ codeunit 88005 "BCS Bot Dispatcher"
                             Clear(BotInvBasic);
                             if BotInvBasic.Run(BotInstance) then begin
                                 // YAY! It worked - log to the player activity log
-                                BotSales.GetResult(DispatchResult);
+                                BotInvBasic.GetResult(DispatchResult);
                                 LogActivity(BotInstance, DispatchResult);
                             end else begin
                                 // It hit an error -  log to the system error log
@@ -94,7 +94,7 @@ codeunit 88005 "BCS Bot Dispatcher"
                             Clear(BotInvAdv);
                             if BotInvAdv.Run(BotInstance) then begin
                                 // YAY! It worked - log to the player activity log
-                                BotSales.GetResult(DispatchResult);
+                                BotInvAdv.GetResult(DispatchResult);
                                 LogActivity(BotInstance, DispatchResult);
                             end else begin
                                 // It hit an error -  log to the system error log
@@ -106,7 +106,7 @@ codeunit 88005 "BCS Bot Dispatcher"
                             Clear(BotAssem);
                             if BotAssem.Run(BotInstance) then begin
                                 // YAY! It worked - log to the player activity log
-                                BotSales.GetResult(DispatchResult);
+                                BotAssem.GetResult(DispatchResult);
                                 LogActivity(BotInstance, DispatchResult);
                             end else begin
                                 // It hit an error -  log to the system error log
@@ -118,7 +118,7 @@ codeunit 88005 "BCS Bot Dispatcher"
                             Clear(BotManuf);
                             if BotManuf.Run(BotInstance) then begin
                                 // YAY! It worked - log to the player activity log
-                                BotSales.GetResult(DispatchResult);
+                                BotManuf.GetResult(DispatchResult);
                                 LogActivity(BotInstance, DispatchResult);
                             end else begin
                                 // It hit an error -  log to the system error log
@@ -130,7 +130,7 @@ codeunit 88005 "BCS Bot Dispatcher"
                             Clear(BotResearch);
                             if BotResearch.Run(BotInstance) then begin
                                 // YAY! It worked - log to the player activity log
-                                BotSales.GetResult(DispatchResult);
+                                BotResearch.GetResult(DispatchResult);
                                 LogActivity(BotInstance, DispatchResult);
                             end else begin
                                 // It hit an error -  log to the system error log
@@ -142,7 +142,7 @@ codeunit 88005 "BCS Bot Dispatcher"
                             Clear(BotMarketing);
                             if BotMarketing.Run(BotInstance) then begin
                                 // YAY! It worked - log to the player activity log
-                                BotSales.GetResult(DispatchResult);
+                                BotMarketing.GetResult(DispatchResult);
                                 LogActivity(BotInstance, DispatchResult);
                             end else begin
                                 // It hit an error -  log to the system error log
@@ -166,6 +166,7 @@ codeunit 88005 "BCS Bot Dispatcher"
         BotActLog."Bot Instance" := BotInstance."Instance ID";
         BotActLog."Posting Date" := WorkDate();
         BotActLog.Description := DispatchResult.ResultText;
+        BotActLog."Activity Type" := DispatchResult."Action Type";
         BotActLog.Insert(true);
     end;
 

@@ -20,6 +20,11 @@ page 88007 "BCS Game Setup"
             group(GeneralLedger)
             {
                 Caption = 'General Ledger';
+                field("Wealth Account"; "Wealth Account")
+                {
+                    ApplicationArea = All;
+                }
+
                 field("Cash Account"; "Cash Account")
                 {
                     ApplicationArea = All;

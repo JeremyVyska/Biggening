@@ -148,6 +148,26 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template Req. - Field Quantity - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 287404165 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Dispatch Result</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Dispatch Result - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 287404165 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Dispatch Result - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 287404165 - Field 889292200 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ResultText</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Dispatch Result - Field ResultText - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 287404165 - Field 1060207642 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Action Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Dispatch Result - Field Action Type - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3171401266 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Resource Check Buffer</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -332,6 +352,11 @@
           <source>Loc. Power Account</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Loc. Power Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 4123678134 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wealth Account</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Wealth Account - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4246738589 - NamedType 632351327" size-unit="char" translate="yes" xml:space="preserve">
           <source>Update %1 in all Basic Locations across Companies?</source>
@@ -617,6 +642,11 @@
           <source>Posting Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Activity Log - Field Posting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3997325726 - Field 1489664975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Activity Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Activity Log - Field Activity Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3997325726 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
@@ -1032,6 +1062,36 @@
           <source>Bot Errors</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Bot Errors - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2002652694 - Field 4036383149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wealth</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Wealth - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2002652694 - Field 1281245773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Idling Bots</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Idling Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2002652694 - Field 2974027974 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Erroring Bots</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Erroring Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2002652694 - Field 2579805692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delayed Date Filter</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Delayed Date Filter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2002652694 - Field 3972269745 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delayed Shipments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Delayed Shipments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2002652694 - Field 1731362909 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delayed Receipts</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Delayed Receipts - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 988425705 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Season</source>
@@ -1543,6 +1603,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Bot Errors - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 3412068102 - Control 1281245773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Idling Bots</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Idling Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3412068102 - Control 2974027974 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Erroring Bots</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Erroring Bots - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2116380514 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Player Role Center</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1787,6 +1857,26 @@
           <source>Player</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Error Type - EnumValue PlayerError - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 874210662 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Bot Result Type - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 874210662 - EnumValue 659317815 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Activity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Bot Result Type - EnumValue Activity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 874210662 - EnumValue 1192151816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Idle</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Bot Result Type - EnumValue Idle - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 874210662 - EnumValue 2248886284 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Bot Result Type - EnumValue Error - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 980859205 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>

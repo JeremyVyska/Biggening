@@ -26,6 +26,30 @@ page 88003 "BCS Player Activities"
                     DrillDownPageId = "BCS Bot Error Log";
                     ToolTip = 'Current count of new bot related errors';
                 }
+                field("Idling Bots"; "Idling Bots")
+                {
+                    Caption = 'Idling Bots';
+                    ApplicationArea = All;
+
+                    trigger OnDrillDown()
+                    var
+                        WhichFilter: Enum "BCS Bot Result Type";
+                    begin
+                        DrillDownBots(WhichFilter::Idle);
+                    end;
+                }
+                field("Erroring Bots"; "Erroring Bots")
+                {
+                    Caption = 'Erroring Bots';
+                    ApplicationArea = All;
+
+                    trigger OnDrillDown()
+                    var
+                        WhichFilter: Enum "BCS Bot Result Type";
+                    begin
+                        DrillDownBots(WhichFilter::Error);
+                    end;
+                }
             }
         }
     }
@@ -47,7 +71,7 @@ page 88003 "BCS Player Activities"
 
     local procedure CalculateCueFieldValues()
     begin
-
+        CalculateNonFlowFields();
     end;
 
 }

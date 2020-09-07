@@ -135,7 +135,6 @@ table 88004 "BCS Game Setup"
             TableRelation = "G/L Account" where("Direct Posting" = const(true));
         }
 
-
         field(60; "Bot Power Account"; Code[20])
         {
             Caption = 'Bot Power Account';
@@ -147,6 +146,13 @@ table 88004 "BCS Game Setup"
             Caption = 'Loc. Power Account';
             DataClassification = SystemMetadata;
             TableRelation = "G/L Account" where("Direct Posting" = const(true));
+        }
+
+        field(70; "Wealth Account"; Code[20])
+        {
+            Caption = 'Wealth Account';
+            DataClassification = SystemMetadata;
+            TableRelation = "G/L Account";
         }
     }
 
