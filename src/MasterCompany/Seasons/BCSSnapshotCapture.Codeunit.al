@@ -5,6 +5,7 @@ codeunit 88020 "BCS Snapshot Capture"
     local procedure "BCS Player Heartbeat Listener_OnHeartbeat"()
     begin
         TakeSnapshot();
+        GenerateDailyRankings();
     end;
 
     local procedure TakeSnapshot()
@@ -70,6 +71,24 @@ codeunit 88020 "BCS Snapshot Capture"
             SnapshotBots."Bot Count" := Bots.Count;
             SnapshotBots.Insert(true);
         end;
+    end;
+
+    local procedure GenerateDailyRankings()
+    var
+        GameSetup: Record "BCS Game Setup";
+        Snapshot: Record "BCS Snapshot";
+        Rank: Integer;
+    begin
+        GameSetup.Get();
+        Snapshot.SetCurrentKey("Game Date", "Wealth Balance");
+        Snapshot.SetAscending("Wealth Balance", false);
+        Snapshot.SetRange("Game Date", GameSetup."Game Date");
+        if Snapshot.FindSet(true) then
+            repeat
+                Rank := Rank + 1;
+                Snapshot."Rank at Date" := Rank;
+                Snapshot.Modify(true);
+            until Snapshot.Next() = 0;
     end;
 
 }

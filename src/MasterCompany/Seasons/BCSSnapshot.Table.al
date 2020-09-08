@@ -51,6 +51,11 @@ table 88017 "BCS Snapshot"
             Caption = 'Power Usage';
             DataClassification = SystemMetadata;
         }
+        field(100; "Rank at Date"; Integer)
+        {
+            Caption = 'Rank at Date';
+            DataClassification = SystemMetadata;
+        }
     }
     keys
     {
@@ -58,6 +63,8 @@ table 88017 "BCS Snapshot"
         {
             Clustered = true;
         }
+        key(Ranking; "Game Date", "Wealth Balance")
+        { }
     }
 
 }

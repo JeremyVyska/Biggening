@@ -263,6 +263,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Error Log - Action Ack - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1270744385 - Action 2189612435 - Method 1377591017 - NamedType 3756218284" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 errors acknowledged.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Error Log - Action Ack - Method OnAction - NamedType AckMsg</note>
+        </trans-unit>
         <trans-unit id="Table 4246738589 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Primary Key</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1583,15 +1588,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3412068102 - Control 2067503412 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Bot Count</source>
+        <trans-unit id="Page 3412068102 - Control 4036383149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Current Wealth</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Total Bot Count - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Wealth - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3412068102 - Control 2067503412 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Current count of bots the company operates</source>
+        <trans-unit id="Page 3412068102 - Control 1281245773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Idling Bots</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Total Bot Count - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Idling Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3412068102 - Control 2974027974 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Erroring Bots</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Erroring Bots - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3412068102 - Control 2439377710 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Errors</source>
@@ -1603,15 +1613,15 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Bot Errors - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 3412068102 - Control 1281245773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Idling Bots</source>
+        <trans-unit id="Page 3412068102 - Control 3972269745 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delayed Shipments</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Idling Bots - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Delayed Shipments - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3412068102 - Control 2974027974 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Erroring Bots</source>
+        <trans-unit id="Page 3412068102 - Control 1731362909 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delayed Receipts</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Erroring Bots - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Delayed Receipts - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2116380514 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Player Role Center</source>
@@ -1667,6 +1677,56 @@
           <source>Bots By Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Snapshot List - Control BCSBotList - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2383186180 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Bot Type Overview</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Type Overview - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2383186180 - Control 4280186650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Count</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Type Overview - Control Research Points Per Op - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2383186180 - Control 2860396600 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Power Per Day</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Type Overview - Control Power Per Day - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2383186180 - Control 63316191 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Ops. Per Day</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Type Overview - Control Operations Per Day - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1816974432 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Item Overview</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Item Overview - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1816974432 - Control 35685 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Market Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Item Overview - Control BCSMarketPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2363116744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Location Overview</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Location Overview - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3554428194 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Standings Overview</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Standings Overview - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3554428194 - Control 2058393039 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Standings Overview - Control DisplayName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3554428194 - Control 586081679 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wealth</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Standings Overview - Control Wealth Balance - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 253072695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Import Master Items</source>

@@ -66,9 +66,19 @@ page 88010 "BCS Bot Error Log"
                 Enabled = not Acknowledged;
 
                 trigger OnAction()
+                var
+                    Selected: Record "BCS Bot Error Log";
+                    AckMsg: Label '%1 errors acknowledged.';
                 begin
-                    Rec.Acknowledged := true;
-                    Rec.Modify(true);
+                    CurrPage.SetSelectionFilter(Selected);
+                    if Selected.Count = 1 then begin
+                        Rec.Acknowledged := true;
+                        Rec.Modify(true);
+                    end else begin
+                        Selected.ModifyAll(Acknowledged, true, true);
+                        Selected.SetRange(Acknowledged);
+                        Message(AckMsg, Selected.Count);
+                    end;
                 end;
             }
         }
