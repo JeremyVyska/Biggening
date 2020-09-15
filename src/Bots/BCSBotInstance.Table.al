@@ -106,6 +106,13 @@ table 88001 "BCS Bot Instance"
             else
             if ("Bot Type" = const(Manufacturing)) "Work Center";
             ValidateTableRelation = true;
+
+            trigger OnValidate()
+            var
+                BCSCheckAssignment: Codeunit "BCS Bot Check Assignment";
+            begin
+                BCSCheckAssignment.CheckAssignment(Rec);
+            end;
         }
     }
 

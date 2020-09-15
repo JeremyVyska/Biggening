@@ -1178,6 +1178,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Power Usage - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 2426870281 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Rank at Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Rank at Date - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2062530576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Snapshot Bots</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1207,6 +1212,16 @@
           <source>Bot Count</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot Bots - Field Bot Count - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 58387642 - Method 3928840918 - NamedType 3510997606" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot %1 is already assigned to %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Check Assignment - Method CheckNoOthersAssignedHere - NamedType BotAlreadyAssignedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 58387642 - Method 2494082682 - NamedType 2415926717" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location %1 already has the maximum %2 bots assigned.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Check Assignment - Method CheckLocationBotCapacity - NamedType LocationFullErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 1555525260 - NamedType 3410486187" size-unit="char" translate="yes" xml:space="preserve">
           <source>Money</source>
@@ -1717,6 +1732,11 @@
           <source>BCS Standings Overview</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Standings Overview - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3554428194 - Control 2426870281 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Rank</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Standings Overview - Control Rank at Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3554428194 - Control 2058393039 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Company</source>

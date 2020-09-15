@@ -60,6 +60,13 @@ page 88005 "BCS Bot Purchase Wizard"
                 {
                     Caption = 'Assignment Code';
                     ApplicationArea = all;
+
+                    trigger OnValidate()
+                    var
+                        BCSCheckAssignment: Codeunit "BCS Bot Check Assignment";
+                    begin
+                        BCSCheckAssignment.CheckAssignment(Rec);
+                    end;
                 }
             }
             group(ConfirmStep)

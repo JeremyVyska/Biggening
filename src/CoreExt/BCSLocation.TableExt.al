@@ -36,6 +36,7 @@ tableextension 88003 "BCS Location" extends Location
             Caption = 'Assigned Bots';
             FieldClass = FlowField;
             Editable = false;
+            //BUG: Wrong type filter
             CalcFormula = count ("BCS Bot Instance" where("Bot Type" = filter("Inventory-Basic" | "Inventory-Advanced"), "Assignment Code" = field(code)));
         }
         field(88102; "BCS Item Filter"; Code[20])
