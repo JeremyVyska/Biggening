@@ -2,6 +2,38 @@ pageextension 88004 "BCS Item Card" extends "Item Card"
 {
     layout
     {
+        modify(Item)
+        {
+            Editable = IsAdmin;
+        }
+        modify(InventoryGrp)
+        {
+            Editable = IsAdmin;
+        }
+        modify("Costs & Posting")
+        {
+            Editable = IsAdmin;
+        }
+        modify("Prices & Sales")
+        {
+            Editable = IsAdmin;
+        }
+        modify(Replenishment)
+        {
+            Editable = IsAdmin;
+        }
+        modify(Planning)
+        {
+            Editable = IsAdmin;
+        }
+        modify(ItemTracking)
+        {
+            Editable = IsAdmin;
+        }
+        modify(Warehouse)
+        {
+            Editable = IsAdmin;
+        }
         modify("Service Item Group")
         {
             Visible = false;
@@ -74,4 +106,13 @@ pageextension 88004 "BCS Item Card" extends "Item Card"
             }
         }
     }
+
+    trigger OnOpenPage()
+    begin
+        IsAdmin := PlayerMgmt.SetIsAdmin();
+    end;
+
+    var
+        PlayerMgmt: Codeunit "BCS Player Management";
+        IsAdmin: Boolean;
 }
