@@ -323,6 +323,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Location No. Series - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 3568295926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Basic Location Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Basic Location Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2341645759 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adv. Location Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Adv. Location Price - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 4246738589 - Field 2716325568 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Basic - Maximum Bots</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1233,6 +1243,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Management - NamedType BotPurchTok</note>
         </trans-unit>
+        <trans-unit id="Codeunit 2183177400 - Method 3064932810 - NamedType 1008984926" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You do not have enough cash to complete this purchase.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Location Management - Method PurchaseLocation - NamedType InsufficientFundsErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2183177400 - Method 3377517460 - NamedType 2753796441" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase of Location</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Location Management - Method ChargeThePlayer - NamedType LocationChargeTok</note>
+        </trans-unit>
         <trans-unit id="Codeunit 2183177400 - NamedType 1528307622" size-unit="char" translate="yes" xml:space="preserve">
           <source>Location %1 has a Capacity of %2 and cannot accept %3 units because of the %4 already in stock.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1643,6 +1663,41 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 1502400274 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Operation</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action Operations - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 4281990254 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bots</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 419426744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Information</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 1713154120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Chart of Accounts</source>
+          <note from="Developer" annotates="general" priority="2">NLB="YourLanguageCaption"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action ChartofAcc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 4002059277 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bots</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action BotList - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 1554554962 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Items</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action Items - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 516137276 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Buy Bot</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action AddBot - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3908444679 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BC System Manager</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1834,12 +1889,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Location List - Action PurchaseLocation - Method OnAction - NamedType WhichLocationQst</note>
         </trans-unit>
         <trans-unit id="PageExtension 3445643615 - Action 3064932810 - Method 1377591017 - NamedType 3496296870" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 105083977">
-          <source>Basic</source>
+          <source>Basic (Price: %1)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Location List - Action PurchaseLocation - Method OnAction - NamedType BasicTok</note>
         </trans-unit>
         <trans-unit id="PageExtension 3445643615 - Action 3064932810 - Method 1377591017 - NamedType 531357133" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 105083977">
-          <source>Advanced</source>
+          <source>Advanced (Price: %1)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Location List - Action PurchaseLocation - Method OnAction - NamedType AdvTok</note>
         </trans-unit>

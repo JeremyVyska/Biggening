@@ -3,14 +3,28 @@ codeunit 88018 "BCS Location Management"
 
     procedure PurchaseLocation(Basic: Boolean)
     var
+        GLAccount: Record "G/L Account";
         GameSetup: Record "BCS Game Setup";
         Location: Record Location;
         InvtPostingSetup: Record "Inventory Posting Setup";
         LocationCard: Page "Location Card";
         NoSeriesMgmt: Codeunit NoSeriesManagement;
+        AmountToCharge: Decimal;
+        InsufficientFundsErr: Label 'You do not have enough cash to complete this purchase.';
     begin
         GameSetup.Get();
         GameSetup.TestField("Location No. Series");
+
+        GLAccount.Get(GameSetup."Cash Account");
+        GLAccount.CalcFields(Balance);
+        if Basic then
+            AmountToCharge := GameSetup."Basic Location Price"
+        else
+            AmountToCharge := GameSetup."Adv. Location Price";
+
+        if (GLAccount.Balance < AmountToCharge) then
+            Error(InsufficientFundsErr);
+
         Location.Code := NoSeriesMgmt.GetNextNo(GameSetup."Location No. Series", WorkDate(), true);
         if (Basic) then begin
             Location.Name := 'Basic ' + Location.Code;
@@ -27,8 +41,20 @@ codeunit 88018 "BCS Location Management"
         InvtPostingSetup."Inventory Account" := '1300';
         InvtPostingSetup.Insert(true);
 
+        //Charge the player
+        ChargeThePlayer(AmountToCharge, Location, GameSetup);
+
         LocationCard.SetRecord(Location);
         LocationCard.Run();
+    end;
+
+    local procedure ChargeThePlayer(AmountToCharge: Decimal; Location: Record Location; GameSetup: Record "BCS Game Setup")
+    var
+        PlayerCharge: Codeunit "BCS Player Charge";
+        LocationChargeTok: Label 'Purchase of Location';
+    begin
+        //TODO: GL Acct for FA Location value
+        PlayerCharge.ChargeCash('1420', AmountToCharge, Location.Code, LocationChargeTok);
     end;
 
 

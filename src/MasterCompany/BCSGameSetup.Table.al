@@ -71,6 +71,20 @@ table 88004 "BCS Game Setup"
             DataClassification = SystemMetadata;
             TableRelation = "No. Series";
         }
+        field(41; "Basic Location Price"; Decimal)
+        {
+            Caption = 'Basic Location Price';
+            DataClassification = SystemMetadata;
+            BlankZero = true;
+            DecimalPlaces = 0 : 0;
+        }
+        field(42; "Adv. Location Price"; Decimal)
+        {
+            Caption = 'Adv. Location Price';
+            DataClassification = SystemMetadata;
+            BlankZero = true;
+            DecimalPlaces = 0 : 0;
+        }
 
         field(44; "Basic Loc. Max. Bots"; Integer)
         {
@@ -85,6 +99,7 @@ table 88004 "BCS Game Setup"
                 UpdateAllLocations(Location.FieldNo("Maximum Bots"), Location.FieldCaption("Maximum Bots"), "Basic Loc. Max. Bots", true);
             end;
         }
+
         field(45; "Basic Loc. Max. Units"; Decimal)
         {
             Caption = 'Basic - Maximum Units';

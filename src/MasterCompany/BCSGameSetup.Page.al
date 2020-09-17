@@ -94,11 +94,19 @@ page 88007 "BCS Game Setup"
                 {
                     ApplicationArea = All;
                 }
+                field("Basic Location Price"; "Basic Location Price")
+                {
+                    ApplicationArea = All;
+                }
                 field("Basic Loc. Max. Bots"; "Basic Loc. Max. Bots")
                 {
                     ApplicationArea = All;
                 }
                 field("Basic Loc. Max. Units"; "Basic Loc. Max. Units")
+                {
+                    ApplicationArea = All;
+                }
+                field("Adv. Location Price"; "Adv. Location Price")
                 {
                     ApplicationArea = All;
                 }
