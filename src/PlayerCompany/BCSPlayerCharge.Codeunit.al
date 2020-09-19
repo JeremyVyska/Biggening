@@ -6,7 +6,10 @@ codeunit 88025 "BCS Player Charge"
         GameSetup: Record "BCS Game Setup";
         GenJnl: Record "Gen. Journal Line";
         GenJnlPost: Codeunit "Gen. Jnl.-Post Line";
+        MissingAccountErr: Label 'There is a missing Account in Setup while posting: %1'; // we have no idea which here
     begin
+        if ChargeAccount = '' then
+            Error(MissingAccountErr, PostingDesc);
         GameSetup.Get();
         GenJnl.SetRange("Journal Template Name", 'GENERAL');
         GenJnl.SetRange("Journal Batch Name", 'DEFAULT');

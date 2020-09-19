@@ -298,6 +298,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Game Date - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2305977526 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Game Active</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Game Active - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 4246738589 - Field 489847365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Purchase Prospect Effort</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -707,6 +712,31 @@
           <source>Player,Admin</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field System Permissions - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 2297530211 - Field 235415455 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company Made</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Step - Company Made - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2297530211 - Field 2074996781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User Made</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Step - User Made - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2297530211 - Field 1357815713 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Job Queues Made</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Step - Job Queues Made - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2297530211 - Field 2204844114 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Master Data Copied</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Step - Master Data Copy - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2297530211 - Field 1797780955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Init. Job Ran</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Step - Init. Job Ran - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2297530211 - Field 1037431910 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Company Display Name</source>
@@ -1508,11 +1538,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Location Management - NamedType LocationOvercapacityErr</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1637666299 - NamedType 445785139" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Company %1 is not marked as a Master company, so cannot be used as a source.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Master Company - NamedType CopySourceMustBeMasterErr</note>
-        </trans-unit>
         <trans-unit id="Codeunit 792840838 - Method 4165491228 - NamedType 641311581" size-unit="char" translate="yes" xml:space="preserve">
           <source>Please run this from a Master Company.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1532,6 +1557,11 @@
           <source>Setup completed.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Player Management - NamedType SetupCompletedMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2769507221 - Method 1828359189 - NamedType 2291884308" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There is a missing Account in Setup while posting: %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Player Charge - Method ChargeCash - NamedType MissingAccountErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 2769507221 - NamedType 2624433890" size-unit="char" translate="yes" xml:space="preserve">
           <source>You do not have enough of %1 in Inventory (%2/%3).</source>
@@ -1772,6 +1802,16 @@
           <source>Setup New Player</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player List - Action Generate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3522310541 - Action 2214991922 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Start Values</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player List - Action TestStartValues - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3522310541 - Action 2214991922 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Run this FROM THE PLAYER COMPANY</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player List - Action TestStartValues - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2741061690 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Setup Overview</source>

@@ -48,6 +48,35 @@ table 88015 "BCS Player"
             OptionCaption = 'Player,Admin';
         }
 
+
+        // I could have done this via a setup subtable with an extensible enum,
+        // but simple list of boolean fields feels ok for now.
+        field(100; "Step - Company Made"; Boolean)
+        {
+            Caption = 'Company Made';
+            DataClassification = SystemMetadata;
+        }
+        field(110; "Step - User Made"; Boolean)
+        {
+            Caption = 'User Made';
+            DataClassification = SystemMetadata;
+        }
+        field(120; "Step - Job Queues Made"; Boolean)
+        {
+            Caption = 'Job Queues Made';
+            DataClassification = SystemMetadata;
+        }
+        field(130; "Step - Master Data Copy"; Boolean)
+        {
+            Caption = 'Master Data Copied';
+            DataClassification = SystemMetadata;
+        }
+        field(150; "Step - Init. Job Ran"; Boolean)
+        {
+            Caption = 'Init. Job Ran';
+            DataClassification = SystemMetadata;
+        }
+
         field(1000; "Company Display Name"; Text[80])
         {
             Caption = 'Company Display Name';

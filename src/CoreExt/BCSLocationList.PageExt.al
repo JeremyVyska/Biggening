@@ -43,8 +43,11 @@ pageextension 88005 "BCS Location List" extends "Location List"
 
                 trigger OnAction()
                 var
+                    Location: Record Location;
                     GameSetup: Record "BCS Game Setup";
+                    LocationCard: Page "Location Card";
                     BCSLocationMgmt: Codeunit "BCS Location Management";
+                    NewLocationCode: Code[20];
                     WhichLocationQst: Label 'Which type of Location do you wish to buy?';
                     BasicTok: Label 'Basic (Price: %1)';
                     AdvTok: Label 'Advanced (Price: %1)';
@@ -53,9 +56,14 @@ pageextension 88005 "BCS Location List" extends "Location List"
                     case StrMenu(StrSubstNo(BasicTok, GameSetup."Basic Location Price") + ','
                        + StrSubstNo(AdvTok, GameSetup."Adv. Location Price"), 0, WhichLocationQst) of
                         1:
-                            BCSLocationMgmt.PurchaseLocation(true);
+                            NewLocationCode := BCSLocationMgmt.PurchaseLocation(true);
                         2:
-                            BCSLocationMgmt.PurchaseLocation(false);
+                            NewLocationCode := BCSLocationMgmt.PurchaseLocation(false);
+                    end;
+                    if NewLocationCode <> '' then begin
+                        Location.get(NewLocationCode);
+                        LocationCard.SetRecord(Location);
+                        LocationCard.Run();
                     end;
                 end;
             }

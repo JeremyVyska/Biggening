@@ -16,6 +16,11 @@ table 88004 "BCS Game Setup"
             Caption = 'Game Date';
             DataClassification = SystemMetadata;
         }
+        field(15; "Game Active"; Boolean)
+        {
+            Caption = 'Game Active';
+            DataClassification = SystemMetadata;
+        }
 
         field(20; "Purchase Prospect Effort"; Integer)
         {

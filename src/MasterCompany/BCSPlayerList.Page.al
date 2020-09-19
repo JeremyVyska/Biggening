@@ -42,6 +42,26 @@ page 88019 "BCS Player List"
                 {
                     ApplicationArea = All;
                 }
+                field("Step - Company Made"; "Step - Company Made")
+                {
+                    ApplicationArea = All;
+                }
+                field("Step - User Made"; "Step - User Made")
+                {
+                    ApplicationArea = All;
+                }
+                field("Step - Master Data Copy"; "Step - Master Data Copy")
+                {
+                    ApplicationArea = All;
+                }
+                field("Step - Job Queues Made"; "Step - Job Queues Made")
+                {
+                    ApplicationArea = All;
+                }
+                field("Step - Init. Job Ran"; "Step - Init. Job Ran")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }
@@ -63,6 +83,15 @@ page 88019 "BCS Player List"
                 begin
                     BCSPlayerMgmt.SetupNewPlayer(Rec);
                 end;
+            }
+            action(TestStartValues)
+            {
+                Caption = 'Test Start Values';
+                ToolTip = 'Run this FROM THE PLAYER COMPANY';
+                Promoted = true;
+                PromotedCategory = Process;
+                Image = TestDatabase;
+                RunObject = Codeunit "BCS Player Starting Values";
             }
         }
     }

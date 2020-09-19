@@ -7,10 +7,12 @@ codeunit 88002 "BCS Master Heartbeat"
         GameSetup: Record "BCS Game Setup";
     begin
         GameSetup.Get();
-        GameSetup."Game Date" := CalcDate('<+1D>', GameSetup."Game Date");
-        GameSetup.Modify(true);
-        CleanOldJobQueueEntries(Rec);
-        OnMasterHeartbeat();
+        if GameSetup."Game Active" then begin
+            GameSetup."Game Date" := CalcDate('<+1D>', GameSetup."Game Date");
+            GameSetup.Modify(true);
+            CleanOldJobQueueEntries(Rec);
+            OnMasterHeartbeat();
+        end;
     end;
 
 

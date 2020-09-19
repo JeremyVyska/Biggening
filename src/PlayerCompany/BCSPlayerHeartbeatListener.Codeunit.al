@@ -12,6 +12,11 @@ codeunit 88003 "BCS Player Heartbeat Listener"
         CompanyInformation.Get();
         GameSetup.Get();
         if CompanyInformation."Current Game Date" <> GameSetup."Game Date" then begin
+            if CompanyInformation."Current Game Date" = 0D then begin
+                // Treat blank as 'yesterday' in case of blanks
+                CompanyInformation."Current Game Date" := CalcDate('<-1D>', GameSetup."Game Date");
+                CompanyInformation.Modify(true);
+            end;
             MissedDays := GameSetup."Game Date" - CompanyInformation."Current Game Date";
             for i := 1 to MissedDays do begin
                 CompanyInformation."Current Game Date" := CalcDate('<+1D>', CompanyInformation."Current Game Date");

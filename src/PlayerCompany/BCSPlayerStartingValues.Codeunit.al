@@ -4,6 +4,9 @@ codeunit 88031 "BCS Player Starting Values"
     begin
         GameSetup.Get();
 
+        // We need a basic Company Information.  Doesn't need to be much, but must exist
+        GenerateCompanyInfo();
+
         // Game setup - initial Cash, basic locations
         GivePlayerStartingCash();
         CreateLocations();
@@ -13,6 +16,9 @@ codeunit 88031 "BCS Player Starting Values"
 
         // Bots - instantiate bots based on count of 'Include at start' on Templates
         FindAndBuyStarterBots();
+
+        // Last step, update the Player record for this company
+        UpdatePlayerAsDone();
     end;
 
     local procedure ChargeThePlayer(ChargeAcct: Code[20]; AmountToCharge: Decimal)
@@ -85,6 +91,38 @@ codeunit 88031 "BCS Player Starting Values"
                     PurchBot.InitialPurchaseBot(BotTemplate.Code);
                 end;
             until BotTemplate.Next() = 0;
+    end;
+
+    local procedure UpdatePlayerAsDone()
+    var
+        Player: Record "BCS Player";
+    begin
+        Player.SetRange("Company Name", CompanyName());
+        if Player.FindFirst() then begin
+            Player."Step - Init. Job Ran" := true;
+            Player.Modify();
+        end;
+    end;
+
+    local procedure GenerateCompanyInfo()
+    var
+        CompanyInfo: Record "Company Information";
+        Company: Record Company;
+        GameSetup: Record "BCS Game Setup";
+    begin
+        if not CompanyInfo.get() then begin
+            CompanyInfo.Insert(true);
+            Company.Get(CompanyName());
+            if Company."Display Name" <> '' then
+                CompanyInfo.Name := Company."Display Name"
+            else
+                CompanyInfo.Name := Company.Name;
+            CompanyInfo.Modify(true);
+        end;
+        GameSetup.Get();
+        CompanyInfo.Get();
+        CompanyInfo."Current Game Date" := GameSetup."Game Date";
+        CompanyInfo.Modify(true);
     end;
 
 

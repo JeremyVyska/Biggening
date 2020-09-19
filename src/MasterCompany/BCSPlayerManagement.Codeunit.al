@@ -9,27 +9,41 @@ codeunit 88015 "BCS Player Management"
             Error(NotMasterCompanyErr);
 
         Player.TestField("Company Name");
-        Player.TestField("Company Display Name");
 
         // New Company
-        GeneratePlayerCompany(Player);
-        Commit();
+        if not (Player."Step - Company Made") then begin
+            GeneratePlayerCompany(Player);
+            Player."Step - Company Made" := true;
+            Player.Modify(true);
+            Commit();
+        end;
 
         // New User
-        GeneratePlayerUser(Player);
-        Commit();
+        if not (Player."Step - User Made") then begin
+            GeneratePlayerUser(Player);
+            Player."Step - User Made" := true;
+            Player.Modify(true);
+            Commit();
+        end;
 
         //TODO: User Permissions.  Ugh.
 
+        if not (Player."Step - Master Data Copy") then begin
+            CopyMasterCompanySetup(Player."Company Name");
+            Player."Step - Master Data Copy" := true;
+            Player.Modify(true);
+            Commit();
+        end;
 
-        CopyMasterCompanySetup(Player."Company Name");
-        Commit();
+        if not (Player."Step - Job Queues Made") then begin
+            GenerateInitialCompanySettingsJob(Player);
+            Commit();
 
-        GenerateInitialCompanySettingsJob(Player);
-        Commit();
-
-        CreateJobQueueInCompany(Player);
-        Commit();
+            CreateJobQueueInCompany(Player);
+            Player."Step - Job Queues Made" := true;
+            Player.Modify(true);
+            Commit();
+        end;
 
         Message(SetupCompletedMsg);
     end;
@@ -87,9 +101,9 @@ codeunit 88015 "BCS Player Management"
         JobQueueEntry."Run on Saturdays" := true;
         JobQueueEntry."Run on Sundays" := true;
         JobQueueEntry."No. of Minutes between Runs" := 1;  //most of the time, will do nearly nothing.
-        JobQueueEntry."Earliest Start Date/Time" := CurrentDateTime();
-        JobQueueEntry.Status := JobQueueEntry.Status::Ready;
-        JobQueueEntry.Modify();
+        JobQueueEntry."Earliest Start Date/Time" := CurrentDateTime() + (10 * 60 * 1000);
+        JobQueueEntry.VALIDATE(Status, JobQueueEntry.Status::Ready);
+        JobQueueEntry.Modify(true);
     end;
 
     local procedure CopyMasterCompanySetup(CompanyName: Text[30])
@@ -107,11 +121,12 @@ codeunit 88015 "BCS Player Management"
         JobQueueEntry."Object Type to Run" := JobQueueEntry."Object Type to Run"::Codeunit;
         JobQueueEntry."Object ID to Run" := Codeunit::"BCS Player Starting Values";
         JobQueueEntry.Insert(true);
-        JobQueueEntry."User ID" := Player."User ID";
+        //JobQueueEntry."User ID" := Player."User ID";
+        JobQueueEntry."User ID" := UserId; // This needs to run as Admin to update the Player table.
         JobQueueEntry."Recurring Job" := false;
-        JobQueueEntry."Earliest Start Date/Time" := CurrentDateTime();
-        JobQueueEntry.Status := JobQueueEntry.Status::Ready;
-        JobQueueEntry.Modify();
+        JobQueueEntry."Earliest Start Date/Time" := CurrentDateTime() + (30 * 1000);
+        JobQueueEntry.Validate(Status, JobQueueEntry.Status::Ready);
+        JobQueueEntry.Modify(true);
     end;
 
 

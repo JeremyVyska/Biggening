@@ -15,6 +15,10 @@ page 88007 "BCS Game Setup"
                 {
                     ApplicationArea = All;
                 }
+                field("Game Active"; "Game Active")
+                {
+                    ApplicationArea = All;
+                }
                 field("Starting Cash"; "Starting Cash")
                 {
                     ApplicationArea = All;

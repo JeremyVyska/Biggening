@@ -1,7 +1,7 @@
 codeunit 88018 "BCS Location Management"
 {
 
-    procedure PurchaseLocation(Basic: Boolean)
+    procedure PurchaseLocation(Basic: Boolean): Code[20]
     var
         GLAccount: Record "G/L Account";
         GameSetup: Record "BCS Game Setup";
@@ -44,8 +44,7 @@ codeunit 88018 "BCS Location Management"
         //Charge the player
         ChargeThePlayer(AmountToCharge, Location, GameSetup);
 
-        LocationCard.SetRecord(Location);
-        LocationCard.Run();
+        exit(Location.Code);
     end;
 
     local procedure ChargeThePlayer(AmountToCharge: Decimal; Location: Record Location; GameSetup: Record "BCS Game Setup")

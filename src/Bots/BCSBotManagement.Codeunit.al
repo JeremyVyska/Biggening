@@ -68,6 +68,7 @@ codeunit 88001 "BCS Bot Management"
     var
         GameSetup: Record "BCS Game Setup";
     begin
+        GameSetup.Get();
         returnValue := BCSPlayerCharge.ChargeCash(GameSetup."FA Value Account Bot", AmountToCharge, BotDesignation, StrSubstNo(BotPurchTok, BotDesignation));
     end;
 
