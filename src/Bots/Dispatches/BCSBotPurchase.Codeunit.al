@@ -6,10 +6,8 @@ codeunit 88006 "BCS Bot Purchase"
     var
         Vendor: Record Vendor;
         PurchHeader: Record "Purchase Header";
-        Documents: List of [Code[20]];
-        DocListBuilder: TextBuilder;
         DocNo: Text;
-        i: Integer;
+        GeneratedProspects: Integer;
     begin
         // Safety Measure
         if (Rec."Bot Tier" = 0) then begin
@@ -32,13 +30,18 @@ codeunit 88006 "BCS Bot Purchase"
             if not AreAnyOrdersNeeded(Rec) then begin
                 SetResult(StrSubstNo(NoOrdersNeededMsg, Rec."Assignment Code"), MyResult."Action Type"::Idle);
                 exit;
-            end else
-                SetResult(StrSubstNo(POCreatedMsg, CreatePO(Rec), Rec."Assignment Code"), MyResult."Action Type"::Activity);
-        end else
+            end else begin
+                DocNo := CreatePO(Rec);
+                if (DocNo <> '') then
+                    SetResult(StrSubstNo(POCreatedMsg, CreatePO(Rec), Rec."Assignment Code"), MyResult."Action Type"::Activity)
+                else
+                    SetResult('I ran into errors while creating a PO. Check the Bot Error log for details.', MyResult."Action Type"::Error);
+            end;
+        end else begin
             // Else, they will 'farm' for new suppliers
-            FishForProspect(Rec);
-
-        //TODO: Activity message about fishing
+            GeneratedProspects := GeneratedProspects + FishForProspect(Rec);
+            SetResult(StrSubstNo('I fished for new Suppliers and found %1.', GeneratedProspects), MyResult."Action Type"::Activity);
+        end;
     end;
 
     local procedure AreAnyOrdersNeeded(var BotInstance: Record "BCS Bot Instance"): Boolean
@@ -122,10 +125,25 @@ codeunit 88006 "BCS Bot Purchase"
     local procedure CreatePO(var BotInstance: Record "BCS Bot Instance"): Code[20]
     var
         PurchaseHeader: Record "Purchase Header";
+        Vendor: Record Vendor;
+        BotInstance2: Record "BCS Bot Instance";
+        BotErrorLog: Codeunit "BCS Error Management";
+        MissingVendorLocationTok: Label 'Vendor %1 is not assigned to a location, so no orders can be placed.';
+        MissingBotsForLocationTok: Label 'Location %1 has no logistics bots assigned, so no stock can move. No orders can be made.';
     begin
         // Count of BOTH The open PO docs, and the posted docs
-        //TODO: Check Vendor has a Location before allowing.
-        //TODO: Check for Logistics Bots
+        // Check Vendor has a Location before allowing.
+        Vendor.Get(BotInstance."Assignment Code");
+        if Vendor."Location Code" = '' then begin
+            BotErrorLog.ThrowPlayerBotError(BotInstance, StrSubstNo(MissingVendorLocationTok, Vendor."No."));
+            Exit('');  // we don't want to *throw* an error, as that will roll back things.
+        end;
+        // Check for Logistics Bots
+        BotInstance2.SetRange("Assignment Code", Vendor."Location Code"); //this forces bot type Logistics by name
+        if BotInstance2.IsEmpty then begin
+            BotErrorLog.ThrowPlayerBotError(BotInstance, StrSubstNo(MissingBotsForLocationTok, Vendor."Location Code"));
+            Exit('');  // we don't want to *throw* an error, as that will roll back things.
+        end;
         PurchaseHeader.Validate("Document Type", PurchaseHeader."Document Type"::Order);
         PurchaseHeader.Validate("Buy-from Vendor No.", BotInstance."Assignment Code");
         PurchaseHeader.Insert(true);
@@ -154,6 +172,8 @@ codeunit 88006 "BCS Bot Purchase"
         MarketCalc: Codeunit "BCS Market Calculation";
         NextLineNo: Integer;
         i: Integer;
+        QuantityToOrder: Decimal;
+        PriceToCharge: Decimal;
     begin
         NextLineNo := 10000;
         if BotInstance."Maximum Doc. Lines Per Op" = 0 then
@@ -167,11 +187,17 @@ codeunit 88006 "BCS Bot Purchase"
             PurchaseLine.Insert(true);
             PurchaseLine.Validate(Type, PurchaseLine.Type::Item);
             PurchaseLine.Validate("No.", WhatItemIsNeeded(BotInstance));
-            //TODO: Event Throw - Max Vendor Quantity per day
-            PurchaseLine.Validate(Quantity, BotInstance.GetOpsPerDay());
-            //TODO: Event Throw
-            PurchaseLine.validate("Direct Unit Cost", MarketCalc.GetMarketPrice(PurchaseLine."No."));
+
+            QuantityToOrder := BotInstance.GetOpsPerDay();
+            OnBeforeGeneratePOLineSetQuantity(PurchaseLine, BotInstance, QuantityToOrder);
+            PurchaseLine.Validate(Quantity, QuantityToOrder);
+
+            PriceToCharge := MarketCalc.GetMarketPrice(PurchaseLine."No.");
+            OnBeforeGeneratePOLineSetPrice(PurchaseLine, BotInstance, PriceToCharge);
+            PurchaseLine.Validate("Direct Unit Cost", PriceToCharge);
+
             PurchaseLine.Modify(true);
+            OnAfterGeneratePurchLine(PurchaseLine, BotInstance);
         end;
     end;
 
@@ -193,7 +219,7 @@ codeunit 88006 "BCS Bot Purchase"
 
     */
 
-    local procedure FishForProspect(whichBot: Record "BCS Bot Instance")
+    local procedure FishForProspect(whichBot: Record "BCS Bot Instance") Generated: Integer
     var
         CompanyInfo: Record "Company Information";
         GameSetup: Record "BCS Game Setup";
@@ -223,9 +249,10 @@ codeunit 88006 "BCS Bot Purchase"
             Prospect."Maximum Orders Per Day" := Round(GameSetup."Purch. Pros. Base Max Orders" * (whichBot."Bot Tier" * GameSetup."Purch. Pros. Tier Multiplier"));
             Prospect."Maximum Quantity Per Order" := Round(GameSetup."Purch. Pros. Base Max Quantity" * (whichBot."Bot Tier" * GameSetup."Purch. Pros. Tier Multiplier"));
             Prospect.Insert(true);
+            Generated := Generated + 1;
 
             // Trade Creation
-            MasterItem.SetRange("Prod. Posting Group", 'CLASS1');
+            MasterItem.SetRange("Prod. Posting Group", 'CLASS1');  //This OK hardcoding for now
             IfRunTrigger := true;
             OnBeforeProspectTrades(Prospect, MasterItem, IfRunTrigger);
             if IfRunTrigger then begin
@@ -290,6 +317,21 @@ codeunit 88006 "BCS Bot Purchase"
 
     [BusinessEvent(false)]
     local procedure OnAfterProspectTrades(var Prospect: Record "BCS Prospect"; var Trades: Record "BCS Prospect Trades")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterGeneratePurchLine(var PurchaseLine: Record "Purchase Line"; var BotInstance: Record "BCS Bot Instance")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeGeneratePOLineSetPrice(var PurchaseLine: Record "Purchase Line"; var BotInstance: Record "BCS Bot Instance"; var PriceToCharge: Decimal)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeGeneratePOLineSetQuantity(var PurchaseLine: Record "Purchase Line"; var BotInstance: Record "BCS Bot Instance"; var QuantityToOrder: Decimal)
     begin
     end;
 

@@ -22,7 +22,7 @@ page 88013 "BCS Master Item Subpage"
                     ApplicationArea = All;
                     Visible = false;
                 }
-                field("Master Item No."; "Master Item No.")
+                field("Master Component No."; "Master Component No.")
                 {
                     ApplicationArea = All;
                 }

@@ -14,6 +14,7 @@ codeunit 88018 "BCS Location Management"
     begin
         GameSetup.Get();
         GameSetup.TestField("Location No. Series");
+        GameSetup.TestField("Inventory Account");
 
         GLAccount.Get(GameSetup."Cash Account");
         GLAccount.CalcFields(Balance);
@@ -32,13 +33,12 @@ codeunit 88018 "BCS Location Management"
             Location."Maximum Units" := GameSetup."Basic Loc. Max. Units";
 
         end else begin
-            //TODO: Advanced Location
+            //TODO: v0.v2+ Advanced Location
         end;
         Location.Insert(true);
-        //TODO: Inventory Setup : Setup driven
         InvtPostingSetup."Location Code" := Location.code;
-        InvtPostingSetup."Invt. Posting Group Code" := 'ITEM';
-        InvtPostingSetup."Inventory Account" := '1300';
+        InvtPostingSetup."Invt. Posting Group Code" := GameSetup."Inventory Posting Group";
+        InvtPostingSetup."Inventory Account" := GameSetup."Inventory Account";
         InvtPostingSetup.Insert(true);
 
         //Charge the player
@@ -53,8 +53,8 @@ codeunit 88018 "BCS Location Management"
         PlayerCharge: Codeunit "BCS Player Charge";
         LocationChargeTok: Label 'Purchase of Location';
     begin
-        //TODO: GL Acct for FA Location value
-        PlayerCharge.ChargeCash('1420', AmountToCharge, Location.Code, LocationChargeTok);
+        GameSetup.Get();
+        PlayerCharge.ChargeCash(GameSetup."FA Value Account Location", AmountToCharge, Location.Code, LocationChargeTok);
     end;
 
 

@@ -39,7 +39,6 @@ table 88015 "BCS Player"
             DataClassification = SystemMetadata;
             TableRelation = Company;
             ValidateTableRelation = false;
-            TestTableRelation = false;
         }
         field(70; "System Permissions"; Option)
         {

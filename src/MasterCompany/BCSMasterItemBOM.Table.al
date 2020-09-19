@@ -17,11 +17,10 @@ table 88011 "BCS Master Item BOM"
             Caption = 'Line No.';
             DataClassification = SystemMetadata;
         }
-        field(10; "Master Item No."; Code[20])
+        field(10; "Master Component No."; Code[20])
         {
-            //TODO: Rename this, it's a component
-            //TODO: Validate uniqueness
-            Caption = 'Master Item No.';
+            //TODO: v0.2 Validate uniqueness
+            Caption = 'Master Component No.';
             DataClassification = SystemMetadata;
             TableRelation = "BCS Master Item";
         }

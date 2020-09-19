@@ -15,14 +15,17 @@ codeunit 88020 "BCS Snapshot Capture"
         Location: Record Location;
         Customer: Record Customer;
         Vendor: Record Vendor;
+        GameSetup: Record "BCS Game Setup";
         Seasons: Record "BCS Season";
         Players: Record "BCS Player";
         Bots: Record "BCS Bot Instance";
+        PowerLedger: Record "BCS Power Ledger";
         Snapshot: Record "BCS Snapshot";
         SnapshotBots: Record "BCS Snapshot Bots";
         CurrentBotTypes: List of [Integer];
         i: Integer;
     begin
+        GameSetup.Get();
         Seasons.SetRange(Active, true);
         if Seasons.IsEmpty then
             exit
@@ -49,15 +52,16 @@ codeunit 88020 "BCS Snapshot Capture"
         Snapshot."Customer Counts" := Customer.Count;
         Snapshot."Vendor Counts" := Vendor.Count;
 
-        //TODO: Consider Game Setup to point Wealth Account
-        GLAccount.Get('3000');
+        GLAccount.Get(GameSetup."Wealth Account");
         GLAccount.SetRange("Date Filter", 0D, CalcDate('<-1D>', CompanyInfo."Current Game Date"));
         GLAccount.CalcFields("Net Change", Balance);
 
         Snapshot."Wealth Balance" := GLAccount.Balance;
         Snapshot."Wealth Net Change" := GLAccount.Balance - GLAccount."Net Change";
 
-        //TODO: Power Usage
+        PowerLedger.SetRange("Posting Date", CalcDate('<-1D>', CompanyInfo."Current Game Date"));
+        PowerLedger.CalcSums("Power Usage");
+        Snapshot."Power Usage" := PowerLedger."Power Usage";
 
         Snapshot.Insert(true);
 

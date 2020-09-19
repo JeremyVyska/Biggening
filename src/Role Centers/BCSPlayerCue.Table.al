@@ -89,7 +89,7 @@ table 88002 "BCS Player Cue"
         end else
             Wealth := 0;
 
-        // TODO: Query
+        // TODO: v0.2 Query
         "Idling Bots" := 0;
         "Erroring Bots" := 0;
         if BotInstance.FindSet() then

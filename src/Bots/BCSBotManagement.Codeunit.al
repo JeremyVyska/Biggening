@@ -57,6 +57,11 @@ codeunit 88001 "BCS Bot Management"
         exit(NewDesig.ToText())
     end;
 
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeCalculateTemplatePrice(WhichTemplate: Record "BCS Bot Template"; var PriceToChargePlayerForBot: Decimal)
+    begin
+    end;
+
     procedure GenerateReqBuffer(var ResCheckBuffer: Record "BCS Resource Check Buffer"; WhichTemplate: Record "BCS Bot Template")
     var
         GLAccount: Record "G/L Account";
@@ -65,14 +70,16 @@ codeunit 88001 "BCS Bot Management"
         TemplateReq: Record "BCS Bot Template Req.";
         MasterItem: Record "BCS Master Item";
         NextLineNo: Integer;
+        PriceToChargePlayerForBot: Decimal;
     begin
         GameSetup.Get();
 
         // Always do Cash first
         ResCheckBuffer."Line No." := 1;
         ResCheckBuffer.Description := StrSubstNo(CashTok);
-        //TODO: Event safe Price
-        ResCheckBuffer.Requirement := WhichTemplate."Base Price";
+        PriceToChargePlayerForBot := WhichTemplate."Base Price";
+        OnBeforeCalculateTemplatePrice(WhichTemplate, PriceToChargePlayerForBot);
+        ResCheckBuffer.Requirement := PriceToChargePlayerForBot;
         GLAccount.Get(GameSetup."Cash Account");
         GLAccount.CalcFields(Balance);
         ResCheckBuffer.Inventory := GLAccount.Balance;

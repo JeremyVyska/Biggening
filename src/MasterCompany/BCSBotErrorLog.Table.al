@@ -62,4 +62,15 @@ table 88007 "BCS Bot Error Log"
         }
     }
 
+    procedure DeleteOldEntries(DaysOld: Integer)
+    var
+        BotErrorLog2: Record "BCS Bot Error Log";
+        BeforeDate: Date;
+    begin
+        BotErrorLog2.SetRange(Acknowledged, false);  //Anything that need Ack should stay
+        BeforeDate := CalcDate(StrSubstNo('<-%1d>', DaysOld), Today);
+        BotErrorLog2.SetRange("Posting Date", 0D, BeforeDate);
+        BotErrorLog2.DeleteAll();
+    end;
+
 }

@@ -5,6 +5,7 @@ codeunit 88013 "BCS Bot Marketing"
     trigger OnRun()
     var
         i: Integer;
+        GeneratedProspects: Integer;
     begin
         // Safety Measure
         if (Rec."Bot Tier" = 0) then begin
@@ -13,11 +14,10 @@ codeunit 88013 "BCS Bot Marketing"
         end;
         for i := 1 to Rec.GetOpsPerDay() do begin
             // For now, marketing bots will Only fish for Customer Prospects
-            FishForProspect(Rec);
+            GeneratedProspects := GeneratedProspects + FishForProspect(Rec);
         end;
 
-        // TODO: Return useful info to the Activity log
-        SetResult('I researched the market', MyResult."Action Type"::Activity);
+        SetResult(StrSubstNo('I marketed and found %1 prospects today.', GeneratedProspects), MyResult."Action Type"::Activity);
     end;
 
 
@@ -37,10 +37,11 @@ codeunit 88013 "BCS Bot Marketing"
 
         */
 
-    local procedure FishForProspect(whichBot: Record "BCS Bot Instance")
+    local procedure FishForProspect(whichBot: Record "BCS Bot Instance") Generated: Integer
     var
         CompanyInfo: Record "Company Information";
         GameSetup: Record "BCS Game Setup";
+        Template: Record "BCS Bot Template";
         Prospect: Record "BCS Prospect";
         Trades: Record "BCS Prospect Trades";
         MasterItem: Record "BCS Master Item";
@@ -58,6 +59,9 @@ codeunit 88013 "BCS Bot Marketing"
         GameSetup.TestField("Sales Pros. Base Max Quantity");
         GameSetup.TestField("Sales Pros. Tier Multiplier");
 
+        Template.Get(whichBot."Bot Template Code");
+        Template.TestField("Marketing Bot Item Tier");
+
         CompanyInfo."Sales Prospect Effort" := CompanyInfo."Sales Prospect Effort" + whichBot.GetOpsPerDay();
         CompanyInfo.Modify(false);
 
@@ -67,38 +71,42 @@ codeunit 88013 "BCS Bot Marketing"
             Prospect."Maximum Orders Per Day" := Round(GameSetup."Sales Pros. Base Max Orders" * (whichBot."Bot Tier" * GameSetup."Sales Pros. Tier Multiplier"));
             Prospect."Maximum Quantity Per Order" := Round(GameSetup."Sales Pros. Base Max Quantity" * (whichBot."Bot Tier" * GameSetup."Sales Pros. Tier Multiplier"));
             Prospect.Insert(true);
+            Generated := Generated + 1;
 
-            // Trade Creation
-            Trades.Reset();
-            Trades."Prospect No." := Prospect."No.";
-            //TODO: More Eventing!  ... More everything
-            Trades."Prod. Posting Group" := 'CLASS1';
-            Trades."Item Category Code" := '';
-            Trades.Insert(true);
-            /*
-            MasterItem.SetRange("Prod. Posting Group", 'CLASS1');
+            MasterItem.SetRange("Prod. Posting Group", Template."Marketing Bot Item Tier");
             IfRunTrigger := true;
             OnBeforeProspectTrades(Prospect, MasterItem, IfRunTrigger);
             if IfRunTrigger then begin
                 for i := 1 to whichBot."Bot Tier" do begin
                     j := 0;
                     TempMasterItem.Reset();
+
+                    // Randomly select items from that Prod. Posting Group tier
+                    // with duplication detecting
                     repeat
                         if MasterItem.FindFirst() then
                             MasterItem.Next(Random(MasterItem.Count) - 1);
                         j := j + 1
-                    until ((not TempMasterItem.Get(MasterItem.Code)) or (j > 20));
-                    if TempMasterItem.Code = '' then begin
+                    until ((not TempMasterItem.Get(MasterItem."No.")) or (j > 20));
+
+                    if TempMasterItem."No." = '' then begin
                         TempMasterItem := MasterItem;
                         TempMasterItem.Insert(false);
 
-                        
+                        Trades."Prospect No." := Prospect."No.";
+                        Trades."Item No." := MasterItem."No.";
+                        Trades."Prod. Posting Group" := MasterItem."Prod. Posting Group";
+                        Trades."Item Category Code" := MasterItem."Item Category Code";
+                        Trades.Insert(true);
+                        //NOTE: This DOES mean the player can get Customer Prospects that
+                        //      want items they haven't yet unlocked.  This is acceptable to
+                        //      me, since that will show them towards unlocking new items.
+                        //      Code in the Prospect conversion watches for that.
                     end else
                         Error('');
                 end;
             end;
             OnAfterProspectTrades(Prospect, Trades);
-            */
         end;
     end;
 

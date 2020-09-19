@@ -75,7 +75,7 @@ table 88001 "BCS Bot Instance"
             Caption = 'Research Points Per Op.';
             DecimalPlaces = 0 : 0;
             BlankZero = true;
-            //TODO: Editable = false;
+            Editable = false;
         }
 
         field(90; "Maximum Doc. Lines Per Op"; Decimal)
@@ -84,7 +84,7 @@ table 88001 "BCS Bot Instance"
             Caption = 'Maximum Doc. Lines Per Op';
             DecimalPlaces = 0 : 0;
             BlankZero = true;
-            //TODO: Editable = false;
+            Editable = false;
         }
 
         field(100; "Power Upgrade Code"; Code[20])

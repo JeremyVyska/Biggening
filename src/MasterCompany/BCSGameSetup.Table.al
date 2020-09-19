@@ -169,6 +169,78 @@ table 88004 "BCS Game Setup"
             DataClassification = SystemMetadata;
             TableRelation = "G/L Account";
         }
+
+        field(80; "Inventory Account"; Code[20])
+        {
+            Caption = 'Inventory Account';
+            DataClassification = SystemMetadata;
+            TableRelation = "G/L Account";
+        }
+
+        field(90; "FA Value Account Location"; Code[20])
+        {
+            Caption = 'FA Value Account Location';
+            DataClassification = SystemMetadata;
+            TableRelation = "G/L Account";
+        }
+        field(100; "FA Value Account Bot"; Code[20])
+        {
+            Caption = 'FA Value Account Bot';
+            DataClassification = SystemMetadata;
+            TableRelation = "G/L Account";
+        }
+
+
+        field(200; "Inventory Posting Group"; Code[20])
+        {
+            Caption = 'Inventory Posting Group';
+            TableRelation = "Inventory Posting Group";
+        }
+
+        field(210; "Customer Bus. Posting Group"; Code[20])
+        {
+            Caption = 'Customer. Bus. Posting Group';
+            TableRelation = "Gen. Business Posting Group";
+        }
+        field(220; "Customer Posting Group"; Code[20])
+        {
+            Caption = 'Customer Posting Group';
+            TableRelation = "Customer Posting Group";
+        }
+
+        field(230; "Customer Payment Method Code"; Code[20])
+        {
+            Caption = 'Cust. Payment Method Code';
+            TableRelation = "Payment Method";
+        }
+
+        field(250; "Vendor Bus. Posting Group"; Code[20])
+        {
+            Caption = 'Vendor. Bus. Posting Group';
+            TableRelation = "Gen. Business Posting Group";
+        }
+        field(260; "Vendor Posting Group"; Code[20])
+        {
+            Caption = 'Vendor Posting Group';
+            TableRelation = "Vendor Posting Group";
+        }
+
+        field(270; "Vendor Payment Method Code"; Code[20])
+        {
+            Caption = 'Cust. Payment Method Code';
+            TableRelation = "Payment Method";
+        }
+
+
+        field(300; "Market Move Multiplier"; Decimal)
+        {
+            Caption = 'Market Move Multiplier';
+        }
+
+        field(310; "Market Movement Floor"; Decimal)
+        {
+            Caption = 'Market Movement Floor';
+        }
     }
 
     keys

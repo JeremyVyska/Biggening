@@ -60,7 +60,7 @@ codeunit 88025 "BCS Player Charge"
                         RemQtyToCharge := RemQtyToCharge - QtyToReduce;
                 until (RemQtyToCharge = 0) OR (Location.Next() = 0);
 
-        // TODO: Handle Advanced Locations
+        // TODO: v0.2 Handle Advanced Locations
         until (RemQtyToCharge = 0) OR (LoopSafety > 100);
         if (RemQtyToCharge > 0) then
             Error(UnableToFindItems, MaterialCode, RemQtyToCharge);

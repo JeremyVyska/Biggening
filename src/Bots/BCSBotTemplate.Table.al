@@ -20,6 +20,11 @@ table 88000 "BCS Bot Template"
         {
             Caption = 'Bot Tier';
             DataClassification = SystemMetadata;
+
+            trigger OnValidate()
+            begin
+                SafetyCheckTypeTier();
+            end;
         }
         field(10; Description; Text[200])
         {
@@ -65,6 +70,12 @@ table 88000 "BCS Bot Template"
             BlankZero = true;
         }
 
+        field(100; "Marketing Bot Item Tier"; Code[20])
+        {
+            Caption = 'Marketing Bot Item Tier';
+            TableRelation = "Gen. Product Posting Group";
+        }
+
         field(1000; "Materials"; Integer)
         {
             Caption = 'Materials';
@@ -73,8 +84,6 @@ table 88000 "BCS Bot Template"
             Editable = false;
         }
     }
-
-    // TODO: Validate only one Type/tier
 
     keys
     {
@@ -92,4 +101,17 @@ table 88000 "BCS Bot Template"
         }
     }
 
+    procedure SafetyCheckTypeTier()
+    var
+        Template2: Record "BCS Bot Template";
+        DuplicateBotTier: Label 'For each Type and Tier, there should only be one template.';
+    begin
+        if (Rec."Bot Tier" = 0) then
+            exit;
+
+        Template2.SetRange("Bot Type", Rec."Bot Type");
+        Template2.SetRange("Bot Tier", rec."Bot Tier");
+        if not Template2.IsEmpty then
+            Error(DuplicateBotTier);
+    end;
 }

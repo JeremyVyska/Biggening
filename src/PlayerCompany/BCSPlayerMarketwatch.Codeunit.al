@@ -14,7 +14,6 @@ codeunit 88022 "BCS Player Marketwatch"
             BCSMarketTrades.Company := CompanyName();
             BCSMarketTrades.Date := WorkDate();
             BCSMarketTrades."Total Trades" := Rec.Quantity;
-            //TODO: Price?            
             BCSMarketTrades.Insert(true);
         end else begin
             BCSMarketTrades."Total Trades" := BCSMarketTrades."Total Trades" + Rec.Quantity;
@@ -35,7 +34,6 @@ codeunit 88022 "BCS Player Marketwatch"
             BCSMarketTrades.Company := CompanyName();
             BCSMarketTrades.Date := WorkDate();
             BCSMarketTrades."Total Trades" := Rec.Quantity;
-            //TODO: Price?            
             BCSMarketTrades.Insert(true);
         end else begin
             BCSMarketTrades."Total Trades" := BCSMarketTrades."Total Trades" + Rec.Quantity;

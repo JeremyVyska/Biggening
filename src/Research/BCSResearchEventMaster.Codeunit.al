@@ -24,7 +24,7 @@ codeunit 88028 "BCS Research Event Master"
                     exit(false);
             until ResPreq.Next() = 0;
 
-        //TODO: Research Materials Prereq
+        //TODO: v0.2 Research Materials Prereq
 
         exit(true);
     end;

@@ -54,7 +54,7 @@ table 88008 "BCS Research"
             Caption = 'Operation Bonus Code';
             DataClassification = SystemMetadata;
             TableRelation = if ("Operation Bonus Type" = const("Bot Templates")) "BCS Bot Template";
-            //TODO: Need to link the TableRelation to Upgrade Kits
+            //TODO: v0.2 Need to link the TableRelation to Upgrade Kits
         }
 
         field(60; "Power Per Day Bonus"; Integer)
@@ -76,7 +76,7 @@ table 88008 "BCS Research"
             Caption = 'Power Bonus Code';
             DataClassification = SystemMetadata;
             TableRelation = if ("Power Bonus Type" = const("Bot Templates")) "BCS Bot Template";
-            //TODO: Need to link the TableRelation to Upgrade Kits
+            //TODO: v0.2 Need to link the TableRelation to Upgrade Kits
         }
 
         field(70; "Prospect Maximum Multiplier"; Integer)
@@ -99,7 +99,7 @@ table 88008 "BCS Research"
             TableRelation = "Item Category";
         }
 
-        //TODO: Location Unlocking?
+        //TODO: v0.2 adv Location Unlocking?
 
         field(1000; "Prerequisites"; Integer)
         {

@@ -4,6 +4,7 @@ codeunit 88021 "BCS Market Calculation"
 
     procedure CalculateDailyPrices()
     var
+        GameSetup: Record "BCS Game Setup";
         MasterItem: Record "BCS Master Item";
         MarketPrice: Record "BCS Market Price";
         MarketTrades: Record "BCS Market Trades";
@@ -12,6 +13,7 @@ codeunit 88021 "BCS Market Calculation"
         earlierTrades: Decimal;
         marketMovement: Decimal;
     begin
+        GameSetup.Get();
         // Never calc the same day twice
         MarketPrice.SetRange("Last Calculated", WorkDate());
         if not MarketPrice.IsEmpty then
@@ -33,13 +35,18 @@ codeunit 88021 "BCS Market Calculation"
                 if (Players.Count = 0) then
                     exit;
 
+                // Super safety check on these GameSetup options
+                if GameSetup."Market Move Multiplier" = 0 then
+                    GameSetup."Market Move Multiplier" := 0.5;
+                if GameSetup."Market Movement Floor" = 0 then
+                    GameSetup."Market Movement Floor" := 20;
+
                 marketMovement := priorDayTrades - earlierTrades / Players.count;
                 if (marketMovement < 0) then
-                    marketMovement := marketMovement * 0.5;
+                    marketMovement := marketMovement * GameSetup."Market Move Multiplier";
 
                 if (marketMovement = 0) then
-                    marketMovement := 20;
-                //TODO: Game setup settings
+                    marketMovement := GameSetup."Market Movement Floor";
 
                 MarketPrice.Reset();
                 if not MarketPrice.Get(MasterItem."No.") then begin

@@ -88,7 +88,7 @@ report 88000 "BCS Import Master Items"
                         end;
                         //Check if it exists
                         MasterBOM.SetRange("Item No.", WhichMasterItem);
-                        MasterBOM.SetRange("Master Item No.", BomItem);
+                        MasterBOM.SetRange("Master Component No.", BomItem);
                         if MasterBOM.FindFirst() then begin
                             // if the QtyToUpdate = 0, delete, else modify
                             if (QuantityToUpdate <> 0) then begin
@@ -103,7 +103,7 @@ report 88000 "BCS Import Master Items"
                             // if not make it.
                             MasterBOM."Item No." := WhichMasterItem;
                             MasterBOM."Line No." := 0;
-                            MasterBOM."Master Item No." := BomItem;
+                            MasterBOM."Master Component No." := BomItem;
                             MasterBOM.Quantity := QuantityToUpdate;
                             MasterBOM.Insert(true);
                         end;
@@ -111,7 +111,7 @@ report 88000 "BCS Import Master Items"
                 end;
 
                 // Create/Update BOM Col 11 - Complex Items
-                //TODO: Any Item BOM on the Master that isn't CLASS1, remove it.
+                //TODO: v0.2 Any Item BOM on the Master that isn't CLASS1, remove it.
                 // (Consider for future projects, a delta change?)
                 ParseBOMCell(WhichMasterItem, GetCellValue(RowNo, 11));
 
@@ -160,7 +160,7 @@ report 88000 "BCS Import Master Items"
                                 // Checks:  Possible Item, PossibleQty (dec)
                                 MasterBOM."Item No." := WhichMasterItem;
                                 MasterBOM."Line No." := 0;
-                                MasterBOM.Validate("Master Item No.", PossibleItem);
+                                MasterBOM.Validate("Master Component No.", PossibleItem);
                                 MasterBOM.Quantity := PossibleQuantity;
                                 MasterBOM.Insert(true);
                             end;

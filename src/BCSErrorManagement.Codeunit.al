@@ -33,7 +33,7 @@ codeunit 88019 "BCS Error Management"
         BotErrLog."Posting Date" := WorkDate();
         //BotErrLog.Description := BotPurchase.GetResultText();
         BotErrLog."Error Message" := COPYSTR(GetLastErrorText(), 1, MAXSTRLEN(BotErrLog."Error Message"));
-        //TODO: Handle the whole error result with BLOB?
+        //TODO: v0.2 Handle the whole error result with BLOB?
         BotErrLog.Insert(true);
     end;
 }

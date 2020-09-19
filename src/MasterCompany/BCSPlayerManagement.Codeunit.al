@@ -3,10 +3,10 @@ codeunit 88015 "BCS Player Management"
     procedure SetupNewPlayer(var Player: Record "BCS Player")
     var
         IsMasterCompany: Codeunit "BCS Is Master Company";
+        NotMasterCompanyErr: Label 'Please run this from a Master Company.';
     begin
         if not IsMasterCompany.IsMC() then
-            //TODO: Error with feedback
-            exit;
+            Error(NotMasterCompanyErr);
 
         // New Company
         GeneratePlayerCompany(Player);
@@ -16,7 +16,7 @@ codeunit 88015 "BCS Player Management"
         GeneratePlayerUser(Player);
         Commit();
 
-        //TODO: User Permissions
+        //TODO: User Permissions.  Ugh.
 
         Message(SetupCompletedMsg);
     end;
