@@ -373,6 +373,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Adv. Loc. Max. Units - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2248164598 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field System Unit of Measure - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 4246738589 - Field 2427499964 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cash Account</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -392,6 +397,11 @@
           <source>Wealth Account</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Wealth Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 839916081 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Balance Account</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Starting Balance Account - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4246738589 - Field 4103210533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Inventory Account</source>
@@ -1532,6 +1542,11 @@
           <source>Unable to locate sufficient quantity of %1 in Locations (%2)</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Player Charge - NamedType UnableToFindItems</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2547160035 - Method 3377517460 - NamedType 1455564156" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company Initial Values</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Player Starting Values - Method ChargeThePlayer - NamedType InitChargeTok</note>
         </trans-unit>
         <trans-unit id="Codeunit 1815687023 - NamedType 3656885394" size-unit="char" translate="yes" xml:space="preserve">
           <source>PWR-%1</source>
