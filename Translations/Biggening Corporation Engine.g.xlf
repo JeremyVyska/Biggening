@@ -1018,6 +1018,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Research - Field Required By - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1387417077 - Field 1898119907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Research Req. Filter</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Research - Field Research Req. Filter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1387417077 - Field 565747917 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Has Research Req.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Research - Field Has Research Req. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3745763864 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Research Prereq.</source>
           <note from="Developer" annotates="general" priority="2"></note>

@@ -115,6 +115,18 @@ table 88008 "BCS Research"
             BlankZero = true;
             Editable = true;
         }
+
+        field(1020; "Research Req. Filter"; Integer)
+        {
+            Caption = 'Research Req. Filter';
+            FieldClass = FlowFilter;
+        }
+        field(1030; "Has Research Req."; Boolean)
+        {
+            Caption = 'Has Research Req.';
+            FieldClass = FlowField;
+            CalcFormula = exist ("BCS Research Prereq." where("Research No." = field("No."), "Requirement Type" = const(Research), Prerequisite = field("Research Req. Filter")));
+        }
     }
     keys
     {

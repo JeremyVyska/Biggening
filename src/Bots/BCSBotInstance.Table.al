@@ -41,7 +41,12 @@ table 88001 "BCS Bot Instance"
             Caption = 'Bot Tier';
             DataClassification = SystemMetadata;
         }
-
+        field(6; "Bot Template Code"; Code[20])
+        {
+            Caption = 'Bot Template';
+            DataClassification = SystemMetadata;
+            TableRelation = "BCS Bot Template";
+        }
         field(50; "Price"; Decimal)
         {
             DataClassification = SystemMetadata;
@@ -129,17 +134,35 @@ table 88001 "BCS Bot Instance"
     }
 
     procedure GetPowerPerDay(): Decimal
+    var
+        CalculatedPowerPerDay: Decimal;
     begin
-        exit(Rec."Power Per Day");
+        CalculatedPowerPerDay := Rec."Power Per Day";
+        OnBeforeGetPowerPerDay(Rec, CalculatedPowerPerDay);
+        exit(CalculatedPowerPerDay);
     end;
 
     procedure GetOpsPerDay(): Decimal
+    var
+        CalculatedOpsPerDay: Decimal;
     begin
-        exit(Rec."Operations Per Day");
+        CalculatedOpsPerDay := Rec."Operations Per Day";
+        OnBeforeGetOpsPerDay(Rec, CalculatedOpsPerDay);
+        exit(CalculatedOpsPerDay);
     end;
 
     procedure GetResearchPerOp(): Decimal
     begin
         exit(Rec."Research Points Per Op");
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeGetPowerPerDay(Rec: Record "BCS Bot Instance"; var CalculatedPowerPerDay: Decimal)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeGetOpsPerDay(Rec: Record "BCS Bot Instance"; var CalculatedOpsPerDay: Decimal)
+    begin
     end;
 }

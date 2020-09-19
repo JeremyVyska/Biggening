@@ -40,6 +40,10 @@ page 88011 "BCS Research Setup"
                 {
                     ApplicationArea = All;
                 }
+                field("Has Research Req."; "Has Research Req.")
+                {
+                    ApplicationArea = All;
+                }
                 field("Operation Bonus Type"; "Operation Bonus Type")
                 {
                     ApplicationArea = All;

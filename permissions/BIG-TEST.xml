@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PermissionSets>
+  <PermissionSet RoleID="TEST_IMP" RoleName="Testing Import" Scope="Tenant">
+    <TenantPermission>
+      <ObjectType>Table Data</ObjectType>
+      <ObjectID>88001</ObjectID>
+      <ReadPermission>Yes</ReadPermission>
+      <InsertPermission>Indirect</InsertPermission>
+      <ModifyPermission>Indirect</ModifyPermission>
+      <DeletePermission>Indirect</DeletePermission>
+    </TenantPermission>
+  </PermissionSet>
+</PermissionSets>

@@ -35,6 +35,7 @@ table 88014 "BCS Research Progress"
                     Progress := Points;
                 if (Progress = Points) then begin
                     Completed := true;
+                    OnAfterResearchProgressComplete(Rec);
                     Selected := false;
                 end;
             end;
@@ -156,4 +157,9 @@ table 88014 "BCS Research Progress"
         }
     }
 
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterResearchProgressComplete(Rec: Record "BCS Research Progress")
+    begin
+    end;
 }

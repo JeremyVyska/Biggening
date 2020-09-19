@@ -1,0 +1,14 @@
+<PermissionSets>
+    <PermissionSet RoleID="TEST_IMP" RoleName="TestingImport" Scope="Tenant">
+        <Permission>
+            <ObjectType>Table Data</ObjectType>
+            <ObjectID>88000</ObjectID>
+            <ReadPermission>Yes</ReadPermission>
+            <InsertPermission> </InsertPermission>
+            <ModifyPermission>Indirect</ModifyPermission>
+            <DeletePermission>Indirect</DeletePermission>
+            <ExecutePermission>Yes</ExecutePermission>
+            <SecurityFilter />
+        </Permission>
+    </PermissionSet>
+</PermissionSets>
