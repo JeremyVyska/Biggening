@@ -36,6 +36,11 @@ table 88010 "BCS Master Item"
             Caption = 'Initial Price';
             DataClassification = SystemMetadata;
         }
+        field(60; "Available at Start"; Boolean)
+        {
+            Caption = 'Available at Start';
+            DataClassification = SystemMetadata;
+        }
     }
     keys
     {

@@ -15,8 +15,33 @@ page 88007 "BCS Game Setup"
                 {
                     ApplicationArea = All;
                 }
-            }
+                field("Starting Cash"; "Starting Cash")
+                {
+                    ApplicationArea = All;
+                }
+                field("Starting Basic Locations"; "Starting Basic Locations")
+                {
+                    ApplicationArea = All;
+                }
+                field("System Unit of Measure"; "System Unit of Measure")
+                {
+                    ApplicationArea = All;
+                }
 
+            }
+            group(Market)
+            {
+                Caption = 'Market Adjustments';
+
+                field("Market Move Multiplier"; "Market Move Multiplier")
+                {
+                    ApplicationArea = All;
+                }
+                field("Market Movement Floor"; "Market Movement Floor")
+                {
+                    ApplicationArea = All;
+                }
+            }
             group(GeneralLedger)
             {
                 Caption = 'General Ledger';
@@ -29,11 +54,27 @@ page 88007 "BCS Game Setup"
                 {
                     ApplicationArea = All;
                 }
+                field("Starting Balance Account"; "Starting Balance Account")
+                {
+                    ApplicationArea = All;
+                }
                 field("Bot Power Account"; "Bot Power Account")
                 {
                     ApplicationArea = All;
                 }
                 field("Loc. Power Account"; "Loc. Power Account")
+                {
+                    ApplicationArea = All;
+                }
+                field("Inventory Account"; "Inventory Account")
+                {
+                    ApplicationArea = All;
+                }
+                field("FA Value Account Bot"; "FA Value Account Bot")
+                {
+                    ApplicationArea = All;
+                }
+                field("FA Value Account Location"; "FA Value Account Location")
                 {
                     ApplicationArea = All;
                 }
@@ -62,6 +103,18 @@ page 88007 "BCS Game Setup"
                     ApplicationArea = All;
                     Caption = 'Pros. Base Max Quantity';
                 }
+                field("Vendor Bus. Posting Group"; "Vendor Bus. Posting Group")
+                {
+                    ApplicationArea = All;
+                }
+                field("Vendor Payment Method Code"; "Vendor Payment Method Code")
+                {
+                    ApplicationArea = All;
+                }
+                field("Vendor Posting Group"; "Vendor Posting Group")
+                {
+                    ApplicationArea = All;
+                }
             }
             group(Sales)
             {
@@ -84,6 +137,18 @@ page 88007 "BCS Game Setup"
                 {
                     ApplicationArea = All;
                     Caption = 'Pros. Base Max Quantity';
+                }
+                field("Customer Bus. Posting Group"; "Customer Bus. Posting Group")
+                {
+                    ApplicationArea = All;
+                }
+                field("Customer Payment Method Code"; "Customer Payment Method Code")
+                {
+                    ApplicationArea = All;
+                }
+                field("Customer Posting Group"; "Customer Posting Group")
+                {
+                    ApplicationArea = All;
                 }
 
             }
@@ -115,6 +180,10 @@ page 88007 "BCS Game Setup"
                     ApplicationArea = All;
                 }
                 field("Adv. Loc. Max. Units"; "Adv. Loc. Max. Units")
+                {
+                    ApplicationArea = All;
+                }
+                field("Inventory Posting Group"; "Inventory Posting Group")
                 {
                     ApplicationArea = All;
                 }

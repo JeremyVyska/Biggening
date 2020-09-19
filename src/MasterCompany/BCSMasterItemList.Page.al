@@ -34,6 +34,10 @@ page 88015 "BCS Master Item List"
                 {
                     ApplicationArea = All;
                 }
+                field("Available at Start"; "Available at Start")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }

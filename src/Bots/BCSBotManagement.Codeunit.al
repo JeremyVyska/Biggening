@@ -7,6 +7,7 @@ codeunit 88001 "BCS Bot Management"
         Instance: Record "BCS Bot Instance";
         BCSPlayerCharge: Codeunit "BCS Player Charge";
         BotDesignation: Code[20];
+
     begin
         Template.Get(WhichTemplate);
         BotDesignation := GenerateDesignator();
@@ -15,28 +16,34 @@ codeunit 88001 "BCS Bot Management"
         if ResCheckBuffer.FindSet() then
             repeat
                 if (ResCheckBuffer."Item No." = '') then
-                    BCSPlayerCharge.ChargeCash('1410', ResCheckBuffer.Requirement, BotDesignation, StrSubstNo(BotPurchTok, BotDesignation))
+                    DoCashChargeForBot(ResCheckBuffer.Requirement, BCSPlayerCharge, BotDesignation)
                 else
                     BCSPlayerCharge.ChargeMaterial(ResCheckBuffer."Item No.", ResCheckBuffer.Requirement, BotDesignation, StrSubstNo(BotPurchTok, BotDesignation));
             until ResCheckBuffer.Next() = 0;
 
         // Create the Bot Instance
-        Instance.Init();
-        Instance."Bot Type" := Template."Bot Type";
-        Instance."Bot Tier" := Template."Bot Tier";
-        Instance."Bot Template Code" := Template.Code;
-        Instance."Power Per Day" := Template."Base Power Per Day";
-        Instance."Operations Per Day" := Template."Base Operations Per Day";
-        Instance.Price := Template."Base Price";
-        Instance.Validate(Designation, BotDesignation);
+        ExecuteBotPurchFromTemplate(Template, Instance, BotDesignation);
 
-        case Template."Bot Type" of
-            Template."Bot Type"::Research:
-                begin
-                    Instance."Research Points Per Op" := Template."Research Points Per Op";
-                end;
-        end;
-        Instance.Insert(true);
+        exit(Instance.Designation);
+    end;
+
+    procedure InitialPurchaseBot(WhichTemplate: Code[20]): Text[20]
+    var
+        Template: Record "BCS Bot Template";
+        Instance: Record "BCS Bot Instance";
+        BCSPlayerCharge: Codeunit "BCS Player Charge";
+        BotDesignation: Code[20];
+    begin
+        // Function is a copy of above, but only considers Cash, since this is used during
+        // initial company setup and only the cash values are considered.
+        Template.Get(WhichTemplate);
+        BotDesignation := GenerateDesignator();
+
+        // Charge the Cash to the Player
+        DoCashChargeForBot(Template."Base Price", BCSPlayerCharge, BotDesignation);
+
+        // Create the Bot Instance
+        ExecuteBotPurchFromTemplate(Template, Instance, BotDesignation);
 
         exit(Instance.Designation);
     end;
@@ -55,6 +62,33 @@ codeunit 88001 "BCS Bot Management"
         NewDesig.Append(Format(Random(9)) + Format(Random(9)) + Format(Random(9)));
 
         exit(NewDesig.ToText())
+    end;
+
+    local procedure DoCashChargeForBot(AmountToCharge: Decimal; var BCSPlayerCharge: Codeunit "BCS Player Charge"; var BotDesignation: Code[20]) returnValue: Boolean
+    var
+        GameSetup: Record "BCS Game Setup";
+    begin
+        returnValue := BCSPlayerCharge.ChargeCash(GameSetup."FA Value Account Bot", AmountToCharge, BotDesignation, StrSubstNo(BotPurchTok, BotDesignation));
+    end;
+
+    local procedure ExecuteBotPurchFromTemplate(var Template: Record "BCS Bot Template"; var Instance: Record "BCS Bot Instance"; var BotDesignation: Code[20])
+    begin
+        Instance.Init();
+        Instance."Bot Type" := Template."Bot Type";
+        Instance."Bot Tier" := Template."Bot Tier";
+        Instance."Bot Template Code" := Template.Code;
+        Instance."Power Per Day" := Template."Base Power Per Day";
+        Instance."Operations Per Day" := Template."Base Operations Per Day";
+        Instance.Price := Template."Base Price";
+        Instance.Validate(Designation, BotDesignation);
+
+        case Template."Bot Type" of
+            Template."Bot Type"::Research:
+                begin
+                    Instance."Research Points Per Op" := Template."Research Points Per Op";
+                end;
+        end;
+        Instance.Insert(true);
     end;
 
     [IntegrationEvent(false, false)]

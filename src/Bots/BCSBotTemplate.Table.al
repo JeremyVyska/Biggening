@@ -76,6 +76,11 @@ table 88000 "BCS Bot Template"
             TableRelation = "Gen. Product Posting Group";
         }
 
+        field(500; "Start With"; Integer)
+        {
+            Caption = 'Start With';
+            BlankZero = true;
+        }
         field(1000; "Materials"; Integer)
         {
             Caption = 'Materials';

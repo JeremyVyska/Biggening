@@ -32,6 +32,16 @@ table 88016 "BCS Season"
             Caption = 'Participants';
             DataClassification = ToBeClassified;
         }
+        field(50; "Season Start Date"; Date)
+        {
+            Caption = 'Season Start Date';
+            DataClassification = ToBeClassified;
+        }
+        field(60; "Season End Date"; Date)
+        {
+            Caption = 'Season End Date';
+            DataClassification = ToBeClassified;
+        }
     }
     keys
     {

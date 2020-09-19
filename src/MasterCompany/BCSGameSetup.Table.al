@@ -143,6 +143,13 @@ table 88004 "BCS Game Setup"
             end;
         }
 
+        field(48; "System Unit of Measure"; Code[10])
+        {
+            Caption = 'System Unit of Measure';
+            DataClassification = SystemMetadata;
+            TableRelation = "Unit of Measure";
+        }
+
         field(50; "Cash Account"; Code[20])
         {
             Caption = 'Cash Account';
@@ -166,6 +173,12 @@ table 88004 "BCS Game Setup"
         field(70; "Wealth Account"; Code[20])
         {
             Caption = 'Wealth Account';
+            DataClassification = SystemMetadata;
+            TableRelation = "G/L Account";
+        }
+        field(75; "Starting Balance Account"; Code[20])
+        {
+            Caption = 'Starting Balance Account';
             DataClassification = SystemMetadata;
             TableRelation = "G/L Account";
         }
@@ -227,7 +240,7 @@ table 88004 "BCS Game Setup"
 
         field(270; "Vendor Payment Method Code"; Code[20])
         {
-            Caption = 'Cust. Payment Method Code';
+            Caption = 'Vend. Payment Method Code';
             TableRelation = "Payment Method";
         }
 
@@ -240,6 +253,16 @@ table 88004 "BCS Game Setup"
         field(310; "Market Movement Floor"; Decimal)
         {
             Caption = 'Market Movement Floor';
+        }
+
+        field(500; "Starting Cash"; Decimal)
+        {
+            Caption = 'Starting Cash';
+        }
+
+        field(510; "Starting Basic Locations"; Integer)
+        {
+            Caption = 'Starting Basic Locations';
         }
     }
 

@@ -8,6 +8,9 @@ codeunit 88015 "BCS Player Management"
         if not IsMasterCompany.IsMC() then
             Error(NotMasterCompanyErr);
 
+        Player.TestField("Company Name");
+        Player.TestField("Company Display Name");
+
         // New Company
         GeneratePlayerCompany(Player);
         Commit();
@@ -17,6 +20,16 @@ codeunit 88015 "BCS Player Management"
         Commit();
 
         //TODO: User Permissions.  Ugh.
+
+
+        CopyMasterCompanySetup(Player."Company Name");
+        Commit();
+
+        GenerateInitialCompanySettingsJob(Player);
+        Commit();
+
+        CreateJobQueueInCompany(Player);
+        Commit();
 
         Message(SetupCompletedMsg);
     end;
@@ -52,6 +65,53 @@ codeunit 88015 "BCS Player Management"
             Player.Modify(true);
         end else
             Error(UserAlreadyExistsErr);
+    end;
+
+    local procedure CreateJobQueueInCompany(var Player: Record "BCS Player")
+    var
+        JobQueueEntry: Record "Job Queue Entry";
+    begin
+        JobQueueEntry.ChangeCompany(Player."Company Name");
+        JobQueueEntry."Object Type to Run" := JobQueueEntry."Object Type to Run"::Codeunit;
+        JobQueueEntry."Object ID to Run" := Codeunit::"BCS Player Heartbeat Listener";
+        JobQueueEntry.Insert(true);
+        JobQueueEntry."User ID" := Player."User ID";
+        JobQueueEntry."Starting Time" := 0T;
+        JobQueueEntry."Ending Time" := 235959T;
+        JobQueueEntry."Recurring Job" := true;
+        JobQueueEntry."Run on Mondays" := true;
+        JobQueueEntry."Run on Tuesdays" := true;
+        JobQueueEntry."Run on Wednesdays" := true;
+        JobQueueEntry."Run on Thursdays" := true;
+        JobQueueEntry."Run on Fridays" := true;
+        JobQueueEntry."Run on Saturdays" := true;
+        JobQueueEntry."Run on Sundays" := true;
+        JobQueueEntry."No. of Minutes between Runs" := 1;  //most of the time, will do nearly nothing.
+        JobQueueEntry."Earliest Start Date/Time" := CurrentDateTime();
+        JobQueueEntry.Status := JobQueueEntry.Status::Ready;
+        JobQueueEntry.Modify();
+    end;
+
+    local procedure CopyMasterCompanySetup(CompanyName: Text[30])
+    var
+        MasterCoCopy: Codeunit "BCS Master Company";
+    begin
+        MasterCoCopy.CopySetupToCompany(CompanyName);
+    end;
+
+    local procedure GenerateInitialCompanySettingsJob(var Player: Record "BCS Player")
+    var
+        JobQueueEntry: Record "Job Queue Entry";
+    begin
+        JobQueueEntry.ChangeCompany(Player."Company Name");
+        JobQueueEntry."Object Type to Run" := JobQueueEntry."Object Type to Run"::Codeunit;
+        JobQueueEntry."Object ID to Run" := Codeunit::"BCS Player Starting Values";
+        JobQueueEntry.Insert(true);
+        JobQueueEntry."User ID" := Player."User ID";
+        JobQueueEntry."Recurring Job" := false;
+        JobQueueEntry."Earliest Start Date/Time" := CurrentDateTime();
+        JobQueueEntry.Status := JobQueueEntry.Status::Ready;
+        JobQueueEntry.Modify();
     end;
 
 

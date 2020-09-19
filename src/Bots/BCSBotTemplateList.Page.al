@@ -29,6 +29,10 @@ page 88000 "BCS Bot Template List"
                 {
                     ApplicationArea = All;
                 }
+                field("Start With"; "Start With")
+                {
+                    ApplicationArea = All;
+                }
                 field("Base Price"; "Base Price")
                 {
                     ApplicationArea = All;
@@ -50,6 +54,10 @@ page 88000 "BCS Bot Template List"
                     ApplicationArea = All;
                 }
                 field("Maximum Doc. Lines Per Op"; "Maximum Doc. Lines Per Op")
+                {
+                    ApplicationArea = All;
+                }
+                field("Marketing Bot Item Tier"; "Marketing Bot Item Tier")
                 {
                     ApplicationArea = All;
                 }

@@ -31,6 +31,10 @@ page 88014 "BCS Master Item Card"
                 {
                     ApplicationArea = All;
                 }
+                field("Available at Start"; "Available at Start")
+                {
+                    ApplicationArea = All;
+                }
 
             }
 
