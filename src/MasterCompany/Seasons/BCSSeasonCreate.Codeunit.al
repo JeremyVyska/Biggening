@@ -2,24 +2,45 @@ codeunit 88030 "BCS Season Create"
 {
     procedure CreateNewSeason()
     var
+        GameSetup: Record "BCS Game Setup";
         ActiveSeason: Record "BCS Season";
         NewSeason: Record "BCS Season";
+        NewSeasonNo: Integer;
     begin
-        // Archive all the 'Seasonal' data
-        ArchivePlayers(ActiveSeason."No.");
-        ArchiveMarketData(ActiveSeason."No.");
+        ActiveSeason.SetRange(Active, true);
+        if ActiveSeason.FindFirst() then begin
 
-        // Clear all the interco operational data
-        ClearBotErrorLogs();
-        ClearMarketData();
+            // Archive all the 'Seasonal' data
+            ArchivePlayers(ActiveSeason."No.");
+            ArchiveMarketData(ActiveSeason."No.");
 
-        Commit();
+            // Clear all the interco operational data
+            ClearBotErrorLogs();
+            ClearMarketData();
 
-        // Hmm - trying to decide if we should also Handle player company deletion. 
-        // that is super DB intensive, but manually doing 40 companies would take ages.
+            Commit();
 
+            // Hmm - trying to decide if we should also Handle player company deletion. 
+            // that is super DB intensive, but manually doing 40 companies would take ages.
 
+            ActiveSeason.Active := false;
+            ActiveSeason.Modify(true);
+        end;
 
+        ActiveSeason.SetRange(Active);
+        if ActiveSeason.FindLast() then
+            NewSeasonNo := ActiveSeason."No." + 1
+        else
+            NewSeasonNo := 1;
+
+        NewSeason."No." := NewSeasonNo;
+        NewSeason.Active := true;
+        NewSeason.Insert(true);
+
+        GameSetup.Get();
+        GameSetup."Game Date" := 20000101D;
+        GameSetup."Game Active" := false;
+        GameSetup.Modify(true);
     end;
 
     local procedure ArchivePlayers(SeasonNo: Integer)

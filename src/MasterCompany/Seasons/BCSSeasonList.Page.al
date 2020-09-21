@@ -36,4 +36,23 @@ page 88020 "BCS Season List"
         }
     }
 
+    actions
+    {
+        area(Processing)
+        {
+            action(CreateSeason)
+            {
+                Image = NewBranch;
+                Promoted = true;
+                PromotedCategory = Process;
+
+                trigger OnAction()
+                var
+                    SeasonNewCreate: Codeunit "BCS Season Create";
+                begin
+                    SeasonNewCreate.CreateNewSeason();
+                end;
+            }
+        }
+    }
 }

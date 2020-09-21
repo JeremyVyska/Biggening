@@ -130,6 +130,22 @@ codeunit 88015 "BCS Player Management"
     end;
 
 
+    procedure RemovePlayerCompany(var Player: Record "BCS Player")
+    var
+        Company: Record Company;
+    begin
+        Player.TestField("Company Name");
+        if Company.Get(Player."Company Name") then
+            Company.Delete(true);
+        Commit();
+        Player."Step - Company Made" := false;
+        Player."Step - Init. Job Ran" := false;
+        player."Step - Master Data Copy" := false;
+        Player."Step - Job Queues Made" := false;
+        Player.Modify(true);
+    end;
+
+
     procedure SetIsAdmin(): Boolean
     var
         Player: Record "BCS Player";

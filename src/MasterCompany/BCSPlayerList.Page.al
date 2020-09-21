@@ -82,16 +82,23 @@ page 88019 "BCS Player List"
                     BCSPlayerMgmt: Codeunit "BCS Player Management";
                 begin
                     BCSPlayerMgmt.SetupNewPlayer(Rec);
+                    CurrPage.Update();
                 end;
             }
-            action(TestStartValues)
+            action(Restart)
             {
-                Caption = 'Test Start Values';
-                ToolTip = 'Run this FROM THE PLAYER COMPANY';
+                Caption = 'Restart Player';
+                Image = Setup;
                 Promoted = true;
                 PromotedCategory = Process;
-                Image = TestDatabase;
-                RunObject = Codeunit "BCS Player Starting Values";
+
+                trigger OnAction()
+                var
+                    BCSPlayerMgmt: Codeunit "BCS Player Management";
+                begin
+                    BCSPlayerMgmt.RemovePlayerCompany(Rec);
+                    CurrPage.Update();
+                end;
             }
         }
     }

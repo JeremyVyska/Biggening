@@ -1803,15 +1803,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player List - Action Generate - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3522310541 - Action 2214991922 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Test Start Values</source>
+        <trans-unit id="Page 3522310541 - Action 1303173321 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Restart Player</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player List - Action TestStartValues - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3522310541 - Action 2214991922 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Run this FROM THE PLAYER COMPANY</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player List - Action TestStartValues - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player List - Action Restart - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2741061690 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Setup Overview</source>
