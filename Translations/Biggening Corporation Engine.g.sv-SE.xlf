@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
   <file datatype="xml" source-language="en-US" target-language="sv-SE" original="Biggening Corporation Engine">
     <body>
@@ -27,6 +27,18 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Instance - Field Bot Name - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 677759022 - Field 1413907429 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Tier</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Instance - Field Bot Tier - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 677759022 - Field 3842292144 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Template</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Instance - Field Bot Template Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 677759022 - Field 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Price</source>
           <target state="translated">Pris</target>
@@ -47,8 +59,15 @@
         </trans-unit>
         <trans-unit id="Table 677759022 - Field 4280186650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Research Points Per Op.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Instance - Field Research Points Per Op - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 677759022 - Field 772327277 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Maximum Doc. Lines Per Op</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Instance - Field Maximum Doc. Lines Per Op - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 677759022 - Field 1207827862 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Power Upgrade Code</source>
@@ -56,11 +75,11 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Instance - Field Power Upgrade Code - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 677759022 - Field 2673868678 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 677759022 - Field 653234277 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Operations Upgrade Code</source>
-          <target state="needs-l10n"> ,Bot mallkod,Uppgraderingskod</target>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Instance - Field Operations Update Code - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Instance - Field Operations Upgrade Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 677759022 - Field 948545954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Assignment Code</source>
@@ -85,6 +104,12 @@
           <target state="translated">Bot typ</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template - Field Bot Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1340414549 - Field 1413907429 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Tier</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template - Field Bot Tier - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1340414549 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
@@ -112,8 +137,141 @@
         </trans-unit>
         <trans-unit id="Table 1340414549 - Field 4280186650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Research Points Per Op.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template - Field Research Points Per Op - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1340414549 - Field 772327277 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Maximum Doc. Lines Per Op</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template - Field Maximum Doc. Lines Per Op - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1340414549 - Field 1128004806 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Marketing Bot Item Tier</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template - Field Marketing Bot Item Tier - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1340414549 - Field 3782245326 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start With</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template - Field Start With - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1340414549 - Field 3499638444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Materials</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template - Field Materials - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1340414549 - Method 1074024252 - NamedType 2646782696" size-unit="char" translate="yes" xml:space="preserve">
+          <source>For each Type and Tier, there should only be one template.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template - Method SafetyCheckTypeTier - NamedType DuplicateBotTier</note>
+        </trans-unit>
+        <trans-unit id="Table 1141274101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Bot Template Req.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template Req. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1141274101 - Field 3842292144 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Template Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template Req. - Field Bot Template Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1141274101 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template Req. - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1141274101 - Field 3839938362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Master Item No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template Req. - Field Master Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1141274101 - Field 2704404533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Template Req. - Field Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 287404165 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Dispatch Result</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Dispatch Result - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 287404165 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Dispatch Result - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 287404165 - Field 889292200 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ResultText</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Dispatch Result - Field ResultText - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 287404165 - Field 1060207642 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Action Type</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Dispatch Result - Field Action Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3171401266 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Resource Check Buffer</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3171401266 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3171401266 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3171401266 - Field 878332001 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Requirement</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Field Requirement - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3171401266 - Field 2105307182 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inventory</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Field Inventory - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3171401266 - Field 2148673219 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortage</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Field Shortage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3171401266 - Field 2989465547 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>LineStyle</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Field LineStyle - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3171401266 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Resource Check Buffer - Field Item No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1270744385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Bot Error Log</source>
@@ -132,6 +290,12 @@
           <target state="translated">Företagsnamn</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Error Log - Field Company Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1270744385 - Field 1905805420 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error Type</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Error Log - Field Error Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1270744385 - Field 3981829876 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Instance</source>
@@ -157,11 +321,29 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Error Log - Field Error Message - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1270744385 - Field 4259673360 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Acknowledged</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Error Log - Field Acknowledged - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1270744385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Bot Error Log</source>
           <target state="needs-l10n">Planerar fellogg</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Error Log - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1270744385 - Action 2189612435 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Acknowledge</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Error Log - Action Ack - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1270744385 - Action 2189612435 - Method 1377591017 - NamedType 3756218284" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 errors acknowledged.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Error Log - Action Ack - Method OnAction - NamedType AckMsg</note>
         </trans-unit>
         <trans-unit id="Table 4246738589 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Primary Key</source>
@@ -175,11 +357,365 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Game Date - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2305977526 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Game Active</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Game Active - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 489847365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Prospect Effort</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Purchase Prospect Effort - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 805256149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purch. Pros. Tier Multiplier</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Purch. Pros. Tier Multiplier - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2006648962 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purch. Pros. Base Max Orders</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Purch. Pros. Base Max Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 545581756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purch. Pros. Base Max Quantity</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Purch. Pros. Base Max Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 3752983244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Prospect Effort</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Sales Prospect Effort - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 4185148003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Pros. Tier Multiplier</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Sales Pros. Tier Multiplier - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 432929872 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Pros. Base Max Orders</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Sales Pros. Base Max Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 3985902030 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Pros. Base Max Quantity</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Sales Pros. Base Max Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 3053492259 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location No. Series</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Location No. Series - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 3568295926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Basic Location Price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Basic Location Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2341645759 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adv. Location Price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Adv. Location Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2716325568 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Basic - Maximum Bots</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Basic Loc. Max. Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 466978061 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Basic - Maximum Units</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Basic Loc. Max. Units - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 1054122965 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adv - Maximum Bots</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Adv. Loc. Max. Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2915397744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adv - Maximum Units</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Adv. Loc. Max. Units - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2248164598 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System Unit of Measure</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field System Unit of Measure - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2427499964 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cash Account</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Cash Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 1743148073 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Power Account</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Bot Power Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 1806059340 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Loc. Power Account</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Loc. Power Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 4123678134 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wealth Account</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Wealth Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 839916081 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Balance Account</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Starting Balance Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 4103210533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inventory Account</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Inventory Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 3188550676 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>FA Value Account Location</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field FA Value Account Location - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2258913800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>FA Value Account Bot</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field FA Value Account Bot - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2037375551 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inventory Posting Group</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Inventory Posting Group - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 783058787 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer. Bus. Posting Group</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Customer Bus. Posting Group - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 410940989 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Posting Group</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Customer Posting Group - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 1095407528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cust. Payment Method Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Customer Payment Method Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2808053019 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor. Bus. Posting Group</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Vendor Bus. Posting Group - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 3194161445 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor Posting Group</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Vendor Posting Group - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 3084615168 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vend. Payment Method Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Vendor Payment Method Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 138139890 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Market Move Multiplier</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Market Move Multiplier - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 2600410385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Market Movement Floor</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Market Movement Floor - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 3447703179 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Cash</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Starting Cash - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - Field 1985845544 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Basic Locations</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - Field Starting Basic Locations - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - NamedType 632351327" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update %1 in all Basic Locations across Companies?</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - NamedType UpdateBasicLocationSettingsQst</note>
+        </trans-unit>
+        <trans-unit id="Table 4246738589 - NamedType 1868693256" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update %1 in all Advanced Locations across Companies?</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Game Setup - NamedType UpdateAdvLocationSettingsQst</note>
+        </trans-unit>
         <trans-unit id="Page 4246738589 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Game Setup</source>
           <target state="needs-l10n">dist.lagerinställningar,lagerinställningar</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Game Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4246738589 - Control 4115273168 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Market Adjustments</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Game Setup - Control Market - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4246738589 - Control 2641605773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General Ledger</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Game Setup - Control GeneralLedger - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4246738589 - Control 805256149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pros. Tier Multiplier</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Game Setup - Control Purch. Pros. Tier Multiplier - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4246738589 - Control 2006648962 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pros. Base Max Orders</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Game Setup - Control Purch. Pros. Base Max Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4246738589 - Control 545581756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pros. Base Max Quantity</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Game Setup - Control Purch. Pros. Base Max Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4246738589 - Control 1634430977 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pros. Tier Multiplier</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Game Setup - Control Sales. Pros. Tier Multiplier - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4246738589 - Control 2602624278 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pros. Base Max Orders</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Game Setup - Control Sales. Pros. Base Max Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4246738589 - Control 1373698248 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pros. Base Max Quantity</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Game Setup - Control Sales. Pros. Base Max Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4246738589 - Control 3891454143 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Game Setup - Control Location - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2065873973 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Market Price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2065873973 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Price - Field Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2065873973 - Field 924038635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Market Price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Price - Field Market Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2065873973 - Field 429282430 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Calculated</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Price - Field Last Calculated - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2065873973 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Market Price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Market Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3615126029 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Market Trades</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3615126029 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades - Field Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3615126029 - Field 3133801257 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades - Field Company - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3615126029 - Field 3192175264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades - Field Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3615126029 - Field 1113358281 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Trades</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades - Field Total Trades - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3615126029 - Field 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades - Field Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3615126029 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Market Trades</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Market Trades - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1671890893 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Master Item</source>
@@ -187,11 +723,11 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Item - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1671890893 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Code</source>
-          <target state="translated">Kod</target>
+        <trans-unit id="Table 1671890893 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Item - Field Code - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Item - Field No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1671890893 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
@@ -211,6 +747,18 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Item - Field Prod. Posting Group - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1671890893 - Field 436357301 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Initial Price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Item - Field Initial Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1671890893 - Field 2086699368 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Available at Start</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Item - Field Available at Start - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1686972629 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Master Item BOM</source>
           <target state="needs-l10n">Jämförelselista för artikelstrukturlista</target>
@@ -229,11 +777,11 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Item BOM - Field Line No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1686972629 - Field 3839938362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Master Item No.</source>
-          <target state="needs-l10n">Huvudtabellnr</target>
+        <trans-unit id="Table 1686972629 - Field 1388773312 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Master Component No.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Item BOM - Field Master Item No. - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Item BOM - Field Master Component No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1686972629 - Field 2704404533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quantity</source>
@@ -241,13 +789,27 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Item BOM - Field Quantity - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 744421501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Master Tables</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Tables - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 744421501 - Field 3017471043 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Table No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Master Tables - Field Table No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2297530211 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Player</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2297530211 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field No. - Property Caption</note>
         </trans-unit>
@@ -280,6 +842,48 @@
           <target state="translated">Företagsnamn</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Company Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2297530211 - Field 2902317799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System Permissions</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field System Permissions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2297530211 - Field 2902317799 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Player,Admin</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field System Permissions - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 2297530211 - Field 235415455 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company Made</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Step - Company Made - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2297530211 - Field 2074996781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User Made</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Step - User Made - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2297530211 - Field 1357815713 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Job Queues Made</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Step - Job Queues Made - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2297530211 - Field 2204844114 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Master Data Copied</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Step - Master Data Copy - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2297530211 - Field 1797780955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Init. Job Ran</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Step - Init. Job Ran - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2297530211 - Field 1037431910 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Company Display Name</source>
@@ -319,6 +923,7 @@
         </trans-unit>
         <trans-unit id="Page 3501782835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Random Entity Name Pool</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Random Entity Name Pool - Property Caption</note>
         </trans-unit>
@@ -352,6 +957,12 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Activity Log - Field Posting Date - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3997325726 - Field 1489664975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Activity Type</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Bot Activity Log - Field Activity Type - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3997325726 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
           <target state="translated">Beskrivning</target>
@@ -364,6 +975,30 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Activity Log - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 998404388 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Customer Interest</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Customer Interest - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 998404388 - Field 4190130733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Customer Interest - Field Customer No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 998404388 - Field 2243309964 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Prod. Posting Group</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Customer Interest - Field Prod. Posting Group - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 998404388 - Field 1037119892 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Category Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Customer Interest - Field Item Category Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 57229516 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Power Ledger</source>
           <target state="needs-l10n">Power BI: Kundreskontratransaktioner</target>
@@ -375,6 +1010,18 @@
           <target state="translated">Löpnr</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Power Ledger - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 57229516 - Field 149522872 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry Type</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Power Ledger - Field Entry Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 57229516 - Field 149522872 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot,Location</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Power Ledger - Field Entry Type - Property OptionCaption</note>
         </trans-unit>
         <trans-unit id="Table 57229516 - Field 3981829876 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Instance</source>
@@ -414,6 +1061,7 @@
         </trans-unit>
         <trans-unit id="Table 864830994 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Prospect - Field No. - Property Caption</note>
         </trans-unit>
@@ -447,8 +1095,21 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Prospect - Field Maximum Quantity Per Order - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 864830994 - Field 4132174999 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Random Entry Source No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Prospect - Field Random Entry Source No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 864830994 - Method 3788024397 - NamedType 4142062057" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This Prospect has Trades that are for items you have not yet unlocked through research. Converting them will remove those trades.\ \Proceed?</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Prospect - Method IfSafetyCheckUnresearchedTrades - NamedType UnresearchedWarningQst</note>
+        </trans-unit>
         <trans-unit id="Table 2223815861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Propect Trades</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Prospect Trades - Property Caption</note>
         </trans-unit>
@@ -476,31 +1137,33 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Prospect Trades - Field Line No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2223815861 - Field 3031359178 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Trade Type</source>
-          <target state="needs-l10n">Anger leverantörens eller kundens handelstyp för att koppla transaktioner som skapas för leverantören till det lämpliga redovisningskontot enligt den generella bokföringsinställningen.</target>
+        <trans-unit id="Table 2223815861 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Prospect Trades - Field Trade Type - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Prospect Trades - Field Item No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2223815861 - Field 3031359178 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Item,Item Category</source>
-          <target state="needs-l10n">Artikelkategori</target>
+        <trans-unit id="Table 2223815861 - Field 2243309964 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Prod. Posting Group</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Prospect Trades - Field Trade Type - Property OptionCaption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Prospect Trades - Field Prod. Posting Group - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2223815861 - Field 3158728669 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Trade Code</source>
-          <target state="needs-l10n">Utlandshandel</target>
+        <trans-unit id="Table 2223815861 - Field 1037119892 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Category Code</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Prospect Trades - Field Trade Code - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Prospect Trades - Field Item Category Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2199768898 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Research</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Research Progress - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2199768898 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Research Progress - Field No. - Property Caption</note>
         </trans-unit>
@@ -608,6 +1271,7 @@
         </trans-unit>
         <trans-unit id="Table 2199768898 - Field 1977303359 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Prerequisites</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Research Progress - Field Prerequisites - Property Caption</note>
         </trans-unit>
@@ -619,11 +1283,13 @@
         </trans-unit>
         <trans-unit id="Table 1387417077 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Research</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Research - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1387417077 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Research - Field No. - Property Caption</note>
         </trans-unit>
@@ -719,6 +1385,7 @@
         </trans-unit>
         <trans-unit id="Table 1387417077 - Field 1977303359 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Prerequisites</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Research - Field Prerequisites - Property Caption</note>
         </trans-unit>
@@ -728,13 +1395,27 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Research - Field Required By - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1387417077 - Field 1898119907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Research Req. Filter</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Research - Field Research Req. Filter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1387417077 - Field 565747917 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Has Research Req.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Research - Field Has Research Req. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3745763864 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Research Prereq.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Research Prereq. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3745763864 - Field 3052303362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Research No.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Research Prereq. - Field Research No. - Property Caption</note>
         </trans-unit>
@@ -758,6 +1439,7 @@
         </trans-unit>
         <trans-unit id="Table 3745763864 - Field 142380850 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Prerequisite</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Research Prereq. - Field Prerequisite - Property Caption</note>
         </trans-unit>
@@ -775,6 +1457,7 @@
         </trans-unit>
         <trans-unit id="Table 3745763864 - NamedType 3354999362" size-unit="char" translate="yes" xml:space="preserve">
           <source>There is a looping issue in your selection</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Research Prereq. - NamedType CyclicLoopErr</note>
         </trans-unit>
@@ -790,10 +1473,383 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Total Bot Count - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1637666299 - NamedType 445785139" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Company %1 is not marked as a Master company, so cannot be used as a source.</source>
+        <trans-unit id="Table 2002652694 - Field 2439377710 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Errors</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Master Company - NamedType CopySourceMustBeMasterErr</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Bot Errors - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2002652694 - Field 4036383149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wealth</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Wealth - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2002652694 - Field 1281245773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Idling Bots</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Idling Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2002652694 - Field 2974027974 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Erroring Bots</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Erroring Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2002652694 - Field 2579805692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delayed Date Filter</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Delayed Date Filter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2002652694 - Field 3972269745 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delayed Shipments</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Delayed Shipments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2002652694 - Field 1731362909 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delayed Receipts</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Cue - Field Delayed Receipts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 988425705 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Season</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Season - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 988425705 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Season - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 988425705 - Field 1090351696 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Active</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Season - Field Active - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 988425705 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Season - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 988425705 - Field 1291660215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Built On Version</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Season - Field Built On Version - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 988425705 - Field 75197648 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Participants</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Season - Field Participants - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 988425705 - Field 2434581779 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Season Start Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Season - Field Season Start Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 988425705 - Field 497691290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Season End Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Season - Field Season End Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Snapshot</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 722776286 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Season No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Season No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 1386389920 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Player No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Player No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 978466758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Game Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Game Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 586081679 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wealth Balance</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Wealth Balance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 1790589750 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wealth Net Change</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Wealth Net Change - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 4057230383 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location Counts</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Location Counts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 1537564488 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Counts</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Customer Counts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 54065872 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor Counts</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Vendor Counts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 4074595926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Power Usage</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Power Usage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1734353186 - Field 2426870281 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Rank at Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot - Field Rank at Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2062530576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Snapshot Bots</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2062530576 - Field 722776286 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Season No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot Bots - Field Season No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2062530576 - Field 1386389920 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Player No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot Bots - Field Player No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2062530576 - Field 978466758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Game Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot Bots - Field Game Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2062530576 - Field 3194883691 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Type</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot Bots - Field Bot Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2062530576 - Field 242570470 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Count</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Snapshot Bots - Field Bot Count - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1093318627 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Market Price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Price Archive - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1093318627 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Price Archive - Field Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1093318627 - Field 722776286 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Season No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Price Archive - Field Season No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1093318627 - Field 924038635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Market Price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Price Archive - Field Market Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1093318627 - Field 429282430 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Calculated</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Price Archive - Field Last Calculated - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2081452923 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Market Trades Archive</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades Archive - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2081452923 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades Archive - Field Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2081452923 - Field 3133801257 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades Archive - Field Company - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2081452923 - Field 3192175264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades Archive - Field Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2081452923 - Field 722776286 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Season No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades Archive - Field Season No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2081452923 - Field 1113358281 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Trades</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades Archive - Field Total Trades - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2081452923 - Field 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Market Trades Archive - Field Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3876155957 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Player Archive</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Archive - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3876155957 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Archive - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3876155957 - Field 722776286 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Season No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Archive - Field Season No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3876155957 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Archive - Field Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3876155957 - Field 1285973296 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Archive - Field Email - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3876155957 - Field 129688762 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User Name</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Archive - Field User Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3876155957 - Field 2708250016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User ID</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Archive - Field User ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3876155957 - Field 3997336476 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company Name</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Archive - Field Company Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3876155957 - Field 2902317799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System Permissions</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Archive - Field System Permissions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3876155957 - Field 2902317799 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Player,Admin</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Archive - Field System Permissions - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 3876155957 - Field 1037431910 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company Display Name</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player Archive - Field Company Display Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 58387642 - Method 3928840918 - NamedType 3510997606" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot %1 is already assigned to %2</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Check Assignment - Method CheckNoOthersAssignedHere - NamedType BotAlreadyAssignedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 58387642 - Method 2494082682 - NamedType 2415926717" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location %1 already has the maximum %2 bots assigned.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Check Assignment - Method CheckLocationBotCapacity - NamedType LocationFullErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1555525260 - NamedType 3410486187" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Money</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Management - NamedType CashTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1555525260 - NamedType 69799087" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Charge for purchase of %1.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Management - NamedType BotPurchTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2183177400 - Method 3064932810 - NamedType 1008984926" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You do not have enough cash to complete this purchase.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Location Management - Method PurchaseLocation - NamedType InsufficientFundsErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2183177400 - Method 3377517460 - NamedType 2753796441" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase of Location</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Location Management - Method ChargeThePlayer - NamedType LocationChargeTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2183177400 - NamedType 1528307622" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location %1 has a Capacity of %2 and cannot accept %3 units because of the %4 already in stock.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Location Management - NamedType LocationOvercapacityErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 792840838 - Method 4165491228 - NamedType 641311581" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Please run this from a Master Company.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Player Management - Method SetupNewPlayer - NamedType NotMasterCompanyErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 792840838 - NamedType 3912584456" size-unit="char" translate="yes" xml:space="preserve">
           <source>The Player's Company "%1" already exists</source>
@@ -813,87 +1869,107 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Player Management - NamedType SetupCompletedMsg</note>
         </trans-unit>
-        <trans-unit id="Page 3791836244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Buy a Bot</source>
-          <target state="needs-l10n">Bot typ</target>
+        <trans-unit id="Codeunit 2769507221 - Method 1828359189 - NamedType 2291884308" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There is a missing Account in Setup while posting: %1</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Player Charge - Method ChargeCash - NamedType MissingAccountErr</note>
         </trans-unit>
-        <trans-unit id="Page 3791836244 - Property 3863440606" size-unit="char" translate="yes" xml:space="preserve">
-          <source>bots,purchasing</source>
-          <target state="needs-l10n">Inköp</target>
+        <trans-unit id="Codeunit 2769507221 - NamedType 2624433890" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You do not have enough of %1 in Inventory (%2/%3).</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Property AdditionalSearchTerms</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Player Charge - NamedType InsufficientItemsErr</note>
         </trans-unit>
-        <trans-unit id="Page 3791836244 - Control 759990093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Bot Type</source>
-          <target state="translated">Bot typ</target>
+        <trans-unit id="Codeunit 2769507221 - NamedType 2961456523" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unable to locate sufficient quantity of %1 in Locations (%2)</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control BotTypeStep - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Player Charge - NamedType UnableToFindItems</note>
         </trans-unit>
-        <trans-unit id="Page 3791836244 - Control 759990093 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Select the Type of Bot and possibly which Tier</source>
+        <trans-unit id="Codeunit 2547160035 - Method 3377517460 - NamedType 1455564156" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company Initial Values</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control BotTypeStep - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Player Starting Values - Method ChargeThePlayer - NamedType InitChargeTok</note>
         </trans-unit>
-        <trans-unit id="Page 3791836244 - Control 17839560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Bot Types</source>
-          <target state="needs-l10n">Bot typ</target>
+        <trans-unit id="Codeunit 1815687023 - NamedType 3656885394" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PWR-%1</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control chooseBotType - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Power Posting - NamedType PowerDocNoTok</note>
         </trans-unit>
-        <trans-unit id="Page 3791836244 - Control 3285058841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Resources Check</source>
-          <target state="needs-l10n">Check</target>
+        <trans-unit id="Codeunit 1815687023 - NamedType 4238063584" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Power charges for bots.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control MaterialCheckStep - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Power Posting - NamedType PowerBotChargeTok</note>
         </trans-unit>
-        <trans-unit id="Page 3791836244 - Control 3285058841 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Review the Required Resources</source>
-          <target state="needs-l10n">Granska</target>
+        <trans-unit id="Codeunit 1815687023 - NamedType 3453767692" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Power charges for locations</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control MaterialCheckStep - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Power Posting - NamedType PowerLocationChargeTok</note>
         </trans-unit>
-        <trans-unit id="Page 3791836244 - Control 663913547 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Step 3</source>
-          <target state="translated">Steg 3</target>
+        <trans-unit id="Codeunit 1769831807 - NamedType 1800867797" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Not assigned to a Location, sleeping.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control AssignmentStep - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Inv-Basic - NamedType UnassignedBotMsg</note>
         </trans-unit>
-        <trans-unit id="Page 3791836244 - Control 3307620804 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Step 4</source>
-          <target state="translated">Steg 4</target>
+        <trans-unit id="Codeunit 1769831807 - NamedType 1398461833" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Received %1 fully and %2 partially.  Shipped %3 fully and %4 partially.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Control ConfirmStep - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Inv-Basic - NamedType OperationSuccessMsg</note>
         </trans-unit>
-        <trans-unit id="Page 3791836244 - Action 2438272767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Back</source>
-          <target state="translated">Föregående</target>
+        <trans-unit id="Codeunit 1769831807 - NamedType 4221683324" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No documents waiting to be processed, sleeping.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Action ActionBack - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Inv-Basic - NamedType NoWorkAvailableMsg</note>
         </trans-unit>
-        <trans-unit id="Page 3791836244 - Action 914282563 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Next</source>
-          <target state="translated">Nästa</target>
+        <trans-unit id="Codeunit 3791836244 - Method 696678341 - NamedType 148072087" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor %1 is not assigned to a location, so no orders can be placed.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Action ActionNext - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Purchase - Method CreatePO - NamedType MissingVendorLocationTok</note>
         </trans-unit>
-        <trans-unit id="Page 3791836244 - Action 3259912055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Finish</source>
-          <target state="translated">Slutför</target>
+        <trans-unit id="Codeunit 3791836244 - Method 696678341 - NamedType 3908881988" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location %1 has no logistics bots assigned, so no stock can move. No orders can be made.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - Action ActionFinish - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Purchase - Method CreatePO - NamedType MissingBotsForLocationTok</note>
         </trans-unit>
-        <trans-unit id="Page 3791836244 - NamedType 1108768241" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Bot %1 purchased.</source>
-          <target state="needs-l10n">Bot typ</target>
+        <trans-unit id="Codeunit 3791836244 - NamedType 3995586570" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purch. Order %1 created for Vendor No. %2.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - NamedType BotPurchasedMsg</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Purchase - NamedType POCreatedMsg</note>
         </trans-unit>
-        <trans-unit id="Page 3791836244 - NamedType 1196336861" size-unit="char" translate="yes" xml:space="preserve">
-          <source>No Bot Template of type %1 was found</source>
+        <trans-unit id="Codeunit 3791836244 - NamedType 4201234458" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No orders are required from Vendor No. %1.</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase - NamedType NoBotTemplateFoundErr</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Purchase - NamedType NoOrdersNeededMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3791836244 - NamedType 4069759577" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor No. %1 already has %2 orders for that date.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Purchase - NamedType MaxOrdersPerDayReachedMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2863822581 - NamedType 4069759577" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No. %1 already has %2 orders for that date.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Sales - NamedType MaxOrdersPerDayReachedMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2863822581 - NamedType 2743498177" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are no Items in stock over market price.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BCS Bot Sales - NamedType NoStockOverMarketPriceMsg</note>
         </trans-unit>
         <trans-unit id="Page 458088940 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot List</source>
@@ -903,6 +1979,7 @@
         </trans-unit>
         <trans-unit id="Page 458088940 - Property 3863440606" size-unit="char" translate="yes" xml:space="preserve">
           <source>bots</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Instance List - Property AdditionalSearchTerms</note>
         </trans-unit>
@@ -918,6 +1995,108 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Instance List - Action PowerEntries - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1732090029 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Buy a Bot</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Property 3863440606" size-unit="char" translate="yes" xml:space="preserve">
+          <source>bots,purchasing</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Property AdditionalSearchTerms</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 759990093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Type</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control BotTypeStep - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 759990093 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the Type of Bot and possibly which Tier</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control BotTypeStep - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 17839560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Types</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control chooseBotType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 2803388714 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TemplatePicker</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control TemplatePicker - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 3285058841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resources Check</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control MaterialCheckStep - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 3285058841 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Review the Required Resources</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control MaterialCheckStep - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 663913547 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Step 3</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control AssignmentStep - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 629510381 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Assignment Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control Assignment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Control 3307620804 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Step 4</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Control ConfirmStep - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Action 2438272767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Back</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Action ActionBack - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Action 914282563 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Next</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Action ActionNext - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - Action 3259912055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Finish</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - Action ActionFinish - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - NamedType 1108768241" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot %1 purchased.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - NamedType BotPurchasedMsg</note>
+        </trans-unit>
+        <trans-unit id="Page 1732090029 - NamedType 1196336861" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No Bot Template of type %1 was found</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Purchase Wizard - NamedType NoBotTemplateFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Page 3600309392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Bot Template Chooser</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Template Chooser - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 739513131 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bot Template List</source>
           <target state="needs-l10n"> ,Bot mallkod,Uppgraderingskod</target>
@@ -926,8 +2105,27 @@
         </trans-unit>
         <trans-unit id="Page 739513131 - Property 3863440606" size-unit="char" translate="yes" xml:space="preserve">
           <source>bots</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Template List - Property AdditionalSearchTerms</note>
+        </trans-unit>
+        <trans-unit id="Page 739513131 - Action 2702432588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Materials</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Template List - Action MaterialsBtn - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2698378957 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Bot Temp. Req. List</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Temp. Req. List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3942313896 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Checklist</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Resource Checklist - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 261101873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Master Item Card</source>
@@ -943,8 +2141,15 @@
         </trans-unit>
         <trans-unit id="Page 1910966160 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Master Item Subpage</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Master Item Subpage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2602657000 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Master Table Checklist</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Master Table Checklist - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3522310541 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Player List</source>
@@ -957,6 +2162,12 @@
           <target state="needs-l10n">Nytt utskriftsformat</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player List - Action Generate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3522310541 - Action 1303173321 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Restart Player</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player List - Action Restart - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2741061690 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Setup Overview</source>
@@ -1030,11 +2241,23 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Setup Overview - Action CopyTO - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 959412293 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Customer Interests</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Customer Interests - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 956387415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Power Usage Ledger</source>
           <target state="needs-l10n">Power BI: Kundreskontratransaktioner</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Power Usage Ledger - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 956387415 - Action 2282416948 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Power Usage Ledger - Action Post - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2080395824 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Prospect List</source>
@@ -1042,8 +2265,21 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Prospect List - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2080395824 - Action 2971031031 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Make Vendor</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Prospect List - Action ConvertToVend - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2080395824 - Action 4287916751 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Make Customer</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Prospect List - Action ConvertToCust - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2338513767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Prospect Trade Factbox</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Prospect Trade Factbox - Property Caption</note>
         </trans-unit>
@@ -1077,22 +2313,95 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3412068102 - Control 2067503412 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Bot Count</source>
-          <target state="needs-l10n">COUNT</target>
+        <trans-unit id="Page 3412068102 - Control 4036383149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Current Wealth</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Total Bot Count - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Wealth - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3412068102 - Control 2067503412 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Current count of bots the company operates</source>
+        <trans-unit id="Page 3412068102 - Control 1281245773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Idling Bots</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Total Bot Count - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Idling Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3412068102 - Control 2974027974 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Erroring Bots</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Erroring Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3412068102 - Control 2439377710 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Errors</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Bot Errors - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3412068102 - Control 2439377710 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Current count of new bot related errors</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Bot Errors - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3412068102 - Control 3972269745 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delayed Shipments</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Delayed Shipments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3412068102 - Control 1731362909 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delayed Receipts</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Activities - Control Delayed Receipts - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2116380514 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Player Role Center</source>
           <target state="needs-l10n">Rollcenter för ekonomichef</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 1502400274 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Operation</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action Operations - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 4281990254 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bots</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 419426744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Information</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 1713154120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Chart of Accounts</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">NLB="YourLanguageCaption"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action ChartofAcc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 4002059277 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bots</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action BotList - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 1554554962 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Items</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action Items - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 516137276 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Buy Bot</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action AddBot - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3908444679 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BC System Manager</source>
@@ -1120,6 +2429,7 @@
         </trans-unit>
         <trans-unit id="Page 3908444679 - Action 3104013918 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Manage Master Items for the game</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Master Items - Property ToolTip</note>
         </trans-unit>
@@ -1128,6 +2438,96 @@
           <target state="translated">Ange centrala funktioner såsom moms, dokument som skickas som e-post samt arbetsflödet för godkännande genom att gå igenom att par sidor som guidar dig genom informationen.</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Assisted Setup - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 130879199 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Season List</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Season List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1592444734 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Snapshot Bot Listpart</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Snapshot Bot Listpart - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3647718720 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Snapshot List</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Snapshot List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3647718720 - Control 3154575163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bots By Type</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Snapshot List - Control BCSBotList - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2383186180 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Bot Type Overview</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Type Overview - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2383186180 - Control 4280186650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bot Count</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Type Overview - Control Research Points Per Op - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2383186180 - Control 2860396600 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Power Per Day</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Type Overview - Control Power Per Day - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2383186180 - Control 63316191 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Ops. Per Day</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Bot Type Overview - Control Operations Per Day - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1816974432 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Item Overview</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Item Overview - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1816974432 - Control 35685 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Market Price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Item Overview - Control BCSMarketPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2363116744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Location Overview</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Location Overview - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3554428194 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Standings Overview</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Standings Overview - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3554428194 - Control 2426870281 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Rank</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Standings Overview - Control Rank at Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3554428194 - Control 2058393039 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Standings Overview - Control DisplayName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3554428194 - Control 586081679 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wealth</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Standings Overview - Control Wealth Balance - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 253072695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Import Master Items</source>
@@ -1147,8 +2547,195 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Company Information - Field Current Game Date - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 1779811491 - Field 489847365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3469146285">
+          <source>Purchase Prospect Effort</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Company Information - Field Purchase Prospect Effort - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1779811491 - Field 3752983244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3469146285">
+          <source>Sales Prospect Effort</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Company Information - Field Sales Prospect Effort - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2791412414 - Control 3211120311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>Player Information &amp; Settings</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Customer Card - Control PlayerInfo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2791412414 - Control 4264043839 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>Customer Interests</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Customer Card - Control Interests - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 606852792 - Control 4264043839 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2901867346">
+          <source>Customer Interests</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Customer List - Control Interests - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2706270701 - Control 3211120311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Player Information &amp; Settings</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Item Card - Control PlayerInfo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2706270701 - Control 4005698708 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Purchasing</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Item Card - Control PlayerPurchase - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2706270701 - Control 35685 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Market Price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Item Card - Control BCSMarketPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3391519799 - Control 35685 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4178721393">
+          <source>Market Price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Item List - Control BCSMarketPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3391519799 - Control 1871059367 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4178721393">
+          <source>Minimum Sales Price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Item List - Control BCS Min. Sales Price. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1956061493 - Control 3211120311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3870787835">
+          <source>Player Information</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Location Card - Control PlayerInfo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3445643615 - Action 3064932810 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 105083977">
+          <source>Buy Location</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Location List - Action PurchaseLocation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3445643615 - Action 3064932810 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 105083977">
+          <source>Acquire a new Location for Inventory for a price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Location List - Action PurchaseLocation - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3445643615 - Action 3064932810 - Method 1377591017 - NamedType 2383351714" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 105083977">
+          <source>Which type of Location do you wish to buy?</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Location List - Action PurchaseLocation - Method OnAction - NamedType WhichLocationQst</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3445643615 - Action 3064932810 - Method 1377591017 - NamedType 3496296870" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 105083977">
+          <source>Basic (Price: %1)</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Location List - Action PurchaseLocation - Method OnAction - NamedType BasicTok</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3445643615 - Action 3064932810 - Method 1377591017 - NamedType 531357133" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 105083977">
+          <source>Advanced (Price: %1)</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Location List - Action PurchaseLocation - Method OnAction - NamedType AdvTok</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1933021926 - Control 3211120311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
+          <source>Player Information &amp; Settings</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Vendor Card - Control PlayerInfo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2607410202 - Field 538187334 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Max. Orders Per Day</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Customer - Field Max Orders Per Day - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2607410202 - Field 1615354488 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Max. Quantity Per Day</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Customer - Field Max Quantity Per Day - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 441721345 - Field 4133416095 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Reorder Level</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Item - Field BCS Reorder Level - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 441721345 - Field 1757624030 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Maximum Stock</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Item - Field BCS Maximum Stock - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 441721345 - Field 1833822561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>BCS Max. Purch Price.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Item - Field BCS Max. Purch Price. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 441721345 - Field 1871059367 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>BCS Min. Sales Price.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Item - Field BCS Min. Sales Price. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2827781225 - Field 967894943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
+          <source>Maximum Units</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Location - Field Maximum Units - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2827781225 - Field 2947049438 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
+          <source>Maximum Bots</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Location - Field Maximum Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2827781225 - Field 4160995943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
+          <source>Upgrade Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Location - Field Upgrade Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2827781225 - Field 3917791686 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
+          <source>Total Stock</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Location - Field Total Stock - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2827781225 - Field 2735134486 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
+          <source>Assigned Bots</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Location - Field Assigned Bots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2827781225 - Field 3698817609 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
+          <source>Item Filter</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Location - Field BCS Item Filter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4097106210 - Field 538187334 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
+          <source>Max. Orders Per Day</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Vendor - Field Max Orders Per Day - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4097106210 - Field 1615354488 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
+          <source>Max. Quantity Per Day</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BCS Vendor - Field Max Quantity Per Day - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Profile 3122274637 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Biggening Player</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Profile Player - Property Caption</note>
         </trans-unit>
@@ -1158,8 +2745,45 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Profile System Manager - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Enum 2109408326 - EnumValue 2480707887 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Error Type - EnumValue SystemError - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2109408326 - EnumValue 1027943565 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Player</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Error Type - EnumValue PlayerError - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 874210662 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Bot Result Type - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 874210662 - EnumValue 659317815 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Activity</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Bot Result Type - EnumValue Activity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 874210662 - EnumValue 1192151816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Idle</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Bot Result Type - EnumValue Idle - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 874210662 - EnumValue 2248886284 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Bot Result Type - EnumValue Error - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Enum 980859205 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Bot Type - EnumValue   - Property Caption</note>
         </trans-unit>
@@ -1201,6 +2825,7 @@
         </trans-unit>
         <trans-unit id="Enum 980859205 - EnumValue 2573627115 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Research</source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Bot Type - EnumValue Research - Property Caption</note>
         </trans-unit>
@@ -1212,6 +2837,7 @@
         </trans-unit>
         <trans-unit id="Enum 3436205 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>
+          <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Enum BCS Research Type - EnumValue   - Property Caption</note>
         </trans-unit>
