@@ -288,12 +288,11 @@ table 88004 "BCS Game Setup"
                 Location.SetRange("Require Receive", false);
                 UpdateLocations(Location, WhichFieldNo, NewValue);
             end;
-        end else begin
+        end else
             if (Confirm(UpdateAdvLocationSettingsQst, true, WhichFieldCaption)) then begin
                 Location.SetRange("Require Receive", true);
                 UpdateLocations(Location, WhichFieldNo, NewValue);
             end;
-        end;
     end;
 
     local procedure UpdateLocations(var Location: Record Location; WhichFieldNo: Integer; NewValue: Decimal)
@@ -326,7 +325,7 @@ table 88004 "BCS Game Setup"
     end;
 
     var
-        UpdateBasicLocationSettingsQst: Label 'Update %1 in all Basic Locations across Companies?';
-        UpdateAdvLocationSettingsQst: Label 'Update %1 in all Advanced Locations across Companies?';
+        UpdateBasicLocationSettingsQst: Label 'Update %1 in all Basic Locations across Companies?', Comment = '%1 is the caption of the field being updated.';
+        UpdateAdvLocationSettingsQst: Label 'Update %1 in all Advanced Locations across Companies?', Comment = '%1 is the caption of the field being updated.';
 
 }

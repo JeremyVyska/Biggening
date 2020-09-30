@@ -64,11 +64,11 @@ table 88012 "BCS Prospect"
         if (Rec."Random Entry Source No." <> 0) and (RandomPool.Get(Rec."Random Entry Source No.")) then begin
             Vendor.Address := RandomPool.Address;
             Vendor.Contact := RandomPool."Contact Name";
-            Vendor."E-Mail" := RandomPool.Email;
+            Vendor."E-Mail" := CopyStr(RandomPool.Email, 1, MaxStrLen(Vendor."E-Mail"));
         end;
         Vendor."Gen. Bus. Posting Group" := Vendor."VAT Bus. Posting Group";
         Vendor."Vendor Posting Group" := GameSetup."Vendor Posting Group";
-        Vendor."Payment Method Code" := GameSetup."Vendor Payment Method Code";
+        Vendor."Payment Method Code" := CopyStr(GameSetup."Vendor Payment Method Code", 1, MaxStrLen(Vendor."Payment Method Code"));
 
         Vendor."Max Orders Per Day" := Rec."Maximum Orders Per Day";
         Vendor."Max Quantity Per Day" := Rec."Maximum Quantity Per Order";
@@ -103,11 +103,11 @@ table 88012 "BCS Prospect"
         if (Rec."Random Entry Source No." <> 0) and (RandomPool.Get(Rec."Random Entry Source No.")) then begin
             Customer.Address := RandomPool.Address;
             Customer.Contact := RandomPool."Contact Name";
-            Customer."E-Mail" := RandomPool.Email;
+            Customer."E-Mail" := CopyStr(RandomPool.Email, 1, MaxStrLen(Customer."E-Mail"));
         end;
         Customer."Gen. Bus. Posting Group" := GameSetup."Customer Bus. Posting Group";
         Customer."Customer Posting Group" := GameSetup."Customer Posting Group";
-        Customer."Payment Method Code" := GameSetup."Customer Payment Method Code";
+        Customer."Payment Method Code" := CopyStr(GameSetup."Customer Payment Method Code", 1, MaxStrLen(Customer."Payment Method Code"));
         Customer.Modify(true);
 
         //Migrate all trades to Customer Interests
@@ -131,6 +131,7 @@ table 88012 "BCS Prospect"
         MissingItems: Boolean;
         UnresearchedWarningQst: Label 'This Prospect has Trades that are for items you have not yet unlocked through research. Converting them will remove those trades.\ \Proceed?';
     begin
+        MissingItems := false;
         if Trades.FindSet() then
             repeat
                 if not MissingItems then

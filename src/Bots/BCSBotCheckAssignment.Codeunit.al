@@ -19,7 +19,7 @@ codeunit 88026 "BCS Bot Check Assignment"
     local procedure CheckNoOthersAssignedHere(var BotInstance: Record "BCS Bot Instance")
     var
         BotInstance2: Record "BCS Bot Instance";
-        BotAlreadyAssignedErr: Label 'Bot %1 is already assigned to %2';
+        BotAlreadyAssignedErr: Label 'Bot %1 is already assigned to %2', Comment = '%1 is the Bot Designation, %2 is where %1 is assigned to.';
     begin
         BotInstance2.SetFilter("Instance ID", '<>%1', BotInstance."Instance ID");
         BotInstance2.SetRange("Assignment Code", BotInstance."Assignment Code");
@@ -32,7 +32,7 @@ codeunit 88026 "BCS Bot Check Assignment"
     local procedure CheckLocationBotCapacity(var BotInstance: Record "BCS Bot Instance")
     var
         Location: Record Location;
-        LocationFullErr: Label 'Location %1 already has the maximum %2 bots assigned.';
+        LocationFullErr: Label 'Location %1 already has the maximum %2 bots assigned.', Comment = '%1 is Which Location, %2 is the Location bot maximum.';
     begin
         Location.Get(BotInstance."Assignment Code");
         Location.TestField("Maximum Bots");

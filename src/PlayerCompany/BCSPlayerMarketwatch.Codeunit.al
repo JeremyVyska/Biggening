@@ -11,7 +11,7 @@ codeunit 88022 "BCS Player Marketwatch"
     begin
         if not BCSMarketTrades.Get(Rec."No.", CompanyName(), WorkDate()) then begin
             BCSMarketTrades."Item No." := Rec."No.";
-            BCSMarketTrades.Company := CompanyName();
+            BCSMarketTrades.Company := CopyStr(CompanyName(), 1, MaxStrLen(BCSMarketTrades.Company));
             BCSMarketTrades.Date := WorkDate();
             BCSMarketTrades."Total Trades" := Rec.Quantity;
             BCSMarketTrades.Insert(true);
@@ -31,7 +31,7 @@ codeunit 88022 "BCS Player Marketwatch"
     begin
         if not BCSMarketTrades.Get(Rec."No.", CompanyName(), WorkDate()) then begin
             BCSMarketTrades."Item No." := Rec."No.";
-            BCSMarketTrades.Company := CompanyName();
+            BCSMarketTrades.Company := CopyStr(CompanyName(), 1, MaxStrLen(BCSMarketTrades.Company));
             BCSMarketTrades.Date := WorkDate();
             BCSMarketTrades."Total Trades" := Rec.Quantity;
             BCSMarketTrades.Insert(true);

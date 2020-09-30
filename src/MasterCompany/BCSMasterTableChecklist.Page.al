@@ -15,8 +15,9 @@ page 88029 "BCS Master Table Checklist"
             {
                 field(CheckedControl; LineChecked)
                 {
+                    Caption = 'Include';
                     ApplicationArea = all;
-                    ToolTip='Specifies the value of the LineChecked field';
+                    ToolTip = 'Specifies the value of the LineChecked field';
 
                     trigger OnValidate()
                     begin
@@ -26,17 +27,17 @@ page 88029 "BCS Master Table Checklist"
                 field("Object ID"; "Object ID")
                 {
                     ApplicationArea = All;
-                    ToolTip='Specifies the value of the Object ID field';
+                    ToolTip = 'Specifies the value of the Object ID field';
                 }
                 field("Object Name"; "Object Name")
                 {
                     ApplicationArea = All;
-                    ToolTip='Specifies the value of the Object Name field';
+                    ToolTip = 'Specifies the value of the Object Name field';
                 }
                 field("Object Caption"; "Object Caption")
                 {
                     ApplicationArea = All;
-                    ToolTip='Specifies the value of the Object Caption field';
+                    ToolTip = 'Specifies the value of the Object Caption field';
                 }
             }
         }
@@ -71,11 +72,9 @@ page 88029 "BCS Master Table Checklist"
                 MasterTables."Table No." := WhichTableNo;
                 MasterTables.insert();
             end;
-        end else begin
+        end else
             if MasterTables.get(WhichTableNo) then
                 MasterTables.Delete();
-        end;
-        ;
     end;
 
     var

@@ -26,7 +26,7 @@ codeunit 88019 "BCS Error Management"
 
         Clear(BotErrLog);
         BotErrLog.Init();
-        BotErrLog."Company Name" := CompanyName();
+        BotErrLog."Company Name" := CopyStr(CompanyName(), 1, MaxStrLen(BotErrLog."Company Name"));
         BotErrLog."Error Type" := BotErrLog."Error Type"::PlayerError;
         BotErrLog."Bot Type" := BotInstance."Bot Type";
         BotErrLog."Bot Instance" := BotInstance."Instance ID";

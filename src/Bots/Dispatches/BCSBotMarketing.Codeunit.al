@@ -12,10 +12,9 @@ codeunit 88013 "BCS Bot Marketing"
             Rec."Bot Tier" := 1;
             Rec.Modify(true);
         end;
-        for i := 1 to Rec.GetOpsPerDay() do begin
+        for i := 1 to Rec.GetOpsPerDay() do
             // For now, marketing bots will Only fish for Customer Prospects
             GeneratedProspects := GeneratedProspects + FishForProspect(Rec);
-        end;
 
         SetResult(StrSubstNo('I marketed and found %1 prospects today.', GeneratedProspects), MyResult."Action Type"::Activity);
     end;
@@ -76,7 +75,7 @@ codeunit 88013 "BCS Bot Marketing"
             MasterItem.SetRange("Prod. Posting Group", Template."Marketing Bot Item Tier");
             IfRunTrigger := true;
             OnBeforeProspectTrades(Prospect, MasterItem, IfRunTrigger);
-            if IfRunTrigger then begin
+            if IfRunTrigger then
                 for i := 1 to whichBot."Bot Tier" do begin
                     j := 0;
                     TempMasterItem.Reset();
@@ -105,7 +104,7 @@ codeunit 88013 "BCS Bot Marketing"
                     end else
                         Error('');
                 end;
-            end;
+
             OnAfterProspectTrades(Prospect, Trades);
         end;
     end;

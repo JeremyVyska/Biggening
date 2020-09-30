@@ -109,7 +109,7 @@ table 88000 "BCS Bot Template"
     procedure SafetyCheckTypeTier()
     var
         Template2: Record "BCS Bot Template";
-        DuplicateBotTier: Label 'For each Type and Tier, there should only be one template.';
+        DuplicateBotTierMsg: Label 'For each Type and Tier, there should only be one template.';
     begin
         if (Rec."Bot Tier" = 0) then
             exit;
@@ -117,6 +117,6 @@ table 88000 "BCS Bot Template"
         Template2.SetRange("Bot Type", Rec."Bot Type");
         Template2.SetRange("Bot Tier", rec."Bot Tier");
         if not Template2.IsEmpty then
-            Error(DuplicateBotTier);
+            Error(DuplicateBotTierMsg);
     end;
 }

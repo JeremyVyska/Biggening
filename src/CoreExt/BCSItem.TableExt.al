@@ -32,6 +32,4 @@ tableextension 88002 "BCS Item" extends Item
         }
     }
 
-    var
-        myInt: Integer;
 }

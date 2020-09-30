@@ -32,20 +32,19 @@ codeunit 88008 "BCS Bot Inv-Basic"
                     SalesHeader.SetAscending("Posting Date", false);
                     SalesHeader.SetRange("Location Code", Rec."Assignment Code");
                     SalesHeader.SetFilter("Posting Date", '..%1', CalcDate('<-1D>', WorkDate()));
-                    if SalesHeader.FindSet(false) then begin
+                    if SalesHeader.FindSet(false) then
                         repeat
                             if SalesHasOutstanding(SalesHeader) then begin
                                 LinesHandled := HandleShipment(Rec, SalesHeader); //COMMITS
                                 if (LinesHandled < 0) then // Fully Received
-                                    DocsHandled[1] := DocsHandled[1] + 1
+                                    DocsHandled[3] := DocsHandled[3] + 1
                                 else
                                     if (LinesHandled > 0) then
-                                        DocsHandled[2] := DocsHandled[2] + 1;
+                                        DocsHandled[4] := DocsHandled[4] + 1;
                                 if (LinesHandled <> 0) then
                                     ActivityCompleted := true;
                             end;
                         until (SalesHeader.Next() = 0) or ActivityCompleted;
-                    end;
                 end;
 
                 // Look for Prior to WorkDate Receipts
@@ -54,7 +53,7 @@ codeunit 88008 "BCS Bot Inv-Basic"
                     PurchHeader.SetAscending("Posting Date", false);
                     PurchHeader.SetRange("Location Code", Rec."Assignment Code");
                     PurchHeader.SetFilter("Posting Date", '..%1', CalcDate('<-1D>', WorkDate()));
-                    if PurchHeader.FindSet(false) then begin
+                    if PurchHeader.FindSet(false) then
                         repeat
                             if PurchHasOutstanding(PurchHeader) then begin
                                 LinesHandled := HandleReceipt(Rec, PurchHeader); //COMMITS
@@ -67,32 +66,30 @@ codeunit 88008 "BCS Bot Inv-Basic"
                                     ActivityCompleted := true;
                             end;
                         until (PurchHeader.Next() = 0) or ActivityCompleted;
-                    end;
                 end;
 
                 // Look for Current Workdate shipments
                 if not ActivityCompleted then begin
                     SalesHeader.SetRange("Posting Date", WorkDate());
-                    if SalesHeader.FindSet(false) then begin
+                    if SalesHeader.FindSet(false) then
                         repeat
                             if SalesHasOutstanding(SalesHeader) then begin
                                 LinesHandled := HandleShipment(Rec, SalesHeader); //COMMITS
                                 if (LinesHandled < 0) then // Fully Received
-                                    DocsHandled[1] := DocsHandled[1] + 1
+                                    DocsHandled[3] := DocsHandled[3] + 1
                                 else
                                     if (LinesHandled > 0) then
-                                        DocsHandled[2] := DocsHandled[2] + 1;
+                                        DocsHandled[4] := DocsHandled[4] + 1;
                                 if (LinesHandled <> 0) then
                                     ActivityCompleted := true;
                             end;
                         until (SalesHeader.Next() = 0) or ActivityCompleted;
-                    end;
                 end;
 
                 // Look for Current Workdate receipt
                 if not ActivityCompleted then begin
                     PurchHeader.SetRange("Posting Date", WorkDate());
-                    if PurchHeader.FindSet(false) then begin
+                    if PurchHeader.FindSet(false) then
                         repeat
                             if PurchHasOutstanding(PurchHeader) then begin
                                 LinesHandled := HandleReceipt(Rec, PurchHeader); //COMMITS
@@ -105,7 +102,6 @@ codeunit 88008 "BCS Bot Inv-Basic"
                                     ActivityCompleted := true;
                             end;
                         until (PurchHeader.Next() = 0) or ActivityCompleted;
-                    end;
                 end;
             end;
 
@@ -231,6 +227,6 @@ codeunit 88008 "BCS Bot Inv-Basic"
     var
         MyResult: Record "BCS Dispatch Result" temporary;
         UnassignedBotMsg: Label 'Not assigned to a Location, sleeping.';
-        OperationSuccessMsg: Label 'Received %1 fully and %2 partially.  Shipped %3 fully and %4 partially.';
+        OperationSuccessMsg: Label 'Received %1 fully and %2 partially.  Shipped %3 fully and %4 partially.', Comment = '%1 %2 are a count of received orders, full and partial. %3 %4 are a count of shipped orders, full and partial';
         NoWorkAvailableMsg: Label 'No documents waiting to be processed, sleeping.';
 }

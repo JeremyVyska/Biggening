@@ -58,7 +58,7 @@ codeunit 88023 "BCS Power Posting"
 
     var
         GameSetup: Record "BCS Game Setup";
-        PowerDocNoTok: Label 'PWR-%1';
+        PowerDocNoTok: Label 'PWR-%1', Comment = '%1 is an incrementing number';
         PowerBotChargeTok: Label 'Power charges for bots.';
         PowerLocationChargeTok: Label 'Power charges for locations';
 }

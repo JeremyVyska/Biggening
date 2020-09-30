@@ -61,7 +61,7 @@ codeunit 88001 "BCS Bot Management"
         NewDesig.Append('-');
         NewDesig.Append(Format(Random(9)) + Format(Random(9)) + Format(Random(9)));
 
-        exit(NewDesig.ToText())
+        exit(CopyStr(NewDesig.ToText(), 1, 10));
     end;
 
     local procedure DoCashChargeForBot(AmountToCharge: Decimal; var BCSPlayerCharge: Codeunit "BCS Player Charge"; var BotDesignation: Code[20]) returnValue: Boolean
@@ -85,9 +85,7 @@ codeunit 88001 "BCS Bot Management"
 
         case Template."Bot Type" of
             Template."Bot Type"::Research:
-                begin
-                    Instance."Research Points Per Op" := Template."Research Points Per Op";
-                end;
+                Instance."Research Points Per Op" := Template."Research Points Per Op";
         end;
         Instance.Insert(true);
     end;
@@ -152,5 +150,5 @@ codeunit 88001 "BCS Bot Management"
 
     var
         CashTok: Label 'Money';
-        BotPurchTok: Label 'Charge for purchase of %1.';
+        BotPurchTok: Label 'Charge for purchase of %1.', Comment = '%1 is the code for what was purchased.';
 }

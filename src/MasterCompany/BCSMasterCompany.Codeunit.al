@@ -26,9 +26,8 @@ codeunit 88000 "BCS Master Company"
                 for i := 1 to SourceRecRef.FieldCount do begin
                     SourceFieldRef := SourceRecRef.FieldIndex(i);
                     DestFieldRef := DestRecRef.FieldIndex(i);
-                    if (SourceFieldRef.Class = FieldClass::Normal) then begin
+                    if (SourceFieldRef.Class = FieldClass::Normal) then
                         DestFieldRef.Value(SourceFieldRef.Value);
-                    end;
                     if not DestRecRef.Insert() then
                         DestRecRef.Modify();
                 end;

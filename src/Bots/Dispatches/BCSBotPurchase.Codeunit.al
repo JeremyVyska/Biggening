@@ -128,8 +128,8 @@ codeunit 88006 "BCS Bot Purchase"
         Vendor: Record Vendor;
         BotInstance2: Record "BCS Bot Instance";
         BotErrorLog: Codeunit "BCS Error Management";
-        MissingVendorLocationTok: Label 'Vendor %1 is not assigned to a location, so no orders can be placed.';
-        MissingBotsForLocationTok: Label 'Location %1 has no logistics bots assigned, so no stock can move. No orders can be made.';
+        MissingVendorLocationTok: Label 'Vendor %1 is not assigned to a location, so no orders can be placed.', Comment = '%1 is the Vendor No.';
+        MissingBotsForLocationTok: Label 'Location %1 has no logistics bots assigned, so no stock can move. No orders can be made.', Comment = '%1 is the Location Code';
     begin
         // Count of BOTH The open PO docs, and the posted docs
         // Check Vendor has a Location before allowing.
@@ -255,7 +255,7 @@ codeunit 88006 "BCS Bot Purchase"
             MasterItem.SetRange("Prod. Posting Group", 'CLASS1');  //This OK hardcoding for now
             IfRunTrigger := true;
             OnBeforeProspectTrades(Prospect, MasterItem, IfRunTrigger);
-            if IfRunTrigger then begin
+            if IfRunTrigger then
                 for i := 1 to whichBot."Bot Tier" do begin
                     j := 0;
                     TempMasterItem.Reset();
@@ -275,7 +275,6 @@ codeunit 88006 "BCS Bot Purchase"
                     end else
                         Error('');
                 end;
-            end;
             OnAfterProspectTrades(Prospect, Trades);
         end;
     end;
@@ -350,7 +349,7 @@ codeunit 88006 "BCS Bot Purchase"
 
     var
         MyResult: Record "BCS Dispatch Result" temporary;
-        POCreatedMsg: Label 'Purch. Order %1 created for Vendor No. %2.';
-        NoOrdersNeededMsg: Label 'No orders are required from Vendor No. %1.';
-        MaxOrdersPerDayReachedMsg: Label 'Vendor No. %1 already has %2 orders for that date.';
+        POCreatedMsg: Label 'Purch. Order %1 created for Vendor No. %2.', Comment = '%1 is the Purchase Order No., %2 is the Vendor No.';
+        NoOrdersNeededMsg: Label 'No orders are required from Vendor No. %1.', Comment = '%1 is the Vendor No.';
+        MaxOrdersPerDayReachedMsg: Label 'Vendor No. %1 already has %2 orders for that date.', Comment = '%1 is the Vendor No., %2 is a count of orders for the given vendor and date.';
 }

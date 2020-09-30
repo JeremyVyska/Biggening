@@ -6,7 +6,7 @@ codeunit 88025 "BCS Player Charge"
         GameSetup: Record "BCS Game Setup";
         GenJnl: Record "Gen. Journal Line";
         GenJnlPost: Codeunit "Gen. Jnl.-Post Line";
-        MissingAccountErr: Label 'There is a missing Account in Setup while posting: %1'; // we have no idea which here
+        MissingAccountErr: Label 'There is a missing Account in Setup while posting: %1', Comment = '%1 is the Posting Description'; // we have no idea which here
     begin
         if ChargeAccount = '' then
             Error(MissingAccountErr, PostingDesc);
@@ -34,7 +34,7 @@ codeunit 88025 "BCS Player Charge"
     var
         Item: Record Item;
         Location: Record Location;
-        WhseItemJnl: Record "Warehouse Journal Line";
+        // WhseItemJnl: Record "Warehouse Journal Line";
         RemQtyToCharge: Decimal;
         QtyToReduce: Decimal;
         LoopSafety: Integer;
@@ -66,7 +66,7 @@ codeunit 88025 "BCS Player Charge"
         // TODO: v0.2 Handle Advanced Locations
         until (RemQtyToCharge = 0) OR (LoopSafety > 100);
         if (RemQtyToCharge > 0) then
-            Error(UnableToFindItems, MaterialCode, RemQtyToCharge);
+            Error(UnableToFindItemsErr, MaterialCode, RemQtyToCharge);
     end;
 
     local procedure AdjustOutSimple(ItemNo: Code[20]; QtyToReduce: Decimal; DocNo: Code[20]; LocNo: Code[20]; PostingDesc: Text[100]): Boolean
@@ -96,6 +96,6 @@ codeunit 88025 "BCS Player Charge"
 
 
     var
-        InsufficientItemsErr: Label 'You do not have enough of %1 in Inventory (%2/%3).';
-        UnableToFindItems: Label 'Unable to locate sufficient quantity of %1 in Locations (%2)';
+        InsufficientItemsErr: Label 'You do not have enough of %1 in Inventory (%2/%3).', Comment = '%1 is which Item, %2 is on hand quantity, and %3 is the amount needed.';
+        UnableToFindItemsErr: Label 'Unable to locate sufficient quantity of %1 in Locations (%2)', Comment = '%1 is which Item, %2 is the missing quantity to find.';
 }

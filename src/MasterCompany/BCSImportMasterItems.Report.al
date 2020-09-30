@@ -17,7 +17,7 @@ report 88000 "BCS Import Master Items"
 
         trigger OnQueryClosePage(CloseAction: Action): Boolean
         begin
-            if CloseAction = Action::OK then begin
+            if CloseAction = Action::OK then
                 if (UploadIntoStream('Upload Master Items', '', '', OurFilename, InS)) then begin
                     if (OurFilename = '') then
                         exit(false);
@@ -25,7 +25,6 @@ report 88000 "BCS Import Master Items"
                     if WhichSheet = '' then
                         exit(true);
                 end;
-            end;
         end;
     }
 
@@ -135,7 +134,6 @@ report 88000 "BCS Import Master Items"
 
     local procedure ParseBOMCell(WhichMasterItem: Code[20]; BOMText: Text)
     var
-        MasterItem: Record "BCS Master Item";
         MasterBOM: Record "BCS Master Item BOM";
         SemiSep: List of [Text];
         CommaSep: List of [Text];
@@ -153,7 +151,7 @@ report 88000 "BCS Import Master Items"
         foreach ComponentEntry in BOMText.Split(SemiSep) do begin
             ComponentPart := ComponentEntry.Split(CommaSep);
             if ComponentPart.Get(1, PossibleItem) then
-                if PossibleItem <> '' then begin
+                if PossibleItem <> '' then
                     if ComponentPart.get(2, PossibleQuantityText) then
                         if PossibleQuantityText <> '' then
                             if Evaluate(PossibleQuantity, PossibleQuantityText) then begin
@@ -164,8 +162,6 @@ report 88000 "BCS Import Master Items"
                                 MasterBOM.Quantity := PossibleQuantity;
                                 MasterBOM.Insert(true);
                             end;
-
-                end;
         end;
     end;
 

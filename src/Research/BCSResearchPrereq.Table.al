@@ -70,6 +70,5 @@ table 88009 "BCS Research Prereq."
 
     end;
 
-    var
-        CyclicLoopErr: Label 'There is a looping issue in your selection';
+    // CyclicLoopErr: Label 'There is a looping issue in your selection';
 }

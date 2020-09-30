@@ -35,10 +35,9 @@ codeunit 88031 "BCS Player Starting Values"
 
     local procedure GivePlayerStartingCash()
     begin
-        if GameSetup."Starting Cash" <> 0 then begin
+        if GameSetup."Starting Cash" <> 0 then
             // Note the sign flip - we're -reverse- charging cash to initialize.
             ChargeThePlayer(GameSetup."Starting Balance Account", -GameSetup."Starting Cash");
-        end;
     end;
 
     local procedure CreateLocations()
@@ -52,9 +51,8 @@ codeunit 88031 "BCS Player Starting Values"
                 -(GameSetup."Starting Basic Locations" * GameSetup."Basic Location Price"));
 
             // And now we can just 'buy' the locations using existing code.  Tidy.
-            for i := 1 to GameSetup."Starting Basic Locations" do begin
+            for i := 1 to GameSetup."Starting Basic Locations" do
                 LocPurchase.PurchaseLocation(true);  //almost a palindrome.  naming Method CUs is odd.
-            end;
         end;
     end;
 
@@ -79,7 +77,6 @@ codeunit 88031 "BCS Player Starting Values"
 
     local procedure FindAndBuyStarterBots()
     var
-        GameSetup: Record "BCS Game Setup";
         BotTemplate: Record "BCS Bot Template";
         PurchBot: Codeunit "BCS Bot Management";
         i: Integer;
@@ -112,13 +109,12 @@ codeunit 88031 "BCS Player Starting Values"
     var
         CompanyInfo: Record "Company Information";
         Company: Record Company;
-        GameSetup: Record "BCS Game Setup";
     begin
         if not CompanyInfo.get() then begin
             CompanyInfo.Insert(true);
             Company.Get(CompanyName());
             if Company."Display Name" <> '' then
-                CompanyInfo.Name := Company."Display Name"
+                CompanyInfo.Name := CopyStr(Company."Display Name", 1, MaxStrLen(CompanyInfo.Name))
             else
                 CompanyInfo.Name := Company.Name;
             CompanyInfo.Modify(true);
@@ -133,7 +129,6 @@ codeunit 88031 "BCS Player Starting Values"
     var
         Customer: Record Customer;
         MasterItem: Record "BCS Master Item";
-        GameSetup: Record "BCS Game Setup";
         CustInterests: Record "BCS Customer Interest";
         RandomPool: Record "BCS Random Entity Name Pool";
     begin
@@ -148,10 +143,10 @@ codeunit 88031 "BCS Player Starting Values"
         Customer.Name := RandomPool."Company Name";
         Customer.Address := RandomPool.Address;
         Customer.Contact := RandomPool."Contact Name";
-        Customer."E-Mail" := RandomPool.Email;
+        Customer."E-Mail" := CopyStr(RandomPool.Email, 1, MaxStrLen(Customer."E-Mail"));
         Customer."Gen. Bus. Posting Group" := GameSetup."Customer Bus. Posting Group";
         Customer."Customer Posting Group" := GameSetup."Customer Posting Group";
-        Customer."Payment Method Code" := GameSetup."Customer Payment Method Code";
+        Customer."Payment Method Code" := CopyStr(GameSetup."Customer Payment Method Code", 1, MaxStrLen(Customer."Payment Method Code"));
         Customer.Modify(true);
 
         // find cheapest item
@@ -171,7 +166,6 @@ codeunit 88031 "BCS Player Starting Values"
         Vendor: Record Vendor;
         ItemVendor: Record "Item Vendor";
         MasterItem: Record "BCS Master Item";
-        GameSetup: Record "BCS Game Setup";
         RandomPool: Record "BCS Random Entity Name Pool";
     begin
         GameSetup.Get();
@@ -185,10 +179,10 @@ codeunit 88031 "BCS Player Starting Values"
         Vendor.Name := RandomPool."Company Name";
         Vendor.Address := RandomPool.Address;
         Vendor.Contact := RandomPool."Contact Name";
-        Vendor."E-Mail" := RandomPool.Email;
+        Vendor."E-Mail" := CopyStr(RandomPool.Email, 1, MaxStrLen(Vendor."E-Mail"));
         Vendor."Gen. Bus. Posting Group" := GameSetup."Vendor Bus. Posting Group";
         Vendor."Vendor Posting Group" := GameSetup."Vendor Posting Group";
-        Vendor."Payment Method Code" := GameSetup."Vendor Payment Method Code";
+        Vendor."Payment Method Code" := CopyStr(GameSetup."Vendor Payment Method Code", 1, MaxStrLen(Vendor."Payment Method Code"));
 
         Vendor."Max Orders Per Day" := Round(GameSetup."Purch. Pros. Base Max Orders" * GameSetup."Purch. Pros. Tier Multiplier");
         Vendor."Max Quantity Per Day" := Round(GameSetup."Purch. Pros. Base Max Quantity" * GameSetup."Purch. Pros. Tier Multiplier");

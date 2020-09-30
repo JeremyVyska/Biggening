@@ -19,7 +19,7 @@ page 88005 "BCS Bot Purchase Wizard"
                 {
                     ApplicationArea = all;
                     Caption = 'Bot Types';
-                    ToolTip='Specifies the value of the Bot Types field';
+                    ToolTip = 'Specifies the value of the Bot Types field';
 
                     trigger OnValidate()
                     var
@@ -61,7 +61,7 @@ page 88005 "BCS Bot Purchase Wizard"
                 {
                     Caption = 'Assignment Code';
                     ApplicationArea = all;
-                     ToolTip='Specifies the value of the Assignment Code field';
+                    ToolTip = 'Specifies the value of the Assignment Code field';
 
                     trigger OnValidate()
                     var
@@ -90,7 +90,7 @@ page 88005 "BCS Bot Purchase Wizard"
                 InFooterBar = true;
                 Enabled = ActionBackAllowed;
                 Image = PreviousRecord;
-                ToolTip='Executes the Back action';
+                ToolTip = 'Executes the Back action';
 
                 trigger OnAction()
                 begin
@@ -104,7 +104,7 @@ page 88005 "BCS Bot Purchase Wizard"
                 InFooterBar = true;
                 Enabled = ActionNextAllowed;
                 Image = NextRecord;
-                ToolTip='Executes the Next action';
+                ToolTip = 'Executes the Next action';
                 trigger OnAction()
                 begin
                     TakeStep(1);
@@ -117,7 +117,7 @@ page 88005 "BCS Bot Purchase Wizard"
                 InFooterBar = true;
                 Enabled = ActionFinishAllowed;
                 Image = Approve;
-                ToolTip='Executes the Finish action';
+                ToolTip = 'Executes the Finish action';
 
                 trigger OnAction()
                 var
@@ -178,22 +178,18 @@ page 88005 "BCS Bot Purchase Wizard"
             ReqToShow.DeleteAll();
         end;
 
-        if WhichStep = 2 then begin
+        if WhichStep = 2 then
             // We're moving to materials requirements.
             //Message('You picked: %1', CurrPage.TemplatePicker.Page.GetSelected());
             populateRequirements();
-        end;
 
-        if WhichStep = 3 then begin
+        if WhichStep = 3 then
             //TODO - do we need to be here?
-            if (Rec."Bot Type" in [Rec."Bot Type"::Sales, Rec."Bot Type"::Purchasing, Rec."Bot Type"::"Inventory-Basic", Rec."Bot Type"::"Inventory-Advanced"]) then begin
-
-            end else
+            if not (Rec."Bot Type" in [Rec."Bot Type"::Sales, Rec."Bot Type"::Purchasing, Rec."Bot Type"::"Inventory-Basic", Rec."Bot Type"::"Inventory-Advanced"]) then
                 if (WhichDirection > 0) then //Nexting
                     WhichStep := 4
                 else  //Backing
                     WhichStep := 2;
-        end;
         SetControls();
     end;
 
@@ -224,8 +220,8 @@ page 88005 "BCS Bot Purchase Wizard"
         ActionNextAllowed: Boolean;
         ActionFinishAllowed: Boolean;
         ShowBotTemplates: Boolean;
-        BotPurchasedMsg: Label 'Bot %1 purchased.';
-        NoBotTemplateFoundErr: Label 'No Bot Template of type %1 was found';
+        BotPurchasedMsg: Label 'Bot %1 purchased.', Comment = '%1 is which Bot Designator is the new purchase.';
+        NoBotTemplateFoundErr: Label 'No Bot Template of type %1 was found', Comment = '%1 is from the enum of the Bot Type that we are checking for a Template of';
 
         MissingMaterials: Boolean;
 }

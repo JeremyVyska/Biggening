@@ -7,7 +7,6 @@ codeunit 88018 "BCS Location Management"
         GameSetup: Record "BCS Game Setup";
         Location: Record Location;
         InvtPostingSetup: Record "Inventory Posting Setup";
-        LocationCard: Page "Location Card";
         NoSeriesMgmt: Codeunit NoSeriesManagement;
         AmountToCharge: Decimal;
         InsufficientFundsErr: Label 'You do not have enough cash to complete this purchase.';
@@ -26,15 +25,14 @@ codeunit 88018 "BCS Location Management"
         if (GLAccount.Balance < AmountToCharge) then
             Error(InsufficientFundsErr);
 
-        Location.Code := NoSeriesMgmt.GetNextNo(GameSetup."Location No. Series", WorkDate(), true);
+        Location.Code := CopyStr(NoSeriesMgmt.GetNextNo(GameSetup."Location No. Series", WorkDate(), true), 1, MaxStrLen(Location.Code));
         if (Basic) then begin
             Location.Name := 'Basic ' + Location.Code;
             Location."Maximum Bots" := GameSetup."Basic Loc. Max. Bots";
             Location."Maximum Units" := GameSetup."Basic Loc. Max. Units";
 
-        end else begin
-            //TODO: v0.v2+ Advanced Location
         end;
+        //TODO: v0.v2+ Advanced Location
         Location.Insert(true);
         InvtPostingSetup."Location Code" := Location.code;
         InvtPostingSetup."Invt. Posting Group Code" := GameSetup."Inventory Posting Group";
@@ -97,6 +95,6 @@ codeunit 88018 "BCS Location Management"
     end;
 
     var
-        LocationOvercapacityErr: Label 'Location %1 has a Capacity of %2 and cannot accept %3 units because of the %4 already in stock.';
+        LocationOvercapacityErr: Label 'Location %1 has a Capacity of %2 and cannot accept %3 units because of the %4 already in stock.', Comment = '%1 is the Code of the Location, %2 is the BCS Max Stock, %3 is how many are trying to be received, and %4 is the current amount in that location.';
 
 }

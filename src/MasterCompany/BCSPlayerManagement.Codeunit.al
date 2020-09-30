@@ -72,7 +72,7 @@ codeunit 88015 "BCS Player Management"
             User.Init();
             User."User Security ID" := CreateGuid();
             user."User Name" := Player."User Name";
-            User."Full Name" := Player."Name";
+            User."Full Name" := Copystr(Player."Name", 1, MaxStrLen(User."Full Name"));
             User.Insert(true);
 
             Player."User ID" := User."User Security ID";
@@ -122,7 +122,7 @@ codeunit 88015 "BCS Player Management"
         JobQueueEntry."Object ID to Run" := Codeunit::"BCS Player Starting Values";
         JobQueueEntry.Insert(true);
         //JobQueueEntry."User ID" := Player."User ID";
-        JobQueueEntry."User ID" := UserId; // This needs to run as Admin to update the Player table.
+        JobQueueEntry."User ID" := CopyStr(UserId, 1, MaxStrLen(JobQueueEntry."User ID")); // This needs to run as Admin to update the Player table.
         JobQueueEntry."Recurring Job" := false;
         JobQueueEntry."Earliest Start Date/Time" := CurrentDateTime() + (30 * 1000);
         JobQueueEntry.Validate(Status, JobQueueEntry.Status::Ready);
@@ -169,7 +169,7 @@ codeunit 88015 "BCS Player Management"
 */
 
     var
-        CompanyAlreadyExistsErr: Label 'The Player''s Company "%1" already exists';
+        CompanyAlreadyExistsErr: Label 'The Player''s Company "%1" already exists', Comment = '%1 is the name of the Player Company';
         UserAlreadyExistsErr: Label 'The Player already has a User.';
         SetupCompletedMsg: Label 'Setup completed.';
 }

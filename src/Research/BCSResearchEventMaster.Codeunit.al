@@ -13,7 +13,6 @@ codeunit 88028 "BCS Research Event Master"
     local procedure ReadyToUnlock(ResearchSetup: Record "BCS Research"): Boolean
     var
         ResPreq: Record "BCS Research Prereq.";
-        Research: Record "BCS Research";
     begin
         // check all Prereq conditions
         ResPreq.SetRange("Research No.", ResearchSetup."No.");

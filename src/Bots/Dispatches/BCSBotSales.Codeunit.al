@@ -6,7 +6,6 @@ codeunit 88007 "BCS Bot Sales"
     var
         SalesHeader: Record "Sales Header";
         Cust: Record Customer;
-        i: Integer;
     begin
         // Safety Measure
         if (Rec."Bot Tier" = 0) then begin
@@ -28,9 +27,8 @@ codeunit 88007 "BCS Bot Sales"
 
             CreateOrders(Rec)
 
-        end else begin
+        end else
             SetResult(('I am missing an Assignment Code and did nothing today.'), MyResult."Action Type"::Idle);
-        end;
 
     end;
 
@@ -137,6 +135,6 @@ codeunit 88007 "BCS Bot Sales"
 
     var
         MyResult: Record "BCS Dispatch Result" temporary;
-        MaxOrdersPerDayReachedMsg: Label 'Customer No. %1 already has %2 orders for that date.';
+        MaxOrdersPerDayReachedMsg: Label 'Customer No. %1 already has %2 orders for that date.', Comment = '%1 is the customer no., %2 is the count of orders for the given customer and date.';
         NoStockOverMarketPriceMsg: Label 'There are no Items in stock over market price.';
 }
