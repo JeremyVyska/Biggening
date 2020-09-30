@@ -16,17 +16,20 @@ page 88033 "BCS Standings Overview"
                 {
                     Caption = 'Rank';
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Rank field';
                 }
 
                 field(DisplayName; DisplayName)
                 {
                     Caption = 'Company';
                     ApplicationArea = All;
+                     ToolTip='Specifies the value of the Company field';
                 }
                 field("Wealth Balance"; "Wealth Balance")
                 {
                     Caption = 'Wealth';
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Wealth field';
                 }
             }
         }

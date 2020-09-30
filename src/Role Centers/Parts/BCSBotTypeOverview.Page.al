@@ -15,21 +15,25 @@ page 88032 "BCS Bot Type Overview"
                 field("Bot Type"; "Bot Type")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Bot Type field';
                 }
                 field("Research Points Per Op"; "Research Points Per Op")
                 {
                     Caption = 'Bot Count';
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Bot Count field';
                 }
                 field("Power Per Day"; "Power Per Day")
                 {
                     Caption = 'Total Power Per Day';
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Total Power Per Day field';
                 }
                 field("Operations Per Day"; "Operations Per Day")
                 {
                     Caption = 'Total Ops. Per Day';
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Total Ops. Per Day field';
                 }
             }
         }

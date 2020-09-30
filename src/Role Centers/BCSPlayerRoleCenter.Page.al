@@ -42,6 +42,7 @@ page 88004 "BCS Player Role Center"
                     Caption = 'Bots';
                     Image = SetupLines;
                     RunObject = Page "BCS Bot Instance List";
+                    ToolTip='Executes the Bots action';
                 }
             }
             group(Information)
@@ -56,6 +57,7 @@ page 88004 "BCS Player Role Center"
                     PromotedIsBig = true;
                     Image = ChartOfAccounts;
                     RunObject = Page "Chart of Accounts";
+                    ToolTip='Executes the Chart of Accounts'', comment = ''NLB="YourLanguageCaption" action';
                 }
             }
         }
@@ -67,6 +69,7 @@ page 88004 "BCS Player Role Center"
                 Caption = 'Bots';
                 Image = SetupLines;
                 RunObject = Page "BCS Bot Instance List";
+                ToolTip='Executes the Bots action';
             }
             action(Items)
             {
@@ -74,6 +77,7 @@ page 88004 "BCS Player Role Center"
                 Caption = 'Items';
                 Image = Item;
                 RunObject = Page "Item List";
+                ToolTip='Executes the Items action';
             }
         }
 
@@ -88,6 +92,7 @@ page 88004 "BCS Player Role Center"
                 PromotedIsBig = true;
                 ApplicationArea = All;
                 RunObject = Codeunit "BCS Bot Purchase";
+                ToolTip='Executes the Buy Bot action';
             }
         }
     }

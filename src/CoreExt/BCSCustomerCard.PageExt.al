@@ -31,16 +31,19 @@ pageextension 88007 "BCS Customer Card" extends "Customer Card"
                 field(EditableLocationCode; "Location Code")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Location Code field';
                 }
                 field(MaxOrdersPerDay; "Max Orders Per Day")
                 {
                     ApplicationArea = All;
                     Editable = IsAdmin;
+                    ToolTip='Specifies the value of the Max Orders Per Day field';
                 }
                 field(MaxQtyPerDay; "Max Quantity Per Day")
                 {
                     ApplicationArea = All;
                     Editable = IsAdmin;
+                    ToolTip='Specifies the value of the Max Quantity Per Day field';
                 }
             }
         }

@@ -16,26 +16,32 @@ page 88018 "BCS Research List"
                 field("No."; "No.")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the No. field';
                 }
                 field(Description; Description)
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Description field';
                 }
                 field(Selected; Selected)
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Selected field';
                 }
                 field(Points; Points)
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Points field';
                 }
                 field(Progress; Progress)
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Progress field';
                 }
                 field(Completed; Completed)
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Completed field';
                 }
             }
         }
@@ -52,6 +58,7 @@ page 88018 "BCS Research List"
                 PromotedCategory = Process;
                 PromotedIsBig = true;
                 Caption = 'Select';
+                ToolTip='Executes the Select action';
 
                 trigger OnAction()
                 begin

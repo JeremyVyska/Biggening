@@ -15,22 +15,27 @@ page 88020 "BCS Season List"
                 field("Built On Version"; "Built On Version")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Built On Version field';
                 }
                 field("No."; "No.")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the No. field';
                 }
                 field(Active; Active)
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Active field';
                 }
                 field(Description; Description)
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Description field';
                 }
                 field(Participants; Participants)
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Participants field';
                 }
             }
         }
@@ -45,6 +50,7 @@ page 88020 "BCS Season List"
                 Image = NewBranch;
                 Promoted = true;
                 PromotedCategory = Process;
+                ToolTip='Executes the CreateSeason action';
 
                 trigger OnAction()
                 var

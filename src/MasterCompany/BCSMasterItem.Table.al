@@ -48,6 +48,9 @@ table 88010 "BCS Master Item"
         {
             Clustered = true;
         }
+        key(StarterItem; "Available at Start", "Initial Price")
+        {
+        }
     }
 
 }

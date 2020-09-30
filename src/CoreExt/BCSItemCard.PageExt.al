@@ -75,14 +75,17 @@ pageextension 88004 "BCS Item Card" extends "Item Card"
                     field("BCS Reorder Level"; "BCS Reorder Level")
                     {
                         ApplicationArea = All;
+                          ToolTip='Specifies the value of the BCS Reorder Level field';
                     }
                     field("BCS Maximum Stock"; "BCS Maximum Stock")
                     {
                         ApplicationArea = All;
+                        ToolTip='Specifies the value of the BCS Maximum Stock field';
                     }
                     field("BCS Max. Purch Price."; "BCS Max. Purch Price.")
                     {
                         ApplicationArea = All;
+                        ToolTip='Specifies the value of the BCS Max. Purch Price. field';
                     }
 
                 }
@@ -91,6 +94,7 @@ pageextension 88004 "BCS Item Card" extends "Item Card"
                     field("BCS Min. Sales Price."; "BCS Min. Sales Price.")
                     {
                         ApplicationArea = All;
+                        ToolTip='Specifies the value of the BCS Min. Sales Price. field';
                     }
 
                 }

@@ -12,6 +12,7 @@ page 88025 "BCS Market Price"
             field("Market Price"; "Market Price")
             {
                 ApplicationArea = All;
+                ToolTip='Specifies the value of the Market Price field';
             }
         }
     }

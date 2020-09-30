@@ -14,28 +14,34 @@ page 88031 "BCS Item Overview"
                 field("No."; "No.")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the No. field';
                 }
                 field(Description; Description)
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Description field';
                 }
                 field(Inventory; Inventory)
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Inventory field';
                 }
                 field("BCS Maximum Stock"; "BCS Maximum Stock")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the BCS Maximum Stock field';
                 }
                 field("BCS Min. Sales Price."; "BCS Min. Sales Price.")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the BCS Min. Sales Price. field';
                 }
                 field(BCSMarketPrice; MarketPrice)
                 {
                     Caption = 'Market Price';
                     Editable = false;
                     DecimalPlaces = 0 : 0;
+                    ToolTip='Specifies the value of the Market Price field';
                 }
             }
         }

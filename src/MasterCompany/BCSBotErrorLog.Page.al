@@ -18,35 +18,43 @@ page 88010 "BCS Bot Error Log"
                 field("Entry No."; "Entry No.")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Entry No. field';
                 }
                 field("Error Type"; "Error Type")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Error Type field';
                 }
                 field(Acknowledged; Acknowledged)
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Acknowledged field';
                 }
 
                 field("Company Name"; "Company Name")
                 {
                     ApplicationArea = All;
+                     ToolTip='Specifies the value of the Company Name field';
                 }
                 field("Bot Instance"; "Bot Instance")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Bot Instance field';
                 }
                 field("Bot Type"; "Bot Type")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Bot Type field';
                 }
                 field("Posting Date"; "Posting Date")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Posting Date field';
                 }
                 field("Error Message"; "Error Message")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Error Message field';
                 }
             }
         }
@@ -64,6 +72,7 @@ page 88010 "BCS Bot Error Log"
                 PromotedOnly = true;
                 Image = Approve;
                 Enabled = not Acknowledged;
+                ToolTip='Executes the Acknowledge action';
 
                 trigger OnAction()
                 var

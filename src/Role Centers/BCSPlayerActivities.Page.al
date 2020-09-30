@@ -17,6 +17,7 @@ page 88003 "BCS Player Activities"
                 {
                     ApplicationArea = All;
                     Caption = 'Current Wealth';
+                    ToolTip='Specifies the value of the Current Wealth field';
 
                     trigger OnDrillDown()
                     begin
@@ -28,6 +29,7 @@ page 88003 "BCS Player Activities"
                 {
                     Caption = 'Idling Bots';
                     ApplicationArea = All;
+                      ToolTip='Specifies the value of the Idling Bots field';
 
                     trigger OnDrillDown()
                     var
@@ -40,6 +42,7 @@ page 88003 "BCS Player Activities"
                 {
                     Caption = 'Erroring Bots';
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Erroring Bots field';
 
                     trigger OnDrillDown()
                     var
@@ -62,11 +65,13 @@ page 88003 "BCS Player Activities"
                 {
                     Caption = 'Delayed Shipments';
                     ApplicationArea = all;
+                    ToolTip='Specifies the value of the Delayed Shipments field';
                 }
                 field("Delayed Receipts"; "Delayed Receipts")
                 {
                     Caption = 'Delayed Receipts';
                     ApplicationArea = all;
+                    ToolTip='Specifies the value of the Delayed Receipts field';
                 }
             }
         }

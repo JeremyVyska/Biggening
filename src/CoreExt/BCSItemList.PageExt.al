@@ -48,6 +48,7 @@ pageextension 88009 "BCS Item List" extends "Item List"
             field("BCS Reorder Level"; "BCS Reorder Level")
             {
                 ApplicationArea = All;
+                ToolTip='Specifies the value of the BCS Reorder Level field';
             }
         }
 
@@ -58,11 +59,13 @@ pageextension 88009 "BCS Item List" extends "Item List"
                 Caption = 'Market Price';
                 Editable = false;
                 DecimalPlaces = 0 : 0;
+                ToolTip='Specifies the value of the Market Price field';
             }
             field("BCS Min. Sales Price."; "BCS Min. Sales Price.")
             {
                 Caption = 'Minimum Sales Price';
                 ApplicationArea = All;
+                ToolTip='Specifies the value of the Minimum Sales Price field';
             }
 
         }

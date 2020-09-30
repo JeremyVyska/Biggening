@@ -16,18 +16,22 @@ page 88016 "BCS Prospect List"
                 field(Name; Name)
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Name field';
                 }
                 field(Type; Type)
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Type field';
                 }
                 field("Maximum Orders Per Day"; "Maximum Orders Per Day")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Maximum Orders Per Day field';
                 }
                 field("Maximum Quantity Per Order"; "Maximum Quantity Per Order")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Maximum Quantity Per Order field';
                 }
             }
         }
@@ -53,6 +57,7 @@ page 88016 "BCS Prospect List"
                 PromotedCategory = Process;
                 Image = Vendor;
                 Enabled = Type = Type::Vendor;
+                ToolTip='Executes the Make Vendor action';
 
                 trigger OnAction()
                 var
@@ -75,6 +80,7 @@ page 88016 "BCS Prospect List"
                 PromotedCategory = Process;
                 Image = Customer;
                 Enabled = Type = Type::Customer;
+                 ToolTip='Executes the Make Customer action';
 
                 trigger OnAction()
                 var

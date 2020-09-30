@@ -15,22 +15,27 @@ page 88006 "BCS Random Entity Name Pool"
                 field("Company Name"; "Company Name")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Company Name field';
                 }
                 field("Contact Name"; "Contact Name")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Contact Name field';
                 }
                 field("Entry No."; "Entry No.")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Entry No. field';
                 }
                 field(Address; Address)
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Address field';
                 }
                 field(Email; Email)
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Email field';
                 }
             }
         }

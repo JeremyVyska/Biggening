@@ -19,6 +19,7 @@ page 88005 "BCS Bot Purchase Wizard"
                 {
                     ApplicationArea = all;
                     Caption = 'Bot Types';
+                    ToolTip='Specifies the value of the Bot Types field';
 
                     trigger OnValidate()
                     var
@@ -60,6 +61,7 @@ page 88005 "BCS Bot Purchase Wizard"
                 {
                     Caption = 'Assignment Code';
                     ApplicationArea = all;
+                     ToolTip='Specifies the value of the Assignment Code field';
 
                     trigger OnValidate()
                     var
@@ -88,6 +90,7 @@ page 88005 "BCS Bot Purchase Wizard"
                 InFooterBar = true;
                 Enabled = ActionBackAllowed;
                 Image = PreviousRecord;
+                ToolTip='Executes the Back action';
 
                 trigger OnAction()
                 begin
@@ -101,6 +104,7 @@ page 88005 "BCS Bot Purchase Wizard"
                 InFooterBar = true;
                 Enabled = ActionNextAllowed;
                 Image = NextRecord;
+                ToolTip='Executes the Next action';
                 trigger OnAction()
                 begin
                     TakeStep(1);
@@ -113,6 +117,7 @@ page 88005 "BCS Bot Purchase Wizard"
                 InFooterBar = true;
                 Enabled = ActionFinishAllowed;
                 Image = Approve;
+                ToolTip='Executes the Finish action';
 
                 trigger OnAction()
                 var

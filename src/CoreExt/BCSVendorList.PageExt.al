@@ -36,10 +36,12 @@ pageextension 88002 "BCS Vendor List" extends "Vendor List"
             field("Max Orders Per Day"; "Max Orders Per Day")
             {
                 ApplicationArea = all;
+                ToolTip='Specifies the value of the Max Orders Per Day field';
             }
             field("Max Quantity Per Day"; "Max Quantity Per Day")
             {
                 ApplicationArea = all;
+                ToolTip='Specifies the value of the Max Quantity Per Day field';
             }
         }
     }

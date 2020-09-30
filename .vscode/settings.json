@@ -1,4 +1,5 @@
 {
-    "al.enableCodeAnalysis": false,
-    "al.codeAnalyzers": ["${CodeCop}"]
+    "al.enableCodeAnalysis": true,
+    "al.codeAnalyzers": ["${CodeCop}"],
+    "al.ruleSetPath": "rulesets\\biggening.ruleset.json"
 }

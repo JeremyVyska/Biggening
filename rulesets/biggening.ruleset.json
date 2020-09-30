@@ -1,0 +1,10 @@
+{
+  "name": "Biggening Corporation",
+  "rules": [
+    {
+      "action": "Hidden",
+      "id": "AA0214",
+      "justification": "Not quite up to standards yet - too many false positives"
+    }
+  ]
+}

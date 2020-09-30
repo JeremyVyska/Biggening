@@ -7,22 +7,27 @@ pageextension 88005 "BCS Location List" extends "Location List"
             field("Upgrade Code"; "Upgrade Code")
             {
                 ApplicationArea = All;
+                ToolTip='Specifies the value of the Upgrade Code field';
             }
             field("Maximum Bots"; "Maximum Bots")
             {
                 ApplicationArea = All;
+                ToolTip='Specifies the value of the Maximum Bots field';
             }
             field("Assigned Bots"; "Assigned Bots")
             {
                 ApplicationArea = All;
+                ToolTip='Specifies the value of the Assigned Bots field';
             }
             field("Maximum Units"; "Maximum Units")
             {
                 ApplicationArea = All;
+                ToolTip='Specifies the value of the Maximum Units field';
             }
             field("Total Stock"; "Total Stock")
             {
                 ApplicationArea = All;
+                ToolTip='Specifies the value of the Total Stock field';
             }
 
         }

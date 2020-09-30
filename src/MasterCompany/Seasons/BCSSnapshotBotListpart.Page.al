@@ -15,10 +15,12 @@ page 88022 "BCS Snapshot Bot Listpart"
                 field("Bot Type"; "Bot Type")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Bot Type field';
                 }
                 field("Bot Count"; "Bot Count")
                 {
                     ApplicationArea = All;
+                    ToolTip='Specifies the value of the Bot Count field';
                 }
             }
         }
