@@ -18,65 +18,65 @@ page 88002 "BCS Bot Instance List"
                 {
                     ApplicationArea = All;
                     Visible = false;
-                    ToolTip='Specifies the value of the Instance ID field';
+                    ToolTip = 'Specifies the value of the Instance ID field';
                 }
                 field("Bot Type"; "Bot Type")
                 {
                     ApplicationArea = All;
-                    ToolTip='Specifies the value of the Bot Type field';
+                    ToolTip = 'Specifies the value of the Bot Type field';
                 }
                 field(Designation; Designation)
                 {
                     ApplicationArea = All;
-                    ToolTip='Specifies the value of the Designation field';
+                    ToolTip = 'Specifies the value of the Designation field';
                 }
                 field("Bot Name"; "Bot Name")
                 {
                     ApplicationArea = All;
-                    ToolTip='Specifies the value of the Bot Name field';
+                    ToolTip = 'Specifies the value of the Bot Name field';
                 }
                 field("Assignment Code"; "Assignment Code")
                 {
                     ApplicationArea = All;
-                    ToolTip='Specifies the value of the Assignment Code field';
+                    ToolTip = 'Specifies the value of the Assignment Code field';
                 }
                 field("Power Per Day"; "Power Per Day")
                 {
                     ApplicationArea = All;
-                    ToolTip='Specifies the value of the Power Per Day field';
+                    ToolTip = 'Specifies the value of the Power Per Day field';
                 }
                 field("Operations Per Day"; "Operations Per Day")
                 {
                     ApplicationArea = All;
-                    ToolTip='Specifies the value of the Ops. Per Day field';
+                    ToolTip = 'Specifies the value of the Ops. Per Day field';
                 }
                 field("Operations Upgrade Code"; "Operations Upgrade Code")
                 {
                     ApplicationArea = All;
                     Visible = false;
-                    ToolTip='Specifies the value of the Operations Upgrade Code field';
+                    ToolTip = 'Specifies the value of the Operations Upgrade Code field';
                 }
                 field("Power Upgrade Code"; "Power Upgrade Code")
                 {
                     ApplicationArea = All;
                     Visible = false;
-                    ToolTip='Specifies the value of the Power Upgrade Code field';
+                    ToolTip = 'Specifies the value of the Power Upgrade Code field';
                 }
                 field(Price; Price)
                 {
                     ApplicationArea = All;
                     Visible = false;
-                    ToolTip='Specifies the value of the Price field';
+                    ToolTip = 'Specifies the value of the Price field';
                 }
                 field("Research Points Per Op"; "Research Points Per Op")
                 {
                     ApplicationArea = All;
-                    ToolTip='Specifies the value of the Research Points Per Op. field';
+                    ToolTip = 'Specifies the value of the Research Points Per Op. field';
                 }
                 field("Maximum Doc. Lines Per Op"; "Maximum Doc. Lines Per Op")
                 {
                     ApplicationArea = All;
-                    ToolTip='Specifies the value of the Maximum Doc. Lines Per Op field';
+                    ToolTip = 'Specifies the value of the Maximum Doc. Lines Per Op field';
                 }
             }
         }
@@ -94,7 +94,7 @@ page 88002 "BCS Bot Instance List"
                 PromotedCategory = New;
                 PromotedIsBig = true;
                 ApplicationArea = All;
-                ToolTip='Executes the Buy Bot action';
+                ToolTip = 'Executes the Buy Bot action';
 
                 trigger OnAction()
                 begin
@@ -109,10 +109,9 @@ page 88002 "BCS Bot Instance List"
                 Image = LedgerEntries;
                 Caption = 'Power Usage';
                 ApplicationArea = All;
-
                 RunObject = Page "BCS Power Usage Ledger";
                 RunPageLink = "Bot Instance" = field("Instance ID");
-                ToolTip='Executes the Power Usage action';
+                ToolTip = 'Executes the Power Usage action';
             }
         }
     }
