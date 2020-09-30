@@ -14,6 +14,10 @@ codeunit 88031 "BCS Player Starting Values"
         // Master items - copy items 'Available at start'
         CopyInitMasterItems();
 
+        // Initial Customer & Vendor for Lowest Price starter item
+        SetupInitCustomer();
+        SetupInitVendor();
+
         // Bots - instantiate bots based on count of 'Include at start' on Templates
         FindAndBuyStarterBots();
 
@@ -123,6 +127,82 @@ codeunit 88031 "BCS Player Starting Values"
         CompanyInfo.Get();
         CompanyInfo."Current Game Date" := GameSetup."Game Date";
         CompanyInfo.Modify(true);
+    end;
+
+    local procedure SetupInitCustomer()
+    var
+        Customer: Record Customer;
+        MasterItem: Record "BCS Master Item";
+        GameSetup: Record "BCS Game Setup";
+        CustInterests: Record "BCS Customer Interest";
+        RandomPool: Record "BCS Random Entity Name Pool";
+    begin
+        GameSetup.Get();
+
+        if not RandomPool.FindFirst() then
+            Error('');
+        RandomPool.Next(Random(RandomPool.Count) - 1);
+
+        // No, Name, Gen. Bus. Posting, Customer Posting
+        Customer.Insert(true);
+        Customer.Name := RandomPool."Company Name";
+        Customer.Address := RandomPool.Address;
+        Customer.Contact := RandomPool."Contact Name";
+        Customer."E-Mail" := RandomPool.Email;
+        Customer."Gen. Bus. Posting Group" := GameSetup."Customer Bus. Posting Group";
+        Customer."Customer Posting Group" := GameSetup."Customer Posting Group";
+        Customer."Payment Method Code" := GameSetup."Customer Payment Method Code";
+        Customer.Modify(true);
+
+        // find cheapest item
+        MasterItem.SetRange("Available at Start", true);
+        MasterItem.SetCurrentKey("Initial Price");
+        MasterItem.FindFirst();
+
+        // and make that the trade.
+        CustInterests."Customer No." := Customer."No.";
+        CustInterests."Item Category Code" := MasterItem."Item Category Code";
+        CustInterests."Prod. Posting Group" := MasterItem."Prod. Posting Group";
+        CustInterests.Insert(true);
+    end;
+
+    local procedure SetupInitVendor()
+    var
+        Vendor: Record Vendor;
+        ItemVendor: Record "Item Vendor";
+        MasterItem: Record "BCS Master Item";
+        GameSetup: Record "BCS Game Setup";
+        RandomPool: Record "BCS Random Entity Name Pool";
+    begin
+        GameSetup.Get();
+
+        if not RandomPool.FindFirst() then
+            Error('');
+        RandomPool.Next(Random(RandomPool.Count) - 1);
+
+        // No, Name, Gen. Bus. Posting, Vendor Posting
+        Vendor.Insert(true);
+        Vendor.Name := RandomPool."Company Name";
+        Vendor.Address := RandomPool.Address;
+        Vendor.Contact := RandomPool."Contact Name";
+        Vendor."E-Mail" := RandomPool.Email;
+        Vendor."Gen. Bus. Posting Group" := GameSetup."Vendor Bus. Posting Group";
+        Vendor."Vendor Posting Group" := GameSetup."Vendor Posting Group";
+        Vendor."Payment Method Code" := GameSetup."Vendor Payment Method Code";
+
+        Vendor."Max Orders Per Day" := Round(GameSetup."Purch. Pros. Base Max Orders" * GameSetup."Purch. Pros. Tier Multiplier");
+        Vendor."Max Quantity Per Day" := Round(GameSetup."Purch. Pros. Base Max Quantity" * GameSetup."Purch. Pros. Tier Multiplier");
+
+        Vendor.Modify(true);
+
+        // First vendor sells a little of everything
+        MasterItem.SetRange("Available at Start", true);
+        if MasterItem.FindSet() then
+            repeat
+                ItemVendor."Vendor No." := Vendor."No.";
+                ItemVendor."Item No." := MasterItem."No.";
+                ItemVendor.Insert(true);
+            until MasterItem.Next() = 0;
     end;
 
 
