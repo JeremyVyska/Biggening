@@ -1,5 +1,6 @@
 codeunit 88026 "BCS Bot Check Assignment"
 {
+    //Just testing Github with this repo honestly.
     procedure CheckAssignment(var BotInstance: Record "BCS Bot Instance")
     begin
         if (BotInstance."Assignment Code" = '') then
