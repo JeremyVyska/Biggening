@@ -65,6 +65,8 @@ table 88017 "BCS Snapshot"
         }
         key(Ranking; "Game Date", "Wealth Balance")
         { }
+        key(GameRank; "Season No.", "Rank at Date")
+        { }
     }
 
 }
