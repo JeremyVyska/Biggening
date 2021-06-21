@@ -81,7 +81,32 @@ table 88015 "BCS Player"
         {
             Caption = 'Company Display Name';
             FieldClass = FlowField;
-            CalcFormula = lookup (Company."Display Name" where(Name = field("Company Name")));
+            CalcFormula = lookup(Company."Display Name" where(Name = field("Company Name")));
+        }
+        field(1010; "Current Rank"; Integer)
+        {
+            Caption = 'Current Rank';
+            FieldClass = FlowField;
+            CalcFormula = lookup("BCS Snapshot"."Rank at Date" where("Season No." = field("Season Filter"), "Game Date" = field("Game Date Filter")));
+        }
+
+        field(1100; "Season Filter"; Integer)
+        {
+            Caption = 'Season Filter';
+            FieldClass = FlowFilter;
+        }
+
+        field(1110; "Game Date Filter"; Date)
+        {
+            Caption = 'Game Date Filter';
+            FieldClass = FlowFilter;
+        }
+
+        field(5000; "Wealth"; Decimal)
+        {
+            Caption = 'Wealth';
+            //Note that this will be a CALCULATED value in boxes, not a static value.
+            //It will be kept updated by an Event on the G/L Entry table.
         }
     }
     keys
@@ -91,5 +116,6 @@ table 88015 "BCS Player"
             Clustered = true;
         }
     }
+
 
 }

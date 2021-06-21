@@ -155,6 +155,45 @@ codeunit 88015 "BCS Player Management"
     end;
 
 
+
+    /*
+
+     8888888888 888     888 8888888888 888b    888 88888888888 .d8888b.  
+     888        888     888 888        8888b   888     888    d88P  Y88b 
+     888        888     888 888        88888b  888     888    Y88b.      
+     8888888    Y88b   d88P 8888888    888Y88b 888     888     "Y888b.   
+     888         Y88b d88P  888        888 Y88b888     888        "Y88b. 
+     888          Y88o88P   888        888  Y88888     888          "888 
+     888           Y888P    888        888   Y8888     888    Y88b  d88P 
+     8888888888     Y8P     8888888888 888    Y888     888     "Y8888P"  
+
+
+
+
+    */
+
+
+    [EventSubscriber(ObjectType::Table, Database::"G/L Entry", 'OnAfterInsertEvent', '', true, true)]
+    local procedure UpdatePlayerWealth()
+    var
+        BCSPlayer: Record "BCS Player";
+        BCSGameSetup: Record "BCS Game Setup";
+        GLAccount: Record "G/L Account";
+    begin
+        //Any time the G/L is updated, we will populate the player's wealth value.  Optimal?  Gosh no, but close as we'll get to keeping it accurate.
+        BCSPlayer.SetRange("Company Name", CompanyName());
+        if BCSPlayer.FindFirst() then begin
+            BCSGameSetup.Get();
+            if GLAccount.Get(BCSGameSetup."Wealth Account") then begin
+                GLAccount.CalcFields(Balance);
+                BCSPlayer.Wealth := GLAccount.Balance;
+            end else
+                BCSPlayer.Wealth := 0;
+            BCSPlayer.Modify(true);
+        end;
+    end;
+
+
     /*
  
  888     888     d8888 8888888b.   .d8888b.  

@@ -683,10 +683,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Company Name - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2297530211 - Field 2085400561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Current Rank</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Current Rank - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2297530211 - Field 1285973296 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Email</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Email - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2297530211 - Field 36065542 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Game Date Filter</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Game Date Filter - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2297530211 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Name</source>
@@ -697,6 +707,11 @@
           <source>No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2297530211 - Field 510793543 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Season Filter</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Season Filter - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2297530211 - Field 235415455 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Company Made</source>
@@ -742,6 +757,11 @@
           <source>User Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field User Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2297530211 - Field 4036383149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Wealth</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BCS Player - Field Wealth - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3876155957 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Player Archive</source>
@@ -2303,6 +2323,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Item Overview - Control No. - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 2757916081 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BCS Job Queue Overview</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Job Queue Overview - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2757916081 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Description field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Job Queue Overview - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2757916081 - Control 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Status field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Job Queue Overview - Control Status - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 2363116744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Location Overview</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -2337,6 +2372,31 @@
           <source>Specifies the value of the Total Stock field</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Location Overview - Control Total Stock - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2610784479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Market Overview</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Market Overview - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2610784479 - Control 568743302 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Item No. field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Market Overview - Control Item No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2610784479 - Control 2140734087 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the ItemCategory field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Market Overview - Control ItemCategory - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2610784479 - Control 924038635 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Market Price field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Market Overview - Control Market Price - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2610784479 - Control 2598231234 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the ProdPostingGroup field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Market Overview - Control ProdPostingGroup - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2065873973 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Market Price</source>
@@ -3323,6 +3383,46 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3908444679 - Action 3838600046 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Biggening Game Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action GameSetupEmbed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3908444679 - Action 2330445997 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manage the Players</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action PlayersEmbed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3908444679 - Action 3163233023 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manage the Seasons</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action SeasonsEmbed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3908444679 - Action 3758013440 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Information and Settings for the Currently Active Season</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Current Season - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3908444679 - Action 3758013440 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Current Season</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Current Season - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3908444679 - Action 14763062 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Current market prices of items</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Market Prices - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3908444679 - Action 1254378787 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Overview of trading volume of items</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Market Trades - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3908444679 - Action 2468987528 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Snapshot List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Snaphots - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3908444679 - Action 1514883969 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Overview and change system and application settings, and manage extensions and services</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -3333,20 +3433,70 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Setup - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3908444679 - Action 799089619 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Set up core functionality such as sales tax, sending documents as email, and approval workflow by running through a few pages that guide you through the information.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Assisted Setup - Property ToolTip</note>
-        </trans-unit>
         <trans-unit id="Page 3908444679 - Action 1404185334 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Manage Bot Templates</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Bot Templates - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 3908444679 - Action 2207653843 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Biggening Game Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Game Setup - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3908444679 - Action 3104013918 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Manage Master Items for the game</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Master Items - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3908444679 - Action 3683153299 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>master tables are teh setup tables to include when populating the Player companies</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Master Tables - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3908444679 - Action 420000772 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manage the Players</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Players - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3908444679 - Action 4209941445 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manage the Random names drawn from for Customer and Vendor prospects</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Random Name Pools - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3908444679 - Action 1687051034 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manage the Seasons</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS System Manager RC - Action Seasons - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 83811070 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Player Overview</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCSPlayerOverview - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 83811070 - Control 1037431910 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Company Display Name field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCSPlayerOverview - Control Company Display Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 83811070 - Control 3997336476 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Company Name field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCSPlayerOverview - Control Company Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 83811070 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Name field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCSPlayerOverview - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 83811070 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the No. field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCSPlayerOverview - Control No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 83811070 - Control 4036383149 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Wealth field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCSPlayerOverview - Control Wealth - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Report 253072695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Import Master Items</source>
