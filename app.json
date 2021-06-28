@@ -4,7 +4,7 @@
   "publisher": "Jeremy Vyska",
   "brief": "Core code to run the Biggening Corporation game",
   "description": "A silly incremental style community game using Microsoft Dynamics 365 Business Central as the engine to demonstrate AL Development techniques.",
-  "version": "16.3.1.0",
+  "version": "18.0.1.0",
   "privacyStatement": "",
   "EULA": "",
   "help": "https://github.com/JeremyVyska/Biggening/issues",
@@ -12,8 +12,8 @@
   "logo": ".\\images\\logo.png",
   "dependencies": [],
   "screenshots": [],
-  "platform": "16.0.0.0",
-  "application": "16.0.0.0",
+  "platform": "18.0.0.0",
+  "application": "18.0.0.0",
   "idRanges": [
     {
       "from": 88000,
@@ -26,7 +26,7 @@
   "supportedLocales": [
     "en-GB"
   ],
-  "runtime": "5.0",
+  "runtime": "7.0",
   "features": [
     "TranslationFile"
   ]
