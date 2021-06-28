@@ -77,8 +77,7 @@ codeunit 88015 "BCS Player Management"
 
             Player."User ID" := User."User Security ID";
             Player.Modify(true);
-        end else
-            Error(UserAlreadyExistsErr);
+        end;
     end;
 
     local procedure CreateJobQueueInCompany(var Player: Record "BCS Player")

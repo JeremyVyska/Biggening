@@ -2778,6 +2778,26 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action Bots - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 2768240657 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Executes the Items action</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action ItemList - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 2768240657 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Items</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action ItemList - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 1577910633 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens the Location List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action LocationList - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2116380514 - Action 1577910633 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Locations</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BCS Player Role Center - Action LocationList - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 956387415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BCS Power Usage Ledger</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -3502,6 +3522,16 @@
           <source>Import Master Items</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report BCS Import Master Items - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1779811491 - Action 59423316 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
+          <source>Init the Company</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Company Information - Action Initialize - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1779811491 - Action 59423316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
+          <source>Initialize</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BCS Company Information - Action Initialize - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1779811491 - Control 1057271021 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
           <source>Specifies the value of the Current Game Date field</source>

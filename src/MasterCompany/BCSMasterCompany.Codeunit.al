@@ -28,6 +28,11 @@ codeunit 88000 "BCS Master Company"
                     DestFieldRef := DestRecRef.FieldIndex(i);
                     if (SourceFieldRef.Class = FieldClass::Normal) then
                         DestFieldRef.Value(SourceFieldRef.Value);
+
+                    /* Todo:   This *works* and doesn't throw an error, sure
+                        but, it's filling up the event log with warning Telemetry data on each failed record to insert.
+                        messy!
+                    */
                     if not DestRecRef.Insert() then
                         DestRecRef.Modify();
                 end;

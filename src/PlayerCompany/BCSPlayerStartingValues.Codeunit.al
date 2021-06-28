@@ -35,7 +35,7 @@ codeunit 88031 "BCS Player Starting Values"
 
     local procedure GivePlayerStartingCash()
     begin
-        if GameSetup."Starting Cash" <> 0 then
+        if (GameSetup."Starting Cash" <> 0) and (HasZeroCash(GameSetup."Starting Balance Account")) then
             // Note the sign flip - we're -reverse- charging cash to initialize.
             ChargeThePlayer(GameSetup."Starting Balance Account", -GameSetup."Starting Cash");
     end;
@@ -43,10 +43,13 @@ codeunit 88031 "BCS Player Starting Values"
     local procedure CreateLocations()
     var
         LocPurchase: Codeunit "BCS Location Management";
+        Locations: Record Location;
         i: Integer;
     begin
-        if GameSetup."Starting Basic Locations" <> 0 then begin
-            // Give the player the initial money for the locations
+        if not Locations.IsEmpty then
+            exit;
+        if (GameSetup."Starting Basic Locations" <> 0) then begin
+            // Give the player the initial money for the locations - Note, ChargeThePlayer calls COMMIT!
             ChargeThePlayer(GameSetup."Starting Balance Account",
                 -(GameSetup."Starting Basic Locations" * GameSetup."Basic Location Price"));
 
@@ -60,24 +63,35 @@ codeunit 88031 "BCS Player Starting Values"
     var
         MasterItem: Record "BCS master item";
         Item: Record Item;
+        ItemUOM: Record "Item Unit of Measure";
     begin
         MasterItem.SetRange("Available at Start", true);
         if MasterItem.FindSet() then
             repeat
-                Item.Reset();
-                Item.Validate("No.", MasterItem."No.");
-                Item.Validate(Description, MasterItem.Description);
-                //This validate autogenerates the Item UOM entry as Qty for us. Handy!
-                Item.Validate("Base Unit of Measure", GameSetup."System Unit of Measure");
-                Item.Validate("Gen. Prod. Posting Group", MasterItem."Prod. Posting Group");
-                Item.Validate("Item Category Code", MasterItem."Item Category Code");
-                Item.Insert(true);
+                if not Item.Get(MasterItem."No.") then begin
+                    Item.Reset();
+                    Item."No." := MasterItem."No.";
+                    Item.Validate(Description, MasterItem.Description);
+                    Item.Insert(true);   // (╯°□°）╯︵ ┻━┻
+                    // Debugged a bit - It's NOT actually creating the Item UOM, which fails during the Item Vendor creation
+                    Item.Validate("Base Unit of Measure", GameSetup."System Unit of Measure");
+                    Item.Validate("Gen. Prod. Posting Group", MasterItem."Prod. Posting Group");
+                    Item.Validate("Item Category Code", MasterItem."Item Category Code");
+                    Item.Modify(true);   // ಠ_ಠ
+
+                    // So we'll make sure we make it, that's fine.
+                    ItemUOM.Init();
+                    ItemUOM."Item No." := Item."No.";
+                    ItemUOM.Code := GameSetup."System Unit of Measure";
+                    ItemUOM.Insert(true);   //???????? 
+                end;
             until MasterItem.Next() = 0;
     end;
 
     local procedure FindAndBuyStarterBots()
     var
         BotTemplate: Record "BCS Bot Template";
+        Bot: Record "BCS Bot Instance";
         PurchBot: Codeunit "BCS Bot Management";
         i: Integer;
     begin
@@ -86,10 +100,13 @@ codeunit 88031 "BCS Player Starting Values"
         if BotTemplate.FindSet() then
             repeat
                 for i := 1 to BotTemplate."Start With" do begin
-                    // Give the player the initial cash for the bot in question (sign flip!)
-                    ChargeThePlayer(GameSetup."Starting Balance Account", -BotTemplate."Base Price");
-                    // Then execute the purchase
-                    PurchBot.InitialPurchaseBot(BotTemplate.Code);
+                    Bot.SetRange("Bot Template Code", BotTemplate.Code);
+                    if Bot.Count() <> BotTemplate."Start With" then begin
+                        // Give the player the initial cash for the bot in question (sign flip!)
+                        ChargeThePlayer(GameSetup."Starting Balance Account", -BotTemplate."Base Price");
+                        // Then execute the purchase
+                        PurchBot.InitialPurchaseBot(BotTemplate.Code);
+                    end;
                 end;
             until BotTemplate.Next() = 0;
     end;
@@ -132,6 +149,8 @@ codeunit 88031 "BCS Player Starting Values"
         CustInterests: Record "BCS Customer Interest";
         RandomPool: Record "BCS Random Entity Name Pool";
     begin
+        if not Customer.IsEmpty then
+            exit;
         GameSetup.Get();
 
         if not RandomPool.FindFirst() then
@@ -168,6 +187,8 @@ codeunit 88031 "BCS Player Starting Values"
         MasterItem: Record "BCS Master Item";
         RandomPool: Record "BCS Random Entity Name Pool";
     begin
+        if not Vendor.IsEmpty then
+            exit;
         GameSetup.Get();
 
         if not RandomPool.FindFirst() then
@@ -197,6 +218,15 @@ codeunit 88031 "BCS Player Starting Values"
                 ItemVendor."Item No." := MasterItem."No.";
                 ItemVendor.Insert(true);
             until MasterItem.Next() = 0;
+    end;
+
+    local procedure HasZeroCash(StartingBalanceAccount: Code[20]): Boolean
+    var
+        GLAccount: Record "G/L Account";
+    begin
+        GLAccount.Get(StartingBalanceAccount);
+        GLAccount.CalcFields(Balance);
+        exit(GLAccount.Balance = 0);
     end;
 
 

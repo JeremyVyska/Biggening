@@ -81,12 +81,25 @@ codeunit 88020 "BCS Snapshot Capture"
     var
         GameSetup: Record "BCS Game Setup";
         Snapshot: Record "BCS Snapshot";
+        Players: Record "BCS Player";
+        PlayersMissing: Boolean;
         Rank: Integer;
     begin
+        /* This function should only run ONCE after all the players are accounted for */
         GameSetup.Get();
         Snapshot.SetCurrentKey("Game Date", "Wealth Balance");
-        Snapshot.SetAscending("Wealth Balance", false);
         Snapshot.SetRange("Game Date", GameSetup."Game Date");
+
+        if Players.FindSet() then
+            repeat
+                Snapshot.SetRange("Player No.", Players."No.");
+                if Snapshot.IsEmpty then
+                    PlayersMissing := true;
+            until (Players.Next() = 0) or PlayersMissing;
+
+        if PlayersMissing then exit;
+
+        Snapshot.SetAscending("Wealth Balance", false);
         if Snapshot.FindSet(true) then
             repeat
                 Rank := Rank + 1;

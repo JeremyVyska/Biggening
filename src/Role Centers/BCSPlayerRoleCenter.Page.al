@@ -44,6 +44,29 @@ page 88004 "BCS Player Role Center"
                     RunObject = Page "BCS Bot Instance List";
                     ToolTip = 'Executes the Bots action';
                 }
+                action(ItemList)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Items';
+                    Image = Item;
+                    RunObject = Page "Item List";
+                    ToolTip = 'Executes the Items action';
+                }
+                action(LocationList)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Locations';
+                    Image = CreateWhseLoc;
+                    RunObject = Page "Location List";
+                    ToolTip = 'Opens the Location List';
+                }
+                action(ProspectList)
+                {
+                    ApplicationArea = All;
+                    Image = ContactFilter;
+                    RunObject = page "BCS Prospect List";
+                }
+
             }
             group(Information)
             {
@@ -59,6 +82,25 @@ page 88004 "BCS Player Role Center"
                     RunObject = Page "Chart of Accounts";
                     ToolTip = 'Executes the Chart of Accounts';
                 }
+                action(PowerUsage)
+                {
+                    ApplicationArea = All;
+                    Image = CreateRating;
+                    RunObject = Page "BCS Power Usage Ledger";
+                }
+                action(ResearchList)
+                {
+                    ApplicationArea = All;
+                    Image = BOMLedger;
+                    RunObject = page "BCS Research List";
+                }
+                action(ActivitiesLog)
+                {
+                    ApplicationArea = All;
+                    Image = CoupledOpportunitiesList;
+                    RunObject = page "BCS Bot Activity Log";
+                }
+
             }
         }
 
